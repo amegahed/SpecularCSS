@@ -1,0 +1,242 @@
+/******************************************************************************\
+|                                                                              |
+|                                  metal.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$highlight-strength: 100%;
+$specular-size: 75%;
+$specular-strength: 100%;
+$reflection-strength: 100%;
+
+$round-highlight-width: 50%;
+$round-highlight-height: 50%;
+$round-highlight-hoffset: 50%;
+$round-highlight-voffset: 10%;
+
+$round-specular-width: 100%;
+$round-specular-height: 50%;
+$round-specular-hoffset: 50%;
+$round-specular-voffset: 10%;
+
+$round-reflection-width: 100%;
+$round-reflection-height: 100%;
+$round-reflection-hoffset: 50%;
+$round-reflection-voffset: 0%;
+
+$brushed-texture: '../../../images/textures/brushed.png';
+
+//
+// mixins
+//
+
+@mixin metal ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			faded(lightened($color, 30%), $highlight-strength) 0%,
+			faded($color, 0%) 10%) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to bottom,
+			faded(lightened($color, 30%), $specular-strength) 0%,
+			faded($color, 0%) 20%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			faded($color, 0%) 0%,
+			faded($color, calc($reflection-strength / 2)) 66%,
+			faded($color, $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		darkened($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin round-metal ($color: white, $direction: bottom, $border-style: outset, $background-color: white) {
+	background:
+
+		// highlight
+		//
+		radial-gradient(ellipse $round-highlight-width $round-highlight-height at $round-highlight-hoffset $round-highlight-voffset,
+			faded(white, $highlight-strength) 0%,
+			faded(lightened($color, 30%), $highlight-strength) $highlight-size,
+			faded($color, 0%) 100%) no-repeat,
+
+		// specular
+		//
+		radial-gradient(ellipse $round-specular-width $round-specular-height at $round-specular-hoffset $round-specular-voffset,
+			faded($color, $specular-strength) 0%,
+			faded($color, 0%) $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			faded($color, 0%) 25%,
+			faded($color, calc($reflection-strength / 2)) 66%,
+			faded(lightened($color, 30%), $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		darkened($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 20%);
+	}
+}
+
+@mixin rounded-metal ($color: white, $direction: bottom, $border-style: outset, $background-color: white) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to $direction,
+			faded(lightened($color, 60%), $specular-strength) 0%,
+			faded(lightened($color, 30%), $specular-strength) 25%,
+			faded($color, 0%) 50%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			faded($color, 0%) 66%,
+			faded(lightened($color, 10%), $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 20%);
+	}
+}
+
+@mixin long-metal ($color: white, $direction: bottom, $width: 10px) {
+	@if ($direction == top) or ($direction == bottom) {
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				faded(lightened($color, 20%), 0%) 0%,
+				faded(lightened($color, 40%), $highlight-strength) 25%,
+				faded(lightened($color, 20%), 0%) 50%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 0%,
+				faded($color, $specular-strength) 25%,
+				faded($color, 0%) 50%) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 50%,
+				lightened($color, 10%) 100%) no-repeat,
+
+			// diffuse
+			//
+			darkened($color, 30%);
+
+	} @else if ($direction == left) or ($direction == right) {
+		background:
+
+			// top shading
+			//
+			linear-gradient(to bottom,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// bottom shading
+			//
+			linear-gradient(to top,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				faded(lightened($color, 20%), 0%) 0%,
+				faded(lightened($color, 40%), $highlight-strength) 25%,
+				faded(lightened($color, 20%), 0%) 50%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 0%,
+				faded($color, $specular-strength) 25%,
+				faded($color, 0%) 50%) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 50%,
+				lightened($color, 10%) 100%) no-repeat,
+
+			// diffuse
+			//
+			darkened($color, 30%);
+	}
+}

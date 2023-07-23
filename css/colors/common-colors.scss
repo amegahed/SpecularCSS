@@ -1,0 +1,121 @@
+/******************************************************************************\
+|                                                                              |
+|                             common-colors.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+$medium-red:			hsl(0, 66%, 50%);
+$medium-raspberry:		hsl(-30, 75%, 50%);
+$medium-red-orange:		hsl(15, 75%, 50%);
+$medium-orange:			hsl(30, 75%, 50%);
+$medium-yellow:			hsl(60, 50%, 50%);
+$medium-lime:			hsl(90, 50%, 50%);
+$medium-green: 			hsl(135, 33%, 50%);
+$medium-teal:			hsl(180, 50%, 40%);
+$medium-aqua:			hsl(200, 50%, 50%);
+$medium-cyan:			hsl(200, 100%, 66%);
+$medium-blue:			hsl(220, 75%, 50%);
+$medium-indigo:			hsl(230, 75%, 50%);
+$medium-violet:			hsl(250, 33%, 50%);
+$medium-plum:			hsl(270, 25%, 50%);
+$medium-purple:			hsl(270, 50%, 50%);
+$medium-magenta:		hsl(280, 33%, 50%);
+$medium-black:			black;
+$medium-white:			white;
+
+$light-red:				lighten($medium-red, 10%);
+$light-raspberry:		lighten($medium-raspberry, 10%);
+$light-red-orange:		lighten($medium-red-orange, 10%);
+$light-orange:			lighten($medium-orange, 10%);
+$light-yellow:			lighten($medium-yellow, 10%);
+$light-lime:			lighten($medium-lime, 10%);
+$light-green: 			lighten($medium-green, 10%);
+$light-teal: 			lighten($medium-teal, 10%);
+$light-aqua:			lighten($medium-aqua, 10%);
+$light-cyan:			lighten($medium-cyan, 10%);
+$light-blue:			lighten($medium-blue, 10%);
+$light-indigo:			lighten($medium-indigo, 10%);
+$light-violet:			lighten($medium-violet, 10%);
+$light-plum:			lighten($medium-plum, 10%);
+$light-purple:			lighten($medium-purple, 10%);
+$light-magenta:			lighten($medium-magenta, 10%);
+$light-black:			lighten($medium-black, 10%);
+$light-white:			lighten($medium-white, 10%);
+
+$dark-red:				darken($medium-red, 10%);
+$dark-raspberry:		darken($medium-raspberry, 10%);
+$dark-red-orange:		darken($medium-red-orange, 10%);
+$dark-orange:			darken($medium-orange, 10%);
+$dark-yellow:			darken($medium-yellow, 10%);
+$dark-lime:				darken($medium-lime, 10%);
+$dark-green: 			darken($medium-green, 10%);
+$dark-teal: 			darken($medium-teal, 10%);
+$dark-aqua: 			darken($medium-aqua, 10%);
+$dark-cyan:				darken($medium-cyan, 10%);
+$dark-blue:				darken($medium-blue, 10%);
+$dark-indigo:			darken($medium-indigo, 10%);
+$dark-violet:			darken($medium-violet, 10%);
+$dark-plum:				darken($medium-plum, 10%);
+$dark-purple:			darken($medium-purple, 10%);
+$dark-magenta:			darken($medium-magenta, 10%);
+$dark-black:			darken($medium-black, 10%);
+$dark-white:			darken($medium-white, 10%);
+
+//
+// metallics
+//
+
+$medium-copper:			$medium-orange;
+$medium-silver:			#e0e0e0;
+$medium-gold:			hsl(45, 66%, 50%);
+
+$light-copper:			lighten($medium-copper, 10%);
+$light-silver:			lighten($medium-silver, 10%);
+$light-gold:			lighten($medium-gold, 10%);
+
+$dark-copper:			darken($medium-copper, 10%);
+$dark-silver:			darken($medium-silver, 10%);
+$dark-gold:				darken($medium-gold, 10%);
+
+//
+// greys
+//
+
+$medium-grey: #7070a7;
+$ultra-dark-grey: darken($medium-grey, 45%);
+$very-very-very-dark-grey: darken($medium-grey, 40%);
+$very-very-dark-grey: darken($medium-grey, 30%);
+$very-dark-grey: darken($medium-grey, 20%);
+$dark-grey: darken($medium-grey, 10%);
+$light-grey: lighten($medium-grey, 10%);
+$very-light-grey: lighten($medium-grey, 20%);
+$very-very-light-grey: lighten($medium-grey, 30%);
+$very-very-very-light-grey: lighten($medium-grey, 40%);
+$ultra-light-grey: lighten($medium-grey, 45%);
+
+//
+// browns
+//
+
+$medium-brown: hsl(30, 30%, 50%);
+$ultra-dark-brown: darken($medium-brown, 45%);
+$very-very-very-dark-brown: darken($medium-brown, 40%);
+$very-very-dark-brown: darken($medium-brown, 30%);
+$very-dark-brown: darken($medium-brown, 20%);
+$dark-brown: darken($medium-brown, 10%);
+$light-brown: lighten($medium-brown, 10%);
+$very-light-brown: lighten($medium-brown, 20%);
+$very-very-light-brown: lighten($medium-brown, 30%);
+$very-very-very-light-brown: lighten($medium-brown, 40%);
+$ultra-light-brown: lighten($medium-brown, 45%);

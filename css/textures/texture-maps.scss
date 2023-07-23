@@ -1,0 +1,88 @@
+/******************************************************************************\
+|                                                                              |
+|                              texture-maps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.textured {
+	&.brick {
+		&::before {
+			background-image: url(images/brick.png);
+		}
+	}
+
+	&.brushed {
+		&::before {
+			background-image: url(images/brushed.png);
+		}
+	}
+
+	&.crumpled {
+		&::before {
+			background-image: url(images/crumpled.png);
+		}
+	}
+
+	&.dots {
+		&::before {
+			background-image: url(images/dots.png);
+		}
+	}
+
+	&.flag {
+		&::before {
+			background-image: url(images/flag.png);
+		}
+	}
+
+	&.hearts {
+		&::before {
+			background-image: url(images/hearts.png);
+		}
+	}
+
+	&.marble {
+		&::before {
+			background-image: url(images/marble.png);
+		}
+	}
+
+	&.panels {
+		&::before {
+			background-image: url(images/panels.png);
+		}
+	}
+
+	&.rough {
+		&::before {
+			background-image: url(images/rough.png);
+		}
+	}
+
+	&.stars {
+		&::before {
+			background-image: url(images/stars.png);
+		}
+	}
+
+	&.wood {
+		&::before {
+			background-image: url(images/wood.png);
+		}
+	}
+}

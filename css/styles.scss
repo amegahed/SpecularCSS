@@ -1,0 +1,29 @@
+/******************************************************************************\
+|                                                                              |
+|                                   styles.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "colors/styles.scss";
+@import "controls/styles.scss";
+@import "materials/styles.scss";
+@import "textures/styles.scss";
+
+//
+// default color
+//
+
+body {
+	--primary-color: grey;
+}

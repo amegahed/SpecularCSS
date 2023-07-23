@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                                flat-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "flat.scss";
+
+//
+// mixins
+//
+
+@mixin flat-tab($color) {
+	> a {
+		@include flat($color);
+		box-shadow: none;
+
+		&:hover {
+			@include flat(darkened($color, 10%));
+		}
+	}
+}
+
+@mixin flat-active-tab($active-color) {
+	> a {
+		@include flat($active-color);
+	}
+}
+
+//
+// styles
+//
+
+.flat .nav-tabs > li,
+.nav-tabs > li.flat {
+	@include flat-tab(var(--tab-color));
+
+	&.active {
+		@include flat-active-tab(var(--primary-color));
+	}
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<title>SpecularCSS Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- system styles -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+	<div id="page">
+		<div class="figure" style="width:75%">
+			<div class="chalk shaded panel" style="--primary-color:#ececee">
+				<div class="header">
+					<input type="color" value="#40c0ff" />
+				</div>
+
+				<div class="controls" style="--primary-color:#40c0ff">
+					<form class="form-horizontal">
+
+						<div class="buttons form-group">
+							<label class="control-label">Material</label>
+							<select class="material-selector">
+								<option value="flat">Flat</option>
+								<option value="chalk" selected>Chalk</option>
+								<option value="plastic">Plastic</option>
+								<option value="glass">Glass</option>
+								<option value="metal">Metal</option>
+							</select>
+						</div>
+
+						<div class="buttons form-group">
+							<label class="control-label">Buttons</label>
+							<div class="controls">
+								<button class="btn btn-primary">OK</button>
+								<button class="btn">Cancel</button>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Sliders</label>
+							<div class="controls">
+								<input type="range" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Radio Buttons</label>
+							<div class="controls">
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="radio" checked>
+										Option1
+									</label>
+								</div>
+
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="radio">
+										Option2
+									</label>
+								</div>
+
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="radio">
+										Option3
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Tabs</label>
+							<div class="controls">
+								<ul class="centered nav nav-tabs" role="tablist">
+									<li role="presentation" class="active tab">
+										<a role="tab" data-toggle="tab">Tab1</a>
+									</li>
+									<li role="presentation" class="tab">
+										<a role="tab" data-toggle="tab">Tab2</a>
+									</li>
+									<li role="presentation" class="tab">
+										<a role="tab" data-toggle="tab">Tab3</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Scrollbars</label>
+							<div class="controls horizontal scrollbars">
+								<div class="horizontal scrollbar-container">
+									<div class="content"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Region</label>
+							<div class="controls">
+								<select class="shape-selector">
+									<option value="square">Square</option>
+									<option value="rounded" selected>Rounded</option>
+									<option value="round">Round</option>
+								</select>
+								<select class="texture-selector">
+									<option value="none">None</option>
+									<option value="brick">Brick</option>
+									<option value="brushed">Brushed</option>
+									<option value="crumpled">Crumpled</option>
+									<option value="dots">Dots</option>
+									<option value="flag">Flag</option>
+									<option value="hearts">Hearts</option>
+									<option value="marble">Marble</option>
+									<option value="panels">Panels</option>
+									<option value="rough">Rough</option>
+									<option value="stars" selected>Stars</option>
+									<option value="wood">Wood</option>
+								</select>
+								<br /><br />
+								<div class="rounded shaded material textured stars swatch">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- system scripts -->
+	<script src="jquery/jquery-3.6.0.js"></script>
+	<script src="bootstrap/js/tab.js"></script>
+
+	<!-- application scripts -->
+	<script>
+
+		//
+		// getting methods
+		//
+
+		function getMaterials() {
+			let names = [];
+			let options = $('.material-selector option');
+			for (let i = 0; i < options.length; i++) {
+				names.push($(options[i]).val());
+			}
+			return names;
+		}
+
+		function getTextures() {
+			let names = [];
+			let options = $('.texture-selector option');
+			for (let i = 0; i < options.length; i++) {
+				names.push($(options[i]).val());
+			}
+			return names;
+		}
+
+		function getShapes() {
+			let names = [];
+			let options = $('.shape-selector option');
+			for (let i = 0; i < options.length; i++) {
+				names.push($(options[i]).val());
+			}
+			return names;
+		}
+
+		//
+		// setting methods
+		//
+
+		function setColor(color, element) {
+
+			// set color of element
+			//
+			element.css({
+				'--primary-color': color
+			});
+		}
+
+		function setMaterial(material, element) {
+			let materials = this.getMaterials();
+
+			// remove prev materials
+			//
+			for (let i = 0; i < materials.length; i++) {
+				element.removeClass(materials[i]);
+			}
+
+			// set new material
+			//
+			element.addClass(material);
+		}
+
+		function setTexture(texture, element) {
+			let textures = this.getTextures();
+
+			// remove prev textures
+			//
+			for (let i = 0; i < textures.length; i++) {
+				element.removeClass(textures[i]);
+			}
+
+			// add texture class
+			//
+			if (texture != 'none') {
+				element.addClass(texture);
+				element.addClass('textured');
+			} else {
+				element.removeClass('textured');
+			}
+		}
+
+		function setShape(shape, element) {
+			let shapes = this.getShapes();
+
+			// remove prev shapes
+			//
+			for (let i = 0; i < shapes.length; i++) {
+				element.removeClass(shapes[i]);
+			}
+
+			// add shape class
+			//
+			element.addClass(shape);
+		}
+
+		$(document).ready(() => {
+
+			//
+			// set up event handlers
+			//
+
+			$('input[type="color"').change((event) => {
+				let color = $(event.target).val();
+				let swatch = $(event.target).parent().next();
+
+				// set color of swatch
+				//
+				setColor(color, swatch);
+			});
+
+			$('.material-selector').change((event) => {
+				let material = $(event.target).val();
+				let panel = $(event.target).closest('.panel');
+
+				// set material of panel
+				//
+				setMaterial(material, panel);
+			});
+
+			$('.texture-selector').change((event) => {
+				let texture = $(event.target).val();
+				let swatch = $(event.target).parent().find('.swatch');
+
+				// set texture of swatch
+				//
+				setTexture(texture, swatch);
+			});
+
+			$('.shape-selector').change((event) => {
+				let shape = $(event.target).val();
+				let swatch = $(event.target).parent().find('.swatch');
+
+				// set shape of swatch
+				//
+				setShape(shape, swatch);
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/******************************************************************************\
+|                                                                              |
+|                                  glass.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$highlight-size: 25%;
+$highlight-strength: 100%;
+$transmission-strength: 100%;
+
+$round-specular-width: 50%;
+$round-specular-height: 25%;
+$round-specular-hoffset: 50%;
+$round-specular-voffset: 10%;
+
+$round-highlight-width: 25%;
+$round-highlight-height: 12%;
+$round-highlight-hoffset: 50%;
+$round-highlight-voffset: 10%;
+
+$min-plate-opacity: 70%;
+$plate-opacity: 80%;
+$max-plate-opacity: 90%;
+
+$min-frosted-opacity: 50%;
+$frosted-opacity: 60%;
+$max-frosted-opacity: 70%;
+$frosted-blur: 15px;
+
+//
+// mixins
+//
+
+@mixin glass ($color: white, $direction: bottom, $border-style: outset, $opacity: $min-plate-opacity) {
+	background:
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			faded(white, $highlight-strength) 0%,
+			faded(white, 0%) 10%) no-repeat,
+		
+		// specular
+		//
+		linear-gradient(to bottom,
+			faded(white, $specular-strength) 0%,
+			faded(white, 0%) 20%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to bottom,
+			faded($color, 0%) 50%,
+			lightened($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to bottom,
+			faded(darkened($color, 10%), 100%) 0%,
+			faded($color, $opacity) 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin opaque-glass ($color: white, $direction: bottom, $border-style: outset) {
+	@include glass($color, $direction, $border-style);
+	background-color: darkened($color, 25%);
+}
+
+@mixin round-glass ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// highlight
+		//
+		radial-gradient(ellipse $round-highlight-width $round-highlight-height at $round-highlight-hoffset $round-highlight-voffset,
+			faded(white, $highlight-strength) 0%,
+			faded(white, $highlight-strength) $highlight-size,
+			faded(white, 0%) 100%) no-repeat,
+
+		// specular
+		//
+		radial-gradient(ellipse $round-specular-width $round-specular-height at $round-specular-hoffset $round-specular-voffset,
+			faded(white, $specular-strength) 0%,
+			faded(white, $specular-strength) $specular-size,
+			faded(white, 0%) 100%) no-repeat,
+
+		// transmitted
+		//
+		radial-gradient(ellipse 50% 50% at 50% 85%,
+			faded(lightened($color, 50%), $transmission-strength) 0%,
+			faded($color, $transmission-strength) 50%,
+			faded($color, 0%) 100%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			faded($color, 0%) 33%,
+			faded($color, 50%) 100%) no-repeat,
+
+		// diffuse
+		//
+		darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 20%);
+	}
+}
+
+@mixin round-opaque-glass ($color: white, $direction: bottom, $border-style: outset) {
+	@include round-glass($color, $direction, $border-style);
+	background-color: darkened($color, 25%);
+}
+
+@mixin rounded-glass ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			faded(darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			faded(darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			faded(white, $highlight-strength) 0%,
+			faded(white, 0%) 30%) no-repeat,
+
+		// transmitted
+		//
+		radial-gradient(ellipse 50% 50% at 50% 85%,
+			faded(lightened($color, 50%), $transmission-strength) 0%,
+			faded($color, $transmission-strength) 50%,
+			faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin long-glass($color: white, $direction: bottom, $width: 10px) {
+	@if ($direction == top) or ($direction == bottom) {
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				faded(darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				faded(darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				faded(white, 0%) 0%,
+				faded(white, $highlight-strength) 25%,
+				faded(white, 0%) 50%) no-repeat,
+
+			// transmitted
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 50%,
+				faded(lightened($color, 30%), $transmission-strength) 75%,
+				faded($color, 0%) 100%) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				faded(darkened($color, 30%), 100%) 0%,
+				faded(darkened($color, 10%), 100%) 100%) no-repeat;
+
+	} @else if ($direction == left) or ($direction == right) {
+		background:
+
+			// top shading
+			//
+			linear-gradient(to bottom,
+				faded(darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// bottom shading
+			//
+			linear-gradient(to top,
+				faded(darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				faded(white, 0%) 0%,
+				faded(white, $highlight-strength) 25%,
+				faded(white, 0%) 50%) no-repeat,
+
+			// transmitted
+			//
+			linear-gradient(to $direction,
+				faded($color, 0%) 50%,
+				faded(lightened($color, 30%), $transmission-strength) 75%,
+				faded($color, 0%) 100%) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				faded(darkened($color, 20%), 100%) 0%,
+				faded(darkened($color, 10%), 100%) 100%) no-repeat;
+	}
+}

@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                              radio-buttons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "../colors/colors.scss";
+
+//
+// variables
+//
+
+$color: $very-very-light-grey;
+$border-color: $light-grey;
+$checked-color: var(--primary-color);
+$size: 15px;
+$shadow: 1px 1px 5px rgba(black, 33%);
+
+//
+// styles
+//
+
+:root {
+	--btn-color: #{$color};
+	--radio-button-shadow: #{$shadow};
+}
+
+input[type="radio"] {
+	appearance: none;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: $border-color;
+	background: $color;
+
+	&:checked {
+		background: $checked-color;
+	}
+}

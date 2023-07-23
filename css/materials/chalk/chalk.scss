@@ -1,0 +1,147 @@
+/******************************************************************************\
+|                                                                              |
+|                                  chalk.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 100%;
+$highlight-strength: 50%;
+$highlight-size: 25%;
+$round-highlight-width: 50%;
+$round-highlight-height: 25%;
+$round-highlight-hoffset: 50%;
+$round-highlight-voffset: 10%;
+
+//
+// mixins
+//
+
+@mixin chalk($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			lightened($color, 50%) 0%,
+			$color 5px,
+			$color 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin round-chalk($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// highlight
+		//
+		radial-gradient(ellipse $round-highlight-width $round-highlight-height at $round-highlight-hoffset $round-highlight-voffset,
+			faded(white, $highlight-strength) 0%,
+			faded(white, $highlight-strength) $highlight-size,
+			faded(white, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			faded(lightened($color, 50%), $diffuse-strength) 0%,
+			faded($color, $diffuse-strength) 50%,
+			faded(darkened($color, 10%), $diffuse-strength) 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin rounded-chalk ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			lightened($color, 75%) 0%,
+			$color 50%,
+			darkened($color, 10%) 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin long-chalk ($color: white, $direction: bottom, $width: 10px) {
+	@if ($direction == left) or ($direction == right) {
+		background:
+
+			// top shading
+			//
+			linear-gradient(to bottom,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// bottom shading
+			//
+			linear-gradient(to top,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				darkened($color, 10%) 0,
+				lightened($color, 50%) 25%,
+				$color 50%,
+				darkened($color, 10%) 100%) no-repeat;
+
+	} @else if ($direction == top) or ($direction == bottom) {
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				darkened($color, 10%) 0,
+				lightened($color, 50%) 25%,
+				$color 50%,
+				darkened($color, 10%) 100%) no-repeat;
+	}
+}

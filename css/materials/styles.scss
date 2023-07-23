@@ -1,0 +1,38 @@
+/******************************************************************************\
+|                                                                              |
+|                                   styles.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "chalk/styles.scss";
+@import "flat/styles.scss";
+@import "glass/styles.scss";
+@import "chalk/styles.scss";
+@import "metal/styles.scss";
+@import "plastic/styles.scss";
+
+.textured {
+	position: relative;
+
+	&::before {
+		background-image: var(--texture);
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		mix-blend-mode: multiply;
+		background-size: 256px;
+	}
+}

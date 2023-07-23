@@ -1,0 +1,98 @@
+/******************************************************************************\
+|                                                                              |
+|                            metal-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../controls/scrollbars.scss";
+@import "../flat/flat-scrollbars.scss";
+@import "metal.scss";
+
+//
+// mixins
+//
+
+@mixin metal-scrollbar-handle($color, $hover-color, $radius: scrollbars.$border-radius) {
+	::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include long-metal($color, right, $border-radius);
+		}
+		&:vertical:hover {
+			@include long-metal($hover-color, right, $border-radius);
+		}
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include long-metal($color, bottom, $border-radius);
+		}
+		&:horizontal:hover {
+			@include long-metal($hover-color, bottom, $border-radius);
+		}
+	}
+}
+
+@mixin metal-active-scrollbar-handle($active-color, $radius: scrollbars.$border-radius) {
+	::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+
+		// vertical scrollbars
+		//
+		&:vertical:active {
+			@include long-metal($active-color, right, $border-radius);
+		}
+
+		// horizontal scrollbars
+		//
+		&:horizontal:active {
+			@include long-metal($active-color, bottom, $border-radius);
+		}
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.metal {
+
+		// metal scrollbar handles
+		//
+		@include metal-scrollbar-handle(scrollbars.$thumb-color, scrollbars.$thumb-hover-color);
+
+		// metal active scrollbar handles
+		//
+		@include metal-active-scrollbar-handle(scrollbars.$thumb-active-color);
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.metal {
+
+		// metal scrollbar handles
+		//
+		@include flat-scrollbar-handle(scrollbars.$thumb-color, scrollbars.$thumb-hover-color);
+
+		// metal active scrollbar handles
+		//
+		@include flat-active-scrollbar-handle(scrollbars.$thumb-active-color);
+	}
+}

@@ -1,0 +1,86 @@
+/******************************************************************************\
+|                                                                              |
+|                               glass-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "../flat/flat-btns.scss";
+@import "glass.scss";
+
+//
+// mixins
+//
+
+@mixin glass-btn($color) {
+	@include round-glass($color);
+	box-shadow: var(--btn-shadow);
+
+	&:hover {
+		@include round-glass(darkened($color, 5%));
+	}
+
+	&:active {
+		@include round-glass(darkened($color, 10%));
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.glass {
+
+		//
+		// glass styled buttons
+		//
+
+		.btn, &.btn {
+			@include glass-btn(var(--btn-color));
+		}
+
+		//
+		// glass primary buttons
+		//
+
+		.btn-primary, &.btn-primary {
+			@include glass-btn(var(--primary-color));
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.glass {
+
+		//
+		// glass styled buttons
+		//
+
+		.btn, &.btn {
+			@include flat-btn(var(--btn-color));
+		}
+
+		//
+		// glass primary buttons
+		//
+
+		.btn-primary, &.btn-primary {
+			@include flat-btn(var(--primary-color));
+		}
+	}
+}

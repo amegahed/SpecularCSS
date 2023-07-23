@@ -1,0 +1,102 @@
+/******************************************************************************\
+|                                                                              |
+|                                 colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "common-colors.scss";
+
+//
+// variables
+//
+
+$color: var(--primary-color);
+$border-width: 2px;
+$border-style: solid;
+$border-color: darkened($color, 10%);
+
+//
+// styles
+//
+
+.colored {
+	background-color: $color;
+	border-width: $border-width;
+	border-style: $border-style;
+	border-color: $border-color;
+}
+
+//
+// special colors
+//
+
+$success-color:			saturate($light-green, 20%);
+$caution-color:			saturate(mix($light-gold, $light-orange), 20%);
+$warning-color: 		saturate(mix($light-orange, $light-red), 20%);
+$error-color: 			saturate(lighten($light-red, 10%), 20%);
+
+//
+// text colors
+//
+
+$dark-text-color: $very-very-dark-grey;
+$light-text-color: $very-very-light-grey;
+
+//
+// mixins
+//
+
+@function lightened($color, $amount) {
+	@return color-mix(in srgb, white $amount, $color);
+}
+
+@function darkened($color, $amount) {
+	@return color-mix(in srgb, black $amount, $color);
+}
+
+@function faded($color, $amount) {
+	@return color-mix(in srgb, $color $amount, transparent);
+}
+
+@function blended($color1, $color2, $amount:50%) {
+	@return color-mix(in srgb, $color1 $amount, $color2);
+}
+
+//
+// gradient functions
+//
+
+@function perpendicular($direction) {
+	@if ($direction == left) {
+		@return bottom;
+	} @else if ($direction == right) {
+		@return top;
+	} @else if ($direction == bottom) {
+		@return left;
+	} @else if ($direction == top) {
+		@return right;
+	}
+}
+
+@function reversed($direction) {
+	@if ($direction == left) {
+		@return right;
+	} @else if ($direction == right) {
+		@return left;
+	} @else if ($direction == bottom) {
+		@return top;
+	} @else if ($direction == top) {
+		@return bottom;
+	}
+}

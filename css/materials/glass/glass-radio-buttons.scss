@@ -1,0 +1,73 @@
+/******************************************************************************\
+|                                                                              |
+|                          glass-radio-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@use "../../controls/radio-buttons.scss";
+@import "../flat/flat-radio-buttons.scss";
+@import "glass.scss";
+
+//
+// mixins
+//
+
+@mixin glass-radio-button($color) {
+	@include round-glass($color);
+	box-shadow: var(--radio-button-shadow);
+}
+
+@mixin glass-checked-radio-button($checked-color) {
+	&:active {
+		@include round-glass($checked-color);
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.glass {
+
+		//
+		// glass styled buttons
+		//
+
+		input[type="radio"], &input[type="radio"] {
+			&:checked {
+				@include glass-radio-button(radio-buttons.$checked-color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.glass {
+
+		//
+		// glass styled buttons
+		//
+
+		input[type="radio"], &input[type="radio"] {
+			&:checked {
+				@include flat-radio-button(radio-buttons.$checked-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+/******************************************************************************\
+|                                                                              |
+|                                   flat.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin flat($color: white) {
+	background: $color;
+
+	// borders
+	//
+	border-color: $color;
+}
+
+@mixin long-flat($color: white) {
+	background: $color;
+}

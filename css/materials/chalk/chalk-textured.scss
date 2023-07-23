@@ -1,0 +1,104 @@
+/******************************************************************************\
+|                                                                              |
+|                             chalk-textured.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "../../colors/colors.scss";
+@import "chalk.scss";
+
+//
+// mixins
+//
+
+@mixin round-textured-chalk ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			faded(lightened($color, 50%), $diffuse-strength) 0%,
+			faded($color, $diffuse-strength) 50%,
+			faded(darkened($color, 10%), $diffuse-strength) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
+
+			// highlight
+			//
+			radial-gradient(ellipse $round-highlight-width $round-highlight-height at $round-highlight-hoffset $round-highlight-voffset,
+				faded(white, $highlight-strength) 0%,
+				faded(white, $highlight-strength) $highlight-size,
+				faded(white, 0%) 100%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}
+
+@mixin rounded-textured-chalk ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			faded(lightened($color, 50%), $diffuse-strength) 0%,
+			faded($color, $diffuse-strength) 50%,
+			faded(darkened($color, 10%), $diffuse-strength) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				faded(white, $highlight-strength) 0%,
+				faded(white, 0%) 30%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}

@@ -1,0 +1,58 @@
+/******************************************************************************\
+|                                                                              |
+|                                flat-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+\******************************************************************************/
+
+@import "flat.scss";
+
+//
+// mixins
+//
+
+@mixin flat-btn($color) {
+	@include flat($color);
+	box-shadow: none;
+
+	&:hover {
+		@include flat(darkened($color, 5%));
+	}
+
+	&:active {
+		@include flat(darkened($color, 10%));
+	}
+}
+
+//
+// styles
+//
+
+.flat {
+
+	//
+	// flat styled buttons
+	//
+
+	.btn, &.btn {
+		@include flat-btn(var(--btn-color));
+	}
+
+	//
+	// flat primary buttons
+	//
+
+	.btn-primary, &.btn-primary {
+		@include flat-btn(var(--primary-color));
+	}
+}
