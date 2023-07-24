@@ -7,7 +7,7 @@
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -23,7 +23,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -39,7 +39,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 @keyframes blinking-keyframes {
   0% {
@@ -238,7 +238,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .blinking {
   animation: blinking-keyframes 0.3s ease-in-out;
@@ -343,7 +343,7 @@
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -359,7 +359,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -370,7 +370,7 @@
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -386,7 +386,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -397,7 +397,7 @@
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .navbar-inverse .navbar-nav > li.active > a, .navbar-inverse .navbar-nav > li.active a:hover, .navbar-inverse .navbar-nav > li.active a:focus {
   background-color: darkened(var(--primary-color), 10%);
@@ -470,7 +470,7 @@ input[type=range]::-ms-thumb:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -486,7 +486,7 @@ input[type=range]::-ms-thumb:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .modal {
   pointer-events: none;
@@ -671,7 +671,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .modal.opening {
   -webkit-animation: opening 0.5s;
@@ -779,7 +779,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -790,7 +790,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .badge {
   font-weight: bold;
@@ -834,7 +834,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .buttons button {
   font-size: 16px !important;
@@ -899,7 +899,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .controls .control {
   margin: 10px;
@@ -928,7 +928,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 input {
   outline: none !important;
@@ -1118,7 +1118,7 @@ label.error.valid {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .input {
   text-align: center;
@@ -1179,7 +1179,7 @@ input[type=color i]::-webkit-color-swatch {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .popover {
   max-width: 500px;
@@ -1260,7 +1260,7 @@ input[type=color i]::-webkit-color-swatch {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .scrollbars ::-webkit-scrollbar-track {
   background-color: white;
@@ -1319,7 +1319,7 @@ input[type=color i]::-webkit-color-swatch {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 input[type=range] {
   -webkit-appearance: none;
@@ -1362,7 +1362,7 @@ input[type=range]::-moz-range-thumb {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .nav-tabs {
   border-bottom: 2px solid var(--primary-color);
@@ -1393,7 +1393,7 @@ input[type=range]::-moz-range-thumb {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .tooltip-inner {
   max-width: 400px;
@@ -1792,7 +1792,7 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -1803,7 +1803,7 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 #header #brand {
   display: flex;
@@ -1859,7 +1859,7 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .alert-icon {
   color: var(--primary-color);
@@ -1897,7 +1897,7 @@ i.rotated.reversed {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 html,
 body {
@@ -2128,7 +2128,7 @@ body[device=tablet] .desktop-only {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 #page {
   display: flex;
@@ -2227,7 +2227,7 @@ body[device=tablet] .desktop-only {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .panel {
   padding: 10px;
@@ -2275,7 +2275,7 @@ body[device=tablet] .desktop-only {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .plot {
   display: flex;
@@ -2313,7 +2313,7 @@ body[device=tablet] .desktop-only {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 #page .section {
   padding: 30px 50px;
@@ -2402,7 +2402,7 @@ body[device=phone] #page .section > .row > div + div {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .sidebar {
   overflow: auto;
@@ -2520,7 +2520,7 @@ body[device=phone] #page .section > .row > div + div {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .spinner {
   display: none;
@@ -2576,7 +2576,7 @@ body[device=phone] #page .section > .row > div + div {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 .split-view {
   display: block;
@@ -2669,7 +2669,7 @@ body[device="phone"] {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 table {
   display: table;
@@ -2734,7 +2734,7 @@ table tbody tr:not(.first) td.duplicate {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 #toolbar {
   text-align: center;
@@ -2760,7 +2760,7 @@ table tbody tr:not(.first) td.duplicate {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -2853,7 +2853,7 @@ body[device=phone] h3 {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2023, Megahed Labs LLC, www.megahedlabs.com        |
+|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
 \******************************************************************************/
 #page.welcome .masthead {
   display: flex;
