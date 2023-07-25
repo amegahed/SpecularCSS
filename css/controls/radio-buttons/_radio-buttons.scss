@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                             _radio-buttons.scss                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,68 +15,43 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../colors/colors.scss";
 
 //
-// mixins
+// variables
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+$size: 15px;
+$shadow: 1px 1px 5px rgba(black, 33%);
 
-	&.round {
-		@include round-metal.shading($color);
-	}
+//
+// colors
+//
 
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
+$color: colors.$very-very-light-grey;
+$border-color: colors.$light-grey;
+$checked-color: var(--primary-color);
 
 //
 // styles
 //
 
-@supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
-
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
-	}
+:root {
+	--btn-color: #{$color};
+	--radio-button-shadow: #{$shadow};
 }
 
-//
-// fallback styles
-//
+input[type="radio"] {
+	appearance: none;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: $border-color;
+	background: $color;
 
-@supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
-
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
+	&:checked {
+		background: $checked-color;
 	}
 }

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                              _chalk-tabs.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,37 +15,28 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../materials/chalk/rounded-chalk.scss";
+@use "tabs.scss";
+@use "flat-tabs.scss";
 
 //
 // mixins
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+@mixin shading($color, $hover-color, $active-color) {
+	> a {
+		@include rounded-chalk.shading($color);
+		box-shadow: var(--tab-shadow);
 
-	&.round {
-		@include round-metal.shading($color);
+		&:hover {
+			@include rounded-chalk.shading($hover-color);
+		}
 	}
 
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+	&.active {
+		> a {
+			@include rounded-chalk.shading($active-color);
+		}
 	}
 }
 
@@ -54,14 +45,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
+	//
+	// chalk tabs
+	//
+
+	.chalk .nav-tabs > li,
+	.nav-tabs > li.chalk {
+		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
 
@@ -70,13 +61,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
+	//
+	// chalk tabs
+	//
+
+	.chalk .nav-tabs > li,
+	.nav-tabs > li.chalk {
+		@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }

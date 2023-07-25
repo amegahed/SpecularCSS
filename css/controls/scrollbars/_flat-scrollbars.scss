@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                           _flat-scrollbars.scss                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines various CSS styles used in this application.             |
+|        This defines the dom and svg visual styles for this application.      |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,37 +15,37 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../materials/flat/flat.scss";
+@use "scrollbars.scss";
 
 //
 // mixins
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+@mixin shading($color, $hover-color, $active-color) {
 
-	&.round {
-		@include round-metal.shading($color);
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include flat.filling($color);
+	}
+	&:vertical:hover {
+		@include flat.filling($hover-color);
+	}
+	&:vertical:active {
+		@include flat.filling($active-color);
 	}
 
-	&.rounded {
-		@include rounded-metal.shading($color);
+	// horizontal scrollbars
+	//
+	&:horizontal {
+		@include flat.filling($color);
 	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
+	&:horizontal:hover {
+		@include flat.filling($hover-color);
 	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+	&:horizontal:active {
+		@include flat.filling($active-color);
 	}
 }
 
@@ -53,30 +53,11 @@
 // styles
 //
 
-@supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
+.flat {
+	::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
-	}
-}
-
-//
-// fallback styles
-//
-
-@supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
-
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
+		// flat scrollbar thumbs
+		//
+		@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
 	}
 }

@@ -1,0 +1,124 @@
+/******************************************************************************\
+|                                                                              |
+|                             _round-plastic.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 100%;
+$highlight-size: 25%;
+$highlight-strength: 100%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$reflection-strength: 0%;
+
+$highlight-width: 25%;
+$highlight-height: 12%;
+$highlight-hoffset: 50%;
+$highlight-voffset: 10%;
+
+$specular-width: 50%;
+$specular-height: 25%;
+$specular-hoffset: 50%;
+$specular-voffset: 10%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// highlight
+		//
+		radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
+			colors.faded(white, $highlight-strength) 0%,
+			colors.faded(white, $highlight-strength) $highlight-size,
+			colors.faded(white, 0%) 100%) no-repeat,
+
+		// specular
+		//
+		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
+			colors.faded(white, $specular-strength) 0%,
+			colors.faded(white, $specular-strength) $specular-size,
+			colors.faded(white, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			colors.faded(colors.lightened($color, 10%), $diffuse-strength) 0%,
+			colors.faded($color, $diffuse-strength) 50%,
+			colors.faded(colors.darkened($color, 10%), $diffuse-strength) 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}
+
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// diffuse
+		//
+		linear-gradient(to $direction,
+			colors.faded(colors.lightened($color, 10%), $diffuse-strength) 0%,
+			colors.faded($color, $diffuse-strength) 50%,
+			colors.faded(colors.darkened($color, 10%), $diffuse-strength) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
+
+			// highlight
+			//
+			radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
+				colors.faded(white, $highlight-strength) 0%,
+				colors.faded(white, $highlight-strength) $highlight-size,
+				colors.faded(white, 0%) 100%) no-repeat,
+
+			// specular
+			//
+			radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
+				colors.faded(white, $specular-strength) 0%,
+				colors.faded(white, $specular-strength) $specular-size,
+				colors.faded(white, 0%) 100%) no-repeat,
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}

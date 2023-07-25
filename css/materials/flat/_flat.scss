@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                 _flat.scss                                   |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -16,36 +16,44 @@
 \******************************************************************************/
 
 @use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
 
 //
 // mixins
 //
 
+@mixin coloring($color: white) {
+	background: $color;
+
+	// borders
+	//
+	border-color: $color;
+}
+
+@mixin filling($color: white) {
+	background: $color;
+}
+
 @mixin shading($color) {
-	@include flat-metal.shading($color);
+	@include coloring($color);
 
 	&.round {
-		@include round-metal.shading($color);
+		@include coloring($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.shading($color);
+		@include coloring($color);
 	}
 }
 
 @mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
+	@include coloring($color);
 
 	&.round {
-		@include round-metal.multilayer-shading($color);
+		@include coloring($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+		@include coloring($color);
 	}
 }
 
@@ -54,12 +62,12 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.flat {
 		.shaded, &.shaded {
 			@include shading(colored.$color);
 
 			&.textured {
-				@include multilayer-shading(colored.$color);
+				@include shading(colored.$color);
 			}
 		}
 	}
@@ -70,12 +78,12 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.flat {
 		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
+			@include shading(colored.$color);
 
 			&.textured {
-				@include flat.multilayer-shading(colored.$color);
+				@include shading(colored.$color);
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                 _chalk.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -17,35 +17,35 @@
 
 @use "../../colors/colored.scss";
 @use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "flat-chalk.scss";
+@use "round-chalk.scss";
+@use "rounded-chalk.scss";
 
 //
 // mixins
 //
 
 @mixin shading($color) {
-	@include flat-metal.shading($color);
+	@include flat-chalk.shading($color);
 
 	&.round {
-		@include round-metal.shading($color);
+		@include round-chalk.shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.shading($color);
+		@include rounded-chalk.shading($color);
 	}
 }
 
 @mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
+	@include flat-chalk.multilayer-shading($color);
 
 	&.round {
-		@include round-metal.multilayer-shading($color);
+		@include round-chalk.multilayer-shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+		@include rounded-chalk.multilayer-shading($color);
 	}
 }
 
@@ -54,7 +54,7 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.chalk {
 		.shaded, &.shaded {
 			@include shading(colored.$color);
 
@@ -70,7 +70,7 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.chalk {
 		.shaded, &.shaded {
 			@include flat.shading(colored.$color);
 

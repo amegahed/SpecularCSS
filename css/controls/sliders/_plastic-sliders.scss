@@ -1,0 +1,166 @@
+/******************************************************************************\
+|                                                                              |
+|                             _plastic-sliders.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../materials/flat/flat.scss";
+@use "../../materials/plastic/round-plastic.scss";
+@use "sliders.scss";
+@use "flat-sliders.scss";
+
+//
+// mixins
+//
+
+@mixin thumb-shading($color, $hover-color) {
+	-webkit-appearance: none;
+	@include sliders.thumb-shadow;
+
+	//
+	// Webkit slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		@include round-plastic.shading($color);
+
+		&:hover {
+			@include round-plastic.shading($hover-color);
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		@include round-plastic.shading($color);
+
+		&:hover {
+			@include round-plastic.shading($hover-color);
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		@include round-plastic.shading($color);
+
+		&:hover {
+			@include round-plastic.shading($hover-color);
+		}
+	}
+}
+
+//
+// plastic active slider thumbs
+//
+
+@mixin active-thumb-shading($active-color) {
+	-webkit-appearance: none;
+
+	//
+	// Webkit active slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:active {
+			@include round-plastic.shading($active-color);
+		}
+	}
+
+	//
+	// Firefox active slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:active {
+			@include round-plastic.shading($active-color);
+		}
+	}
+
+	//
+	// IE active slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:active {
+			@include round-plastic.shading($active-color);
+		}
+	}
+}
+
+//
+// plastic slider tracks
+//
+
+@mixin track-shading($color) {
+	-webkit-appearance: none;
+	box-shadow: none;
+
+	&::-webkit-slider-runnable-track {
+		@include flat.shading($color);
+	}
+
+	&::-moz-range-track {
+		@include flat.shading($color);
+	}
+}
+
+//
+// plastic sliders
+//
+
+@mixin shading($thumb-color, $thumb-hover-color, $thumb-active-color) {
+
+	@include thumb-shading(sliders.$thumb-color, sliders.$thumb-hover-color);
+
+	//
+	// active slider thumbs
+	//
+
+	@include active-thumb-shading(sliders.$thumb-active-color);
+
+	//
+	// slider tracks
+	//
+
+	@include track-shading(sliders.$track-color);
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.plastic {
+		input[type="range"] {
+			@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.plastic {
+		input[type="range"] {
+			@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+}

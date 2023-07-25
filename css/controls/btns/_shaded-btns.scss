@@ -1,0 +1,95 @@
+/******************************************************************************\
+|                                                                              |
+|                             _shaded-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "btns.scss";
+@use "flat-btns.scss";
+@use "chalk-btns.scss";
+@use "plastic-btns.scss";
+@use "glass-btns.scss";
+@use "metal-btns.scss";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+
+	.flat {
+		&.btn {
+			@include flat-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include flat-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+
+	.chalk {
+		&.btn {
+			@include chalk-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include chalk-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+
+	.plastic {
+		&.btn {
+			@include plastic-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include plastic-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+
+	.glass {
+		&.btn {
+			@include glass-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include glass-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+
+	.metal {
+		&.btn {
+			@include metal-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include metal-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+
+	//
+	// shaded buttons
+	//
+
+	.flat, .chalk, .plastic, .glass, .metal {
+		&.btn {
+			@include flat-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+		&.btn-primary {
+			@include flat-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
+		}
+	}
+}

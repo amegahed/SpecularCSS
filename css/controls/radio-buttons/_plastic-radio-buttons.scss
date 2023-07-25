@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                        _plastic-radio-buttons.scss                           |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,37 +15,19 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../materials/plastic/round-plastic.scss";
+@use "radio-buttons.scss";
+@use "flat-radio-buttons.scss";
 
 //
 // mixins
 //
 
 @mixin shading($color) {
-	@include flat-metal.shading($color);
+	box-shadow: var(--radio-button-shadow);
 
-	&.round {
-		@include round-metal.shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+	&:checked {
+		@include round-plastic.shading($color);
 	}
 }
 
@@ -54,13 +36,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
+	.plastic {
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
+		//
+		// plastic styled buttons
+		//
+
+		input[type="radio"], &input[type="radio"] {
+			@include shading(radio-buttons.$checked-color);
 		}
 	}
 }
@@ -70,13 +53,14 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
+	.plastic {
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
+		//
+		// plastic styled buttons
+		//
+
+		input[type="radio"], &input[type="radio"] {
+			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 		}
 	}
 }

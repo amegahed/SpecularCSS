@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                            _shaded-sliders.scss                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,52 +15,46 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	@include flat-metal.shading($color);
-
-	&.round {
-		@include round-metal.shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
+@use "sliders.scss";
+@use "flat-sliders.scss";
+@use "chalk-sliders.scss";
+@use "plastic-sliders.scss";
+@use "glass-sliders.scss";
+@use "metal-sliders.scss";
 
 //
 // styles
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
+	input[type="range"] {
+		&.flat {
+			@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+
+	input[type="range"] {
+		&.chalk {
+			@include chalk-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+
+	input[type="range"] {
+		&.plastic {
+			@include plastic-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+
+	input[type="range"] {
+		&.glass {
+			@include glass-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		}
+	}
+
+	input[type="range"] {
+		&.metal {
+			@include metal-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
 		}
 	}
 }
@@ -70,13 +64,14 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
+	//
+	// flat sliders
+	//
+
+	input[type="range"] {
+		&.flat, &.chalk, &.plastic, &.glass, &.metal {
+			@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
 		}
 	}
 }

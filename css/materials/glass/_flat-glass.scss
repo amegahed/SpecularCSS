@@ -1,0 +1,113 @@
+/******************************************************************************\
+|                                                                              |
+|                               _flat-glass.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$highlight-size: 25%;
+$highlight-strength: 100%;
+$transmission-strength: 100%;
+$min-plate-opacity: 50%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $border-style: outset, $opacity: $min-plate-opacity) {
+	background:
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			colors.faded(white, $highlight-strength) 0%,
+			colors.faded(white, 0%) 10%) no-repeat,
+		
+		// specular
+		//
+		linear-gradient(to bottom,
+			colors.faded(white, $specular-strength) 0%,
+			colors.faded(white, 0%) 20%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to bottom,
+			colors.faded($color, 0%) 50%,
+			colors.lightened($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 10%), 100%) 0%,
+			colors.faded($color, $opacity) 100%) no-repeat;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}
+
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $opacity: $min-plate-opacity) {
+	background:
+
+		// reflected
+		//
+		linear-gradient(to bottom,
+			colors.faded($color, 0%) 50%,
+			colors.lightened($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 10%), 100%) 0%,
+			colors.faded($color, $opacity) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(white, $highlight-strength) 0%,
+				colors.faded(white, 0%) 10%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to bottom,
+				colors.faded(white, $specular-strength) 0%,
+				colors.faded(white, 0%) 20%) no-repeat;
+	}
+}

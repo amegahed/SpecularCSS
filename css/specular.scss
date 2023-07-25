@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                specular.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,68 +15,15 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "colors";
+@use "controls";
+@use "materials";
+@use "textures";
 
 //
-// mixins
+// default color
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
-
-	&.round {
-		@include round-metal.shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
-
-//
-// styles
-//
-
-@supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
-
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
-	}
-}
-
-//
-// fallback styles
-//
-
-@supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
-
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
-	}
+body {
+	--primary-color: grey;
 }

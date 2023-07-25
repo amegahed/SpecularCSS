@@ -1,0 +1,140 @@
+/******************************************************************************\
+|                                                                              |
+|                             _rounded-glass.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$highlight-size: 25%;
+$highlight-strength: 100%;
+$transmission-strength: 100%;
+
+$round-specular-width: 50%;
+$round-specular-height: 25%;
+$round-specular-hoffset: 50%;
+$round-specular-voffset: 10%;
+
+$round-highlight-width: 25%;
+$round-highlight-height: 12%;
+$round-highlight-hoffset: 50%;
+$round-highlight-voffset: 10%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $border-style: outset, $border-radius: 10px) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			colors.faded(white, $highlight-strength) 0%,
+			colors.faded(white, 0%) 30%) no-repeat,
+
+		// transmitted
+		//
+		radial-gradient(ellipse 50% 50% at 50% 85%,
+			colors.faded(colors.lightened($color, 50%), $transmission-strength) 0%,
+			colors.faded($color, $transmission-strength) 50%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}
+
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $border-radius: 10px) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// transmitted
+		//
+		radial-gradient(ellipse 50% 50% at 50% 85%,
+			colors.faded(colors.lightened($color, 50%), $transmission-strength) 0%,
+			colors.faded($color, $transmission-strength) 50%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(white, $highlight-strength) 0%,
+				colors.faded(white, 0%) 30%) no-repeat,
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}

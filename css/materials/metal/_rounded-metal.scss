@@ -1,0 +1,141 @@
+/******************************************************************************\
+|                                                                              |
+|                            _rounded-metal.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$highlight-strength: 100%;
+$specular-size: 75%;
+$specular-strength: 100%;
+$reflection-strength: 100%;
+$specular-width: 100%;
+$specular-height: 50%;
+$specular-hoffset: 50%;
+$specular-voffset: 10%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $border-style: outset, $background-color: white) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to $direction,
+			colors.faded(colors.lightened($color, 60%), $specular-strength) 0%,
+			colors.faded(colors.lightened($color, 30%), $specular-strength) 25%,
+			colors.faded($color, 0%) 50%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			colors.faded($color, 0%) 66%,
+			colors.faded(colors.lightened($color, 10%), $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
+
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// specular
+		//
+		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
+			colors.faded($color, $specular-strength) 0%,
+			colors.faded($color, 0%) $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			colors.faded($color, 0%) 0%,
+			colors.faded($color, calc($reflection-strength / 2)) 66%,
+			colors.faded($color, $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 50%);
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		// mix-blend-mode: overlay;
+
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				colors.faded(black, 15%) 0%,
+				transparent 25%) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				colors.faded(black, 15%) 0%,
+				transparent 25%) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.lightened($color, 90%), $highlight-strength) 0%,
+				colors.faded(colors.lightened($color, 30%), $highlight-strength) 25%,
+				colors.faded($color, 0%) 50%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}

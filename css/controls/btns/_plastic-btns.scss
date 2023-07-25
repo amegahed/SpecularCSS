@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                             _plastic-btns.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,37 +15,24 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../materials/plastic/round-plastic.scss";
+@use "btns.scss";
+@use "flat-btns.scss";
 
 //
 // mixins
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+@mixin shading($color, $hover-color, $active-color) {
+	@include round-plastic.shading($color);
+	box-shadow: var(--btn-shadow);
 
-	&.round {
-		@include round-metal.shading($color);
+	&:hover {
+		@include round-plastic.shading($hover-color);
 	}
 
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+	&:active {
+		@include round-plastic.shading($active-color);
 	}
 }
 
@@ -54,13 +41,22 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
+	.plastic {
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
+		//
+		// plastic styled buttons
+		//
+
+		.btn, &.btn {
+			@include shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+
+		//
+		// plastic primary buttons
+		//
+
+		.btn-primary, &.btn-primary {
+			@include shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 		}
 	}
 }
@@ -70,13 +66,22 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
+	.plastic {
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
+		//
+		// plastic styled buttons
+		//
+
+		.btn, &.btn {
+			@include flat-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
+		}
+
+		//
+		// plastic primary buttons
+		//
+
+		.btn-primary, &.btn-primary {
+			@include flat-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 		}
 	}
 }

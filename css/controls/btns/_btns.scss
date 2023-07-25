@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                  _btns.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,68 +15,35 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../colors/colors.scss";
 
 //
-// mixins
+// variables
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+$shadow: 2px 2px 5px colors.faded(black, 15%);
 
-	&.round {
-		@include round-metal.shading($color);
-	}
+//
+// colors
+//
 
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
+$color: colors.$very-very-light-grey;
+$hover-color: colors.darkened($color, 10%);
+$active-color: colors.darkened($color, 20%);
+$primary-color: var(--primary-color);
+$primary-hover-color: colors.darkened($primary-color, 10%);
+$primary-active-color: colors.darkened($primary-color, 20%);
 
 //
 // styles
 //
 
-@supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
-
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
-	}
+:root {
+	--btn-color: #{var(--btn-color)};
+	--btn-shadow: #{$shadow};
 }
 
-//
-// fallback styles
-//
-
-@supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
-
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
-	}
+.btn-primary {
+	color: white;
+	background-color: var(--primary-color);
 }

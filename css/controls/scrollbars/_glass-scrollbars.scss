@@ -1,0 +1,81 @@
+/******************************************************************************\
+|                                                                              |
+|                           _glass-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../materials/glass/long-round-glass.scss";
+@use "scrollbars.scss";
+@use "flat-scrollbars.scss";
+
+//
+// mixins
+//
+
+@mixin shading($color, $hover-color, $active-color, $border-radius: scrollbars.$border-radius) {
+
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include long-round-glass.shading($color, right, $border-radius);
+	}
+	&:vertical:hover {
+		@include long-round-glass.shading($hover-color, right, $border-radius);
+	}
+	&:vertical:active {
+		@include long-round-glass.shading($active-color, right, $border-radius);
+	}
+
+	// horizontal scrollbars
+	//
+	&:horizontal {
+		@include long-round-glass.shading($color, bottom, $border-radius);
+	}
+	&:horizontal:hover {
+		@include long-round-glass.shading($hover-color, bottom, $border-radius);
+	}
+	&:horizontal:active {
+		@include long-round-glass.shading($active-color, bottom, $border-radius);
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.glass {
+		::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+
+			// glass scrollbar thumbs
+			//
+			@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.glass {
+		::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+
+			// flat scrollbar thumbs
+			//
+			@include flat-scrollbars.shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
+		}
+	}
+}

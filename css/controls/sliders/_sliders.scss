@@ -1,0 +1,335 @@
+/******************************************************************************\
+|                                                                              |
+|                                _sliders.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$thumb-width: 15px;
+$thumb-height: 15px;
+$thumb-border-width: 1px;
+$thumb-shadow: 1px 1px 5px rgba(black, 33%);
+
+$narrow-thumb-width: 10px;
+$wide-thumb-width: 30px;
+$round-thumb-border-radius: 8px;
+$rounded-thumb-border-radius: 5px;
+
+$track-width: 5px;
+$track-border-width: 0;
+$track-shadow: none;
+
+//
+// colors
+//
+
+$thumb-color: var(--primary-color);
+$thumb-hover-color: colors.darkened($thumb-color, 10%);
+$thumb-active-color: colors.darkened($thumb-color, 20%);
+$track-color: colors.$very-very-light-grey;
+
+//
+// styles
+//
+
+.input {
+	display: flex;
+
+	//
+	// grouped inputs
+	//
+
+	.input-group {
+		display: flex;
+	}
+
+	//
+	// text / number inputs
+	//
+
+	input:not([type="range"]) {
+		text-align: center;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	//
+	// selectable inputs
+	//
+
+	&.selectable {
+		input {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+//
+// range inputs (sliders)
+//
+
+input[type="range"] {
+
+	// removes default webkit styles
+	//
+	-webkit-appearance: none;
+	background: none;
+
+	//
+	// remove focus outline
+	//
+
+	&:focus {
+		outline: none;
+	}
+
+	//
+	// slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: $thumb-width;
+		height: $thumb-height;
+		margin-top: -5px;
+		border-radius: 50%;
+		border-width: $thumb-border-width;
+		border-style: solid;
+	}
+
+	&::-moz-range-thumb {
+		-webkit-appearance: none;
+		width: $thumb-width;
+		height: $thumb-height;
+		margin-top: -5px;
+		border-radius: 50%;
+		border-width: $thumb-border-width;
+		border-style: solid;
+	}
+
+	&::-ms-thumb {
+		-webkit-appearance: none;
+		width: $thumb-width - 1px;
+		height: $thumb-height - 1px;
+		margin-top: -5px;
+		border-radius: 50%;
+		border-width: $thumb-border-width;
+		border-style: solid;
+	}
+
+	//
+	// slider tracks
+	//
+
+	&::-webkit-slider-runnable-track {
+		height: $track-width;
+		border-radius: $track-width;
+		border-width: $track-border-width;
+		border-style: solid;
+		border-color: transparent;
+	}
+
+	&::-moz-range-track {
+		height: $track-width;
+		border-radius: $track-width;
+		border-width: $track-border-width;
+		border-style: solid;
+		border-color: transparent;
+	}
+
+	&::-ms-track {
+		height: $track-width;
+		border-radius: $track-width;
+		border-width: $track-border-width;
+
+		// use ms-fill-lower and ms-fill-upper instead
+		//
+		background: transparent;
+		border-color: transparent;
+
+		// remove default tick marks
+		//
+		color: transparent;
+	}
+
+	&::-ms-fill-lower {
+	    background: grey;
+	    border-radius: 10px;
+	}
+
+	&::-ms-fill-upper {
+	    background: grey;
+	    border-radius: 10px;
+	}
+}
+
+//
+// range input corners
+//
+
+.round-sliders,
+.round.auto-corner-sliders {
+
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			border-radius: $round-thumb-border-radius;
+		}
+		&::-moz-range-thumb {
+			border-radius: $round-thumb-border-radius;
+		}
+		&::-ms-thumb {
+			border-radius: $round-thumb-border-radius;
+		}
+	}
+
+	&.selectable {
+		input {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+.rounded-sliders,
+.rounded.auto-corner-sliders {
+
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			border-radius: $rounded-thumb-border-radius;
+		}
+		&::-moz-range-thumb {
+			border-radius: $rounded-thumb-border-radius;
+		}
+		&::-ms-thumb {
+			border-radius: $rounded-thumb-border-radius;
+		}
+	}
+
+	&.selectable {
+		input {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+.square-sliders,
+.square.auto-corner-sliders {
+
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			border-radius: 0;
+		}
+		&::-moz-range-thumb {
+			border-radius: 0;
+		}
+		&::-ms-thumb {
+			border-radius: 0;
+		}
+	}
+}
+
+//
+// range input handle sizes
+//
+
+.narrow-slider-handles {
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			width: $narrow-thumb-width;
+			height: $thumb-height;
+		}
+		&::-moz-range-thumb {
+			width: $narrow-thumb-width;
+			height: $thumb-height;
+		}
+		&::-ms-thumb {
+			width: $narrow-thumb-width;
+			height: $thumb-height;
+		}
+	}
+}
+
+.medium-slider-handles {
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			width: $thumb-width;
+			height: $thumb-height;
+		}
+		&::-moz-range-thumb {
+			width: $thumb-width;
+			height: $thumb-height;
+		}
+		&::-ms-thumb {
+			width: $thumb-width;
+			height: $thumb-height;
+		}
+	}
+}
+
+.wide-slider-handles {
+	input[type="range"] {
+		&::-webkit-slider-thumb {
+			width: $wide-thumb-width;
+			height: $thumb-height;
+		}
+		&::-moz-range-thumb {
+			width: $wide-thumb-width;
+			height: $thumb-height;
+		}
+		&::-ms-thumb {
+			width: $wide-thumb-width;
+			height: $thumb-height;
+		}
+	}
+}
+
+//
+// slider thumb shadows
+//
+
+@mixin thumb-shadow() {
+
+	// slider thumb shadows
+	//
+	&::-webkit-slider-thumb {
+		box-shadow: $thumb-shadow;
+	}
+	&::-moz-range-thumb {
+		box-shadow: $thumb-shadow;
+	}
+	&::-ms-thumb {
+		box-shadow: $thumb-shadow;
+	}
+}
+
+@mixin track-shadow() {
+
+	// slider track shadows
+	//
+	&::-webkit-slider-runnable-track {
+		box-shadow: $track-shadow;
+	}
+	&::-moz-range-track {
+		box-shadow: $track-shadow;
+	}
+}

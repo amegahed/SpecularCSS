@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                               _flat-btns.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,37 +15,23 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "../../materials/flat/flat.scss";
+@use "btns.scss";
 
 //
 // mixins
 //
 
-@mixin shading($color) {
-	@include flat-metal.shading($color);
+@mixin shading($color, $hover-color, $active-color) {
+	@include flat.shading($color);
+	box-shadow: none;
 
-	&.round {
-		@include round-metal.shading($color);
+	&:hover {
+		@include flat.shading($hover-color);
 	}
 
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+	&:active {
+		@include flat.shading($active-color);
 	}
 }
 
@@ -53,30 +39,21 @@
 // styles
 //
 
-@supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
+.flat {
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
-		}
+	//
+	// flat styled buttons
+	//
+
+	.btn, &.btn {
+		@include shading(btns.$color, btns.$hover-color, btns.$active-color);
 	}
-}
 
-//
-// fallback styles
-//
+	//
+	// flat primary buttons
+	//
 
-@supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
-
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
-		}
+	.btn-primary, &.btn-primary {
+		@include shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 	}
 }

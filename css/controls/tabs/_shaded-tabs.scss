@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                              _shaded-tabs.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,52 +15,46 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	@include flat-metal.shading($color);
-
-	&.round {
-		@include round-metal.shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
+@use "tabs.scss";
+@use "flat-tabs.scss";
+@use "chalk-tabs.scss";
+@use "plastic-tabs.scss";
+@use "glass-tabs.scss";
+@use "metal-tabs.scss";
 
 //
 // styles
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
+	.nav-tabs > li {
+		&.flat {
+			@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		}
+	}
+
+	.nav-tabs > li {
+		&.chalk {
+			@include chalk-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		}
+	}
+
+	.nav-tabs > li {
+		&.plastic {
+			@include plastic-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		}
+	}
+
+	.nav-tabs > li {
+		&.glass {
+			@include glass-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		}
+	}
+
+	.nav-tabs > li {
+		&.metal {
+			@include metal-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 		}
 	}
 }
@@ -70,13 +64,14 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
+	//
+	// flat tabs
+	//
+
+	.nav-tabs > li {
+		&.flat, &.chalk, &.plastic, &.glass, &.metal {
+			@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 		}
 	}
 }

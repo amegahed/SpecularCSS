@@ -1,0 +1,106 @@
+/******************************************************************************\
+|                                                                              |
+|                            _long-round-glass.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$diffuse-strength: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$highlight-size: 25%;
+$highlight-strength: 100%;
+$transmission-strength: 100%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $width: 10px) {
+	@if ($direction == top) or ($direction == bottom) {
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(white, 0%) 0%,
+				colors.faded(white, $highlight-strength) 25%,
+				colors.faded(white, 0%) 50%) no-repeat,
+
+			// transmitted
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 50%,
+				colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+				colors.faded($color, 0%) 100%) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.darkened($color, 30%), 100%) 0%,
+				colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
+
+	} @else if ($direction == left) or ($direction == right) {
+		background:
+
+			// top shading
+			//
+			linear-gradient(to bottom,
+				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// bottom shading
+			//
+			linear-gradient(to top,
+				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(white, 0%) 0%,
+				colors.faded(white, $highlight-strength) 25%,
+				colors.faded(white, 0%) 50%) no-repeat,
+
+			// transmitted
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 50%,
+				colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+				colors.faded($color, 0%) 100%) no-repeat,
+
+			// diffuse
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.darkened($color, 20%), 100%) 0%,
+				colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
+	}
+}

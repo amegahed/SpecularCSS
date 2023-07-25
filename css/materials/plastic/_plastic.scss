@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                _plastic.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -17,35 +17,35 @@
 
 @use "../../colors/colored.scss";
 @use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
+@use "flat-plastic.scss";
+@use "round-plastic.scss";
+@use "rounded-plastic.scss";
 
 //
 // mixins
 //
 
 @mixin shading($color) {
-	@include flat-metal.shading($color);
+	@include flat-plastic.shading($color);
 
 	&.round {
-		@include round-metal.shading($color);
+		@include round-plastic.shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.shading($color);
+		@include rounded-plastic.shading($color);
 	}
 }
 
 @mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
+	@include flat-plastic.multilayer-shading($color);
 
 	&.round {
-		@include round-metal.multilayer-shading($color);
+		@include round-plastic.multilayer-shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+		@include rounded-plastic.multilayer-shading($color);
 	}
 }
 
@@ -54,7 +54,7 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.plastic {
 		.shaded, &.shaded {
 			@include shading(colored.$color);
 
@@ -70,7 +70,7 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.plastic {
 		.shaded, &.shaded {
 			@include flat.shading(colored.$color);
 

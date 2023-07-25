@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                         _shaded-radio-buttons.scss                           |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,52 +15,46 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	@include flat-metal.shading($color);
-
-	&.round {
-		@include round-metal.shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.shading($color);
-	}
-}
-
-@mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
-
-	&.round {
-		@include round-metal.multilayer-shading($color);
-	}
-
-	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
-	}
-}
+@use "radio-buttons.scss";
+@use "flat-radio-buttons.scss";
+@use "chalk-radio-buttons.scss";
+@use "plastic-radio-buttons.scss";
+@use "glass-radio-buttons.scss";
+@use "metal-radio-buttons.scss";
 
 //
 // styles
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include shading(colored.$color);
 
-			&.textured {
-				@include multilayer-shading(colored.$color);
-			}
+	input[type="radio"] {
+		&.flat {
+			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
+		}
+	}
+
+	input[type="radio"] {
+		&.chalk {
+			@include chalk-radio-buttons.shading(radio-buttons.$checked-color);
+		}
+	}
+
+	input[type="radio"] {
+		&.plastic {
+			@include plastic-radio-buttons.shading(radio-buttons.$checked-color);
+		}
+	}
+
+	input[type="radio"] {
+		&.glass {
+			@include glass-radio-buttons.shading(radio-buttons.$checked-color);
+		}
+	}
+
+	input[type="radio"] {
+		&.metal {
+			@include metal-radio-buttons.shading(radio-buttons.$checked-color);
 		}
 	}
 }
@@ -70,13 +64,10 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
-		.shaded, &.shaded {
-			@include flat.shading(colored.$color);
 
-			&.textured {
-				@include flat.multilayer-shading(colored.$color);
-			}
+	input[type="radio"] {
+		&.flat, &.chalk, &.plastic, &.glass, &.metal {
+			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 		}
 	}
 }

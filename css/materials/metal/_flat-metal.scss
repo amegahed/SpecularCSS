@@ -1,0 +1,118 @@
+/******************************************************************************\
+|                                                                              |
+|                               _flat-metal.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$highlight-strength: 100%;
+$specular-size: 75%;
+$specular-strength: 100%;
+$reflection-strength: 100%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// highlight
+		//
+		linear-gradient(to $direction,
+			colors.faded(colors.lightened($color, 30%), $highlight-strength) 0%,
+			colors.faded($color, 0%) 10%) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.lightened($color, 30%), $specular-strength) 0%,
+			colors.faded($color, 0%) 20%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			colors.faded($color, 0%) 0%,
+			colors.faded($color, calc($reflection-strength / 2)) 66%,
+			colors.faded($color, $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 10%);
+	}
+}
+
+@mixin multilayer-shading($color: white, $direction: bottom, $border-style: outset) {
+	background:
+
+		// reflected
+		//
+		linear-gradient(to $direction,
+			colors.faded($color, 0%) 0%,
+			colors.faded($color, calc($reflection-strength / 2)) 66%,
+			colors.faded($color, $reflection-strength)) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 50%);
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		// mix-blend-mode: overlay;
+
+		background:
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.lightened($color, 30%), $highlight-strength) 0%,
+				colors.faded($color, 0%) 10%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to bottom,
+				colors.faded(colors.lightened($color, 30%), $specular-strength) 0%,
+				colors.faded($color, 0%) 20%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: darkened($color, 10%);
+	}
+}

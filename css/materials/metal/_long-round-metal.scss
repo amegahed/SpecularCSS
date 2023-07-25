@@ -1,0 +1,113 @@
+/******************************************************************************\
+|                                                                              |
+|                           _long-round-metal.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors.scss";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$highlight-strength: 100%;
+$specular-size: 75%;
+$specular-strength: 100%;
+$reflection-strength: 100%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $direction: bottom, $width: 10px) {
+	@if ($direction == top) or ($direction == bottom) {
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				colors.darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				colors.darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.lightened($color, 20%), 0%) 0%,
+				colors.faded(colors.lightened($color, 40%), $highlight-strength) 25%,
+				colors.faded(colors.lightened($color, 20%), 0%) 50%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 0%,
+				colors.faded($color, $specular-strength) 25%,
+				colors.faded($color, 0%) 50%) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 50%,
+				colors.lightened($color, 10%) 100%) no-repeat,
+
+			// diffuse
+			//
+			colors.darkened($color, 30%);
+
+	} @else if ($direction == left) or ($direction == right) {
+		background:
+
+			// top shading
+			//
+			linear-gradient(to bottom,
+				colors.darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// bottom shading
+			//
+			linear-gradient(to top,
+				colors.darkened($color, 20%) 0%,
+				transparent calc($width / 2)) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to $direction,
+				colors.faded(colors.lightened($color, 20%), 0%) 0%,
+				colors.faded(colors.lightened($color, 40%), $highlight-strength) 25%,
+				colors.faded(colors.lightened($color, 20%), 0%) 50%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 0%,
+				colors.faded($color, $specular-strength) 25%,
+				colors.faded($color, 0%) 50%) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to $direction,
+				colors.faded($color, 0%) 50%,
+				colors.lightened($color, 10%) 100%) no-repeat,
+
+			// diffuse
+			//
+			colors.darkened($color, 30%);
+	}
+}
