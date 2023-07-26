@@ -23,11 +23,15 @@ SpecularCSS is created using the SASS css preprocessor.
 
 Please visit the [documentation](https://specularcss.sharedigm.com/#docs) on the [SpecularCSS](https://specularcss.sharedigm.com) website.
 
-## Demo
+## Examples
 
-To view an interactive overview of SpecularCSS's capabilities, simply open up the file [demo/index.html](demo/index.html) in your web browser.
+To view some of SpecularCSS's capabilities, you can view the following included demos:
 
-![Screen Shot](images/demo.png)
+[<img src="images/demo.png">](demo/index.html)
+Example1
+
+[<img src="images/demo2.png">](demo2/index.html)
+Example2
 
 <!-- LICENSE -->
 ## License

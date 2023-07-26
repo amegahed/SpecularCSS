@@ -1,0 +1,76 @@
+/******************************************************************************\
+|                                                                              |
+|                                  styles.css                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the visual styling rules used in this application.       |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+.figure {
+	width: 75%;
+	margin: auto;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.barbie.logo {
+	height: 150px;
+	position: absolute;
+	transform: rotate(-30deg);
+	border-radius: 50%;
+	border: 5px solid #f040a0 !important;
+	padding: 10px;
+}
+
+.logo img {
+	height: 75%;
+	border: none;
+}
+
+.portrait {
+	margin: 0 !important;
+	border: none !important;
+	z-index: 1;
+}
+
+.tab-pane {
+	height: 150px;
+	overflow: auto;
+}
+
+input[type="text"] {
+	border-radius: 20px !important;
+	padding: 0 10px;
+}
+
+.friends-pane {
+	text-align: center;
+}
+
+.friend {
+	display: inline-block;
+	text-align: center;
+}
+
+.friend .region {
+	display: flex;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.friend img {
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	margin: auto;
+	border: none;
+}
