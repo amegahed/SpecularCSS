@@ -67,7 +67,7 @@
 	//
 
 	.metal .nav-tabs > li,
-	.nav-tabs > li.metal {
+	.nav-tabs > li.metal.metal {
 		@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }

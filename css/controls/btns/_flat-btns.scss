@@ -45,7 +45,7 @@
 	// flat styled buttons
 	//
 
-	.btn, &.btn {
+	.btn, &.btn.btn {
 		@include shading(btns.$color, btns.$hover-color, btns.$active-color);
 	}
 
@@ -53,7 +53,7 @@
 	// flat primary buttons
 	//
 
-	.btn-primary, &.btn-primary {
+	.btn-primary, &.btn.btn-primary {
 		@include shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 	}
 }

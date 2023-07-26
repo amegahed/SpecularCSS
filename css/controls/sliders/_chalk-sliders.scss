@@ -146,10 +146,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.chalk {
-		input[type="range"] {
-			@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
-		}
+
+	//
+	// chalk sliders
+	//
+
+	.chalk input[type="range"],
+	input[type="range"].chalk.chalk {
+		@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
 	}
 }
 
@@ -158,9 +162,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.chalk {
-		input[type="range"] {
-			@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
-		}
+
+	//
+	// flat sliders
+	//
+
+	.chalk input[type="range"],
+	input[type="range"].chalk.chalk {
+		@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
 	}
 }

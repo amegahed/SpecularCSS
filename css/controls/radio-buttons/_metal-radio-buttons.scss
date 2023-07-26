@@ -36,15 +36,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
 
-		//
-		// metal styled buttons
-		//
+	//
+	// metal radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include shading(radio-buttons.$checked-color);
-		}
+	.metal input[type="radio"],
+	input[type="radio"].metal.metal {
+		@include shading(radio-buttons.$checked-color);
 	}
 }
 
@@ -53,14 +52,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
 
-		//
-		// metal styled buttons
-		//
+	//
+	// flat radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
-		}
+	.metal input[type="radio"],
+	input[type="radio"].metal.metal {
+		@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }

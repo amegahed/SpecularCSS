@@ -51,7 +51,7 @@
 	//
 
 	.plastic .nav-tabs > li,
-	.nav-tabs > li.plastic {
+	.nav-tabs > li.plastic.plastic {
 		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
@@ -67,7 +67,7 @@
 	//
 
 	.plastic .nav-tabs > li,
-	.nav-tabs > li.plastic {
+	.nav-tabs > li.plastic.plastic {
 		@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }

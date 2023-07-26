@@ -34,13 +34,12 @@
 // styles
 //
 
-.flat {
+.flat input[type="radio"],
+input[type="radio"].flat.flat {
 
 	//
-	// flat styled radio buttons
+	// flat radio buttons
 	//
 
-	input[type="radio"], &input[type="radio"] {
-		@include shading(radio-buttons.$checked-color);
-	}
+	@include shading(radio-buttons.$checked-color);
 }

@@ -44,6 +44,11 @@
 //
 
 .flat .nav-tabs > li,
-.nav-tabs > li.flat {
+.nav-tabs > li.flat.flat {
+
+	//
+	// flat tabs
+	//
+
 	@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 }

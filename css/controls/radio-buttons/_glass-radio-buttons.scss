@@ -36,15 +36,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.glass {
 
-		//
-		// glass styled buttons
-		//
+	//
+	// glass radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include shading(radio-buttons.$checked-color);
-		}
+	.glass input[type="radio"],
+	input[type="radio"].glass.glass {
+		@include shading(radio-buttons.$checked-color);
 	}
 }
 
@@ -53,14 +52,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.glass {
 
-		//
-		// glass styled buttons
-		//
+	//
+	// flat radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
-		}
+	.glass input[type="radio"],
+	input[type="radio"].glass.glass {
+		@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }

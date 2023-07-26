@@ -36,15 +36,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.plastic {
 
-		//
-		// plastic styled buttons
-		//
+	//
+	// plastic radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include shading(radio-buttons.$checked-color);
-		}
+	.plastic input[type="radio"],
+	input[type="radio"].plastic.plastic {
+		@include shading(radio-buttons.$checked-color);
 	}
 }
 
@@ -53,14 +52,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.plastic {
 
-		//
-		// plastic styled buttons
-		//
+	//
+	// flat radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
-		}
+	.plastic input[type="radio"],
+	input[type="radio"].plastic.plastic {
+		@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }

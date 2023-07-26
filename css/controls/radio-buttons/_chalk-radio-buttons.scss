@@ -36,15 +36,14 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.chalk {
 
-		//
-		// chalk styled buttons
-		//
+	//
+	// chalk radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include shading(radio-buttons.$checked-color);
-		}
+	.chalk input[type="radio"],
+	input[type="radio"].chalk.chalk {
+		@include shading(radio-buttons.$checked-color);
 	}
 }
 
@@ -53,14 +52,13 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.chalk {
 
-		//
-		// chalk styled buttons
-		//
+	//
+	// flat radio buttons
+	//
 
-		input[type="radio"], &input[type="radio"] {
-			@include flat-radio-buttons.shading(radio-buttons.$checked-color);
-		}
+	.chalk input[type="radio"],
+	input[type="radio"].chalk.chalk {
+		@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }

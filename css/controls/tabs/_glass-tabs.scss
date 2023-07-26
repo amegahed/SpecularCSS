@@ -67,7 +67,7 @@
 	//
 
 	.glass .nav-tabs > li,
-	.nav-tabs > li.glass {
+	.nav-tabs > li.glass.glass {
 		@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }

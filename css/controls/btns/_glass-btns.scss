@@ -47,7 +47,7 @@
 		// glass styled buttons
 		//
 
-		.btn, &.btn {
+		.btn, &.btn.btn {
 			@include shading(btns.$color, btns.$hover-color, btns.$active-color);
 		}
 
@@ -55,7 +55,7 @@
 		// glass primary buttons
 		//
 
-		.btn-primary, &.btn-primary {
+		.btn-primary, &.btn.btn-primary {
 			@include shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 		}
 	}
@@ -72,7 +72,7 @@
 		// glass styled buttons
 		//
 
-		.btn, &.btn {
+		.btn, &.btn.btn {
 			@include flat-btns.shading(btns.$color, btns.$hover-color, btns.$active-color);
 		}
 
@@ -80,7 +80,7 @@
 		// glass primary buttons
 		//
 
-		.btn-primary, &.btn-primary {
+		.btn-primary, &.btn.btn-primary {
 			@include flat-btns.shading(btns.$primary-color, btns.$primary-hover-color, btns.$primary-active-color);
 		}
 	}

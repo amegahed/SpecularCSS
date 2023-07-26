@@ -55,13 +55,12 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.plastic {
-		::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+	.plastic ::-webkit-scrollbar-thumb,
+	.plastic.plastic::-webkit-scrollbar-thumb {
 
-			// plastic scrollbar thumbs
-			//
-			@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
-		}
+		// plastic scrollbars
+		//
+		@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
 	}
 }
 
@@ -70,12 +69,11 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.plastic {
-		::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+	.plastic ::-webkit-scrollbar-thumb,
+	.plastic.plastic::-webkit-scrollbar-thumb {
 
-			// flat scrollbar thumbs
-			//
-			@include flat-scrollbars.shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
-		}
+		// flat scrollbars
+		//
+		@include flat-scrollbars.shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
 	}
 }

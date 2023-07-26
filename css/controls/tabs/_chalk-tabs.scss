@@ -51,7 +51,7 @@
 	//
 
 	.chalk .nav-tabs > li,
-	.nav-tabs > li.chalk {
+	.nav-tabs > li.chalk.chalk {
 		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
@@ -63,11 +63,11 @@
 @supports not (color: color-mix(in srgb, white, black)) {
 
 	//
-	// chalk tabs
+	// flat tabs
 	//
 
 	.chalk .nav-tabs > li,
-	.nav-tabs > li.chalk {
+	.nav-tabs > li.chalk.chalk {
 		@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }

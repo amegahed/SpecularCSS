@@ -139,8 +139,12 @@
 // styles
 //
 
-.flat {
-	input[type="range"] {
-		@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
-	}
+.flat input[type="range"],
+input[type="range"].flat.flat {
+
+	//
+	// flat sliders
+	//
+
+	@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
 }

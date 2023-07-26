@@ -53,11 +53,10 @@
 // styles
 //
 
-.flat {
-	::-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb {
+.flat ::-webkit-scrollbar-thumb,
+.flat.flat::-webkit-scrollbar-thumb {
 
-		// flat scrollbar thumbs
-		//
-		@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
-	}
+	// flat scrollbars
+	//
+	@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
 }
