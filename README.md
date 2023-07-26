@@ -27,10 +27,10 @@ Please visit the [documentation](https://specularcss.sharedigm.com/#docs) on the
 
 To view some of SpecularCSS's capabilities, you can view the following included demos:
 
-[<img src="images/demo.png">](demo/index.html)
+[<img src="images/demo.png">](https://specularcss.sharedigm.com/vendor/specularcss/demo/index.html)
 Example1
 
-[<img src="images/demo2.png">](demo2/index.html)
+[<img src="images/demo2.png">](https://specularcss.sharedigm.com/vendor/specularcss/demo2/index.html)
 Example2
 
 <!-- LICENSE -->
