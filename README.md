@@ -27,14 +27,14 @@ Please visit the [documentation](https://specularcss.sharedigm.com/#docs) on the
 
 To view some of SpecularCSS's capabilities, you can view the following included demos:
 
-[<img src="images/demo1.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo1/index.html)
-Demo1
+[<img src="images/demo1.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo2/index.html)
+<div align="center">Demo1</div>
 
-[<img src="images/demo2.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo2/index.html)
-Demo2
+[<div><img src="images/demo2.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo2/index.html)
+<div align="center">Demo2</div>
 
-[<img src="images/demo3.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo3/index.html)
-Demo3
+[<div><img src="images/demo3.png" align="center">](https://specularcss.sharedigm.com/vendor/specularcss/demos/demo3/index.html)
+<div align="center">Demo3</div>
 
 <!-- LICENSE -->
 ## License
