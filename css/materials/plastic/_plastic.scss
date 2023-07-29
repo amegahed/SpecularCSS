@@ -20,6 +20,7 @@
 @use "flat-plastic.scss";
 @use "round-plastic.scss";
 @use "rounded-plastic.scss";
+@use "long-round-plastic.scss";
 
 //
 // mixins
@@ -35,6 +36,14 @@
 	&.rounded {
 		@include rounded-plastic.shading($color);
 	}
+
+	&.long.round {
+		@include long-round-plastic.shading($color, bottom);
+
+		&.vertical {
+			@include long-round-plastic.shading($color, right);
+		}
+	}
 }
 
 @mixin multilayer-shading($color) {
@@ -46,6 +55,14 @@
 
 	&.rounded {
 		@include rounded-plastic.multilayer-shading($color);
+	}
+
+	&.long.round {
+		@include long-round-plastic.multilayer-shading($color, bottom);
+
+		&.vertical {
+			@include long-round-plastic.multilayer-shading($color, right);
+		}
 	}
 }
 

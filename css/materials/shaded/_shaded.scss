@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                _metal.scss                                   |
+|                                 _shaded.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -16,53 +16,44 @@
 \******************************************************************************/
 
 @use "../../colors/colored.scss";
-@use "../flat/flat.scss";
-@use "flat-metal.scss";
-@use "round-metal.scss";
-@use "rounded-metal.scss";
-@use "long-round-metal.scss";
+@use "flat-shaded.scss";
+@use "round-shaded.scss";
+@use "rounded-shaded.scss";
+@use "long-round-shaded.scss";
 
 //
 // mixins
 //
 
 @mixin shading($color) {
-	@include flat-metal.shading($color);
+	@include flat-shaded.shading($color);
 
 	&.round {
-		@include round-metal.shading($color);
+		@include round-shaded.shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.shading($color);
+		@include rounded-shaded.shading($color);
 	}
 
 	&.long.round {
-		@include long-round-metal.shading($color, bottom);
-
-		&.vertical {
-			@include long-round-metal.shading($color, right);
-		}
+		@include long-round-shaded.shading($color);
 	}
 }
 
 @mixin multilayer-shading($color) {
-	@include flat-metal.multilayer-shading($color);
+	@include flat-shaded.multilayer-shading($color);
 
 	&.round {
-		@include round-metal.multilayer-shading($color);
+		@include round-shaded.multilayer-shading($color);
 	}
 
 	&.rounded {
-		@include rounded-metal.multilayer-shading($color);
+		@include rounded-shaded.multilayer-shading($color);
 	}
 
 	&.long.round {
-		@include long-round-metal.multilayer-shading($color, bottom);
-
-		&.vertical {
-			@include long-round-metal.multilayer-shading($color, right);
-		}
+		@include long-round-shaded.multilayer-shading($color);
 	}
 }
 
@@ -71,7 +62,7 @@
 //
 
 @supports (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.chalk {
 		.shaded, &.shaded {
 			@include shading(colored.$color);
 
@@ -87,7 +78,7 @@
 //
 
 @supports not (color: color-mix(in srgb, white, black)) {
-	.metal {
+	.chalk {
 		.shaded, &.shaded {
 			@include flat.shading(colored.$color);
 

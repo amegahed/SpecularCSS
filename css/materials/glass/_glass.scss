@@ -36,6 +36,14 @@
 	&.rounded {
 		@include rounded-glass.shading($color);
 	}
+
+	&.long.round {
+		@include long-round-glass.shading($color, bottom);
+
+		&.vertical {
+			@include long-round-glass.shading($color, right);
+		}
+	}
 }
 
 @mixin multilayer-shading($color) {
@@ -47,6 +55,14 @@
 
 	&.rounded {
 		@include rounded-glass.multilayer-shading($color);
+	}
+
+	&.long.round {
+		@include long-round-glass.multilayer-shading($color, bottom);
+
+		&.vertical {
+			@include long-round-glass.multilayer-shading($color, right);
+		}
 	}
 }
 

@@ -19,6 +19,10 @@
 	border-radius: 50%;
 }
 
+.rounded {
+	border-radius: 25%;
+}
+
 .barbie.logo {
 	height: 150px;
 	position: absolute;
@@ -62,7 +66,6 @@ input[type="text"] {
 	display: flex;
 	width: 150px;
 	height: 150px;
-	border-radius: 50%;
 	border-width: 5px;
 	border-style: solid;
 }

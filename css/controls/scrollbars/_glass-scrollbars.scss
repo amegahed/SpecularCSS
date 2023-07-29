@@ -28,25 +28,25 @@
 	// vertical scrollbars
 	//
 	&:vertical {
-		@include long-round-glass.shading($color, right, $border-radius);
+		@include long-round-glass.shading($color, right, $border-radius, none);
 	}
 	&:vertical:hover {
-		@include long-round-glass.shading($hover-color, right, $border-radius);
+		@include long-round-glass.shading($hover-color, right, $border-radius, none);
 	}
 	&:vertical:active {
-		@include long-round-glass.shading($active-color, right, $border-radius);
+		@include long-round-glass.shading($active-color, right, $border-radius, none);
 	}
 
 	// horizontal scrollbars
 	//
 	&:horizontal {
-		@include long-round-glass.shading($color, bottom, $border-radius);
+		@include long-round-glass.shading($color, bottom, $border-radius, none);
 	}
 	&:horizontal:hover {
-		@include long-round-glass.shading($hover-color, bottom, $border-radius);
+		@include long-round-glass.shading($hover-color, bottom, $border-radius, none);
 	}
 	&:horizontal:active {
-		@include long-round-glass.shading($active-color, bottom, $border-radius);
+		@include long-round-glass.shading($active-color, bottom, $border-radius, none);
 	}
 }
 

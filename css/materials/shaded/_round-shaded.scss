@@ -1,0 +1,40 @@
+/******************************************************************************\
+|                                                                              |
+|                              _round-shaded.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../flat/_round-flat.scss";
+@use "../flat/_round-chalk.scss";
+@use "../flat/_round-plastic.scss";
+@use "../flat/_round-glass.scss";
+@use "../flat/_round-metal.scss";
+
+//
+// variables
+//
+
+$materials: flat, chalk, plastic, glass, metal;
+
+//
+// mixins
+//
+
+@mixin shading($color) {
+	@each $material in $materials {
+		.{$material} {
+			@include round-{$material}.shading($color)
+		}
+	}
+}

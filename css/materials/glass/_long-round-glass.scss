@@ -21,7 +21,6 @@
 // variables
 //
 
-$diffuse-strength: 25%;
 $specular-size: 50%;
 $specular-strength: 50%;
 $highlight-size: 25%;
@@ -32,75 +31,225 @@ $transmission-strength: 100%;
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $width: 10px) {
-	@if ($direction == top) or ($direction == bottom) {
+@mixin horizontal-shading ($color: white, $width: 10px, $border-style: outset) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to bottom,
+			colors.faded(white, 0%) 0%,
+			colors.faded(white, $highlight-strength) 25%,
+			colors.faded(white, 0%) 50%) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to bottom,
+			colors.faded($color, 0%) 50%,
+			colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
+
+@mixin vertical-shading ($color: white, $width: 10px, $border-style: outset) {
+	background:
+
+		// top shading
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// bottom shading
+		//
+		linear-gradient(to top,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to right,
+			colors.faded(white, 0%) 0%,
+			colors.faded(white, $highlight-strength) 25%,
+			colors.faded(white, 0%) 50%) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to right,
+			colors.faded($color, 0%) 50%,
+			colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
+
+@mixin shading ($color: white, $direction: bottom, $width: 10px, $border-style: outset) {
+	@if ($direction == bottom) or ($direction == top) {
+		@include horizontal-shading($color, $width, $border-style);
+	} @else if ($direction == left) or ($direction == right) {
+		@include vertical-shading($color, $width, $border-style);
+	}
+}
+
+//
+// multilayer mixins
+//
+
+@mixin horizontal-multilayer-shading ($color: white, $width: 10px, $border-style: outset, $background-color: white) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to bottom,
+			colors.faded($color, 0%) 50%,
+			colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 30%), 100%) 0%,
+			colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
 		background:
-
-			// left shading
-			//
-			linear-gradient(to right,
-				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
-				transparent calc($width / 2)) no-repeat,
-
-			// right shading
-			//
-			linear-gradient(to left,
-				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
-				transparent calc($width / 2)) no-repeat,
 
 			// highlight
-			//
-			linear-gradient(to $direction,
-				colors.faded(white, 0%) 0%,
-				colors.faded(white, $highlight-strength) 25%,
-				colors.faded(white, 0%) 50%) no-repeat,
-
-			// transmitted
-			//
-			linear-gradient(to $direction,
-				colors.faded($color, 0%) 50%,
-				colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
-				colors.faded($color, 0%) 100%) no-repeat,
-
-			// diffuse
-			//
-			linear-gradient(to $direction,
-				colors.faded(colors.darkened($color, 30%), 100%) 0%,
-				colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
-
-	} @else if ($direction == left) or ($direction == right) {
-		background:
-
-			// top shading
 			//
 			linear-gradient(to bottom,
-				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
-				transparent calc($width / 2)) no-repeat,
+				colors.faded(white, 0%) 0%,
+				colors.faded(white, $highlight-strength) 25%,
+				colors.faded(white, 0%) 50%) no-repeat;
+	}
 
-			// bottom shading
-			//
-			linear-gradient(to top,
-				colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
-				transparent calc($width / 2)) no-repeat,
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
+
+@mixin vertical-multilayer-shading ($color: white, $width: 10px, $border-style: outset, $background-color: white) {
+	background:
+
+		// top shading
+		//
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// bottom shading
+		//
+		linear-gradient(to top,
+			colors.faded(colors.darkened($color, 25%), $highlight-strength) 0%,
+			transparent calc($width / 2)) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to right,
+			colors.faded($color, 0%) 50%,
+			colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
+			colors.faded($color, 0%) 100%) no-repeat,
+
+		// diffuse
+		//
+		linear-gradient(to right,
+			colors.faded(colors.darkened($color, 20%), 100%) 0%,
+			colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		background:
 
 			// highlight
 			//
-			linear-gradient(to $direction,
+			linear-gradient(to right,
 				colors.faded(white, 0%) 0%,
 				colors.faded(white, $highlight-strength) 25%,
-				colors.faded(white, 0%) 50%) no-repeat,
+				colors.faded(white, 0%) 50%) no-repeat;
+	}
 
-			// transmitted
-			//
-			linear-gradient(to $direction,
-				colors.faded($color, 0%) 50%,
-				colors.faded(colors.lightened($color, 30%), $transmission-strength) 75%,
-				colors.faded($color, 0%) 100%) no-repeat,
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
 
-			// diffuse
-			//
-			linear-gradient(to $direction,
-				colors.faded(colors.darkened($color, 20%), 100%) 0%,
-				colors.faded(colors.darkened($color, 10%), 100%) 100%) no-repeat;
+@mixin multilayer-shading ($color: white, $direction: bottom, $width: 10px, $border-style: outset, $background-color: white) {
+	@if ($direction == bottom) or ($direction == top) {
+		@include horizontal-multilayer-shading($color, $width, $border-style);
+	} @else if ($direction == left) or ($direction == right) {
+		@include vertical-multilayer-shading($color, $width, $border-style);
 	}
 }

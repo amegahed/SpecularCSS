@@ -20,6 +20,7 @@
 @use "flat-chalk.scss";
 @use "round-chalk.scss";
 @use "rounded-chalk.scss";
+@use "long-round-chalk.scss";
 
 //
 // mixins
@@ -35,6 +36,14 @@
 	&.rounded {
 		@include rounded-chalk.shading($color);
 	}
+
+	&.long.round {
+		@include long-round-chalk.shading($color, bottom);
+
+		&.vertical {
+			@include long-round-chalk.shading($color, right);
+		}
+	}
 }
 
 @mixin multilayer-shading($color) {
@@ -46,6 +55,14 @@
 
 	&.rounded {
 		@include rounded-chalk.multilayer-shading($color);
+	}
+
+	&.long.round {
+		@include long-round-chalk.multilayer-shading($color, bottom);
+
+		&.vertical {
+			@include long-round-chalk.multilayer-shading($color, right);
+		}
 	}
 }
 

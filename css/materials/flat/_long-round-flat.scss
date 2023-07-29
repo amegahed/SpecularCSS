@@ -1,0 +1,34 @@
+/******************************************************************************\
+|                                                                              |
+|                            _long-round-flat.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "_flat.scss";
+
+//
+// mixins
+//
+
+@mixin shading($color) {
+	@include flat.coloring($color);
+}
+
+//
+// multilayer mixins
+//
+
+@mixin multilayer-shading($color) {
+	@include flat.coloring($color);
+}

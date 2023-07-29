@@ -1,0 +1,40 @@
+/******************************************************************************\
+|                                                                              |
+|                              _flat-shaded.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../flat/_flat-flat.scss";
+@use "../flat/_flat-chalk.scss";
+@use "../flat/_flat-plastic.scss";
+@use "../flat/_flat-glass.scss";
+@use "../flat/_flat-metal.scss";
+
+//
+// variables
+//
+
+$materials: flat, chalk, plastic, glass, metal;
+
+//
+// mixins
+//
+
+@mixin shading($color) {
+	@each $material in $materials {
+		.{$material} {
+			@include flat-{$material}.shading($color)
+		}
+	}
+}
