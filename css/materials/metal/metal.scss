@@ -78,7 +78,7 @@ $border-radius: var(--border-radius);
 
 @supports (color: color-mix(in srgb, white, black)) {
 	.metal {
-		.shaded, &.shaded {
+		.shaded, &.metal.shaded {
 			@include shading(colored.$color);
 
 			&.textured {
@@ -94,7 +94,7 @@ $border-radius: var(--border-radius);
 
 @supports not (color: color-mix(in srgb, white, black)) {
 	.metal {
-		.shaded, &.shaded {
+		.shaded, &.metal.shaded {
 			@include flat.shading(colored.$color);
 
 			&.textured {

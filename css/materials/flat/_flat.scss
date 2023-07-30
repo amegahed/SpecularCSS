@@ -63,7 +63,7 @@
 
 @supports (color: color-mix(in srgb, white, black)) {
 	.flat {
-		.shaded, &.shaded {
+		.shaded, &.flat.shaded {
 			@include shading(colored.$color);
 
 			&.textured {
@@ -79,7 +79,7 @@
 
 @supports not (color: color-mix(in srgb, white, black)) {
 	.flat {
-		.shaded, &.shaded {
+		.shaded, &.flat.shaded {
 			@include shading(colored.$color);
 
 			&.textured {

@@ -21,68 +21,46 @@
 
 .textured {
 	&.brick {
-		&::before {
-			background-image: url(images/brick.png);
-		}
+		--texture: url(images/brick.png);
 	}
 
 	&.brushed {
-		&::before {
-			background-image: url(images/brushed.png);
-		}
+		--texture: url(images/brushed.png);
 	}
 
 	&.crumpled {
-		&::before {
-			background-image: url(images/crumpled.png);
-		}
+		--texture: url(images/crumpled.png);
 	}
 
 	&.dots {
-		&::before {
-			background-image: url(images/dots.png);
-		}
+		--texture: url(images/dots.png);
 	}
 
 	&.flag {
-		&::before {
-			background-image: url(images/flag.png);
-		}
+		--texture: url(images/flag.png);
 	}
 
 	&.hearts {
-		&::before {
-			background-image: url(images/hearts.png);
-		}
+		--texture: url(images/hearts.png);
 	}
 
 	&.marble {
-		&::before {
-			background-image: url(images/marble.png);
-		}
+		--texture: url(images/marble.png);
 	}
 
 	&.panels {
-		&::before {
-			background-image: url(images/panels.png);
-		}
+		--texture: url(images/panels.png);
 	}
 
 	&.rough {
-		&::before {
-			background-image: url(images/rough.png);
-		}
+		--texture: url(images/rough.png);
 	}
 
 	&.stars {
-		&::before {
-			background-image: url(images/stars.png);
-		}
+		--texture: url(images/stars.png);
 	}
 
 	&.wood {
-		&::before {
-			background-image: url(images/wood.png);
-		}
+		--texture: url(images/wood.png);
 	}
 }

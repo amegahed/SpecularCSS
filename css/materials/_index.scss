@@ -20,19 +20,3 @@
 @use "plastic";
 @use "glass";
 @use "metal";
-@use "shaded";
-
-.textured {
-	position: relative;
-
-	&::before {
-		background-image: var(--texture);
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border-radius: inherit;
-		mix-blend-mode: multiply;
-		background-size: 256px;
-	}
-}
