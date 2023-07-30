@@ -15,9 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/chalk/round-chalk.scss";
-@use "btns.scss";
-@use "flat-btns.scss";
+@use "../../materials/chalk/round-chalk";
+@use "btns";
+@use "flat-btns";
 
 //
 // mixins

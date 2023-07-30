@@ -15,9 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/plastic/rounded-plastic.scss";
-@use "tabs.scss";
-@use "flat-tabs.scss";
+@use "../../materials/plastic/rounded-plastic";
+@use "tabs";
+@use "flat-tabs";
 
 //
 // mixins

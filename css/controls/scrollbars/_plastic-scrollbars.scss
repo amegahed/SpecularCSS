@@ -15,9 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/plastic/long-round-plastic.scss";
-@use "scrollbars.scss";
-@use "flat-scrollbars.scss";
+@use "../../materials/plastic/long-round-plastic";
+@use "scrollbars";
+@use "flat-scrollbars";
 
 //
 // mixins

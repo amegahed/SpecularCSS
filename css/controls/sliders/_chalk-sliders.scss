@@ -15,10 +15,10 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/flat/flat.scss";
-@use "../../materials/chalk/round-chalk.scss";
-@use "sliders.scss";
-@use "flat-sliders.scss";
+@use "../../materials/flat/flat";
+@use "../../materials/chalk/round-chalk";
+@use "sliders";
+@use "flat-sliders";
 
 //
 // mixins

@@ -15,9 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/plastic/round-plastic.scss";
-@use "radio-buttons.scss";
-@use "flat-radio-buttons.scss";
+@use "../../materials/plastic/round-plastic";
+@use "radio-buttons";
+@use "flat-radio-buttons";
 
 //
 // mixins
