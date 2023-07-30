@@ -4320,6 +4320,34 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
+|                                _frosting.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+:root {
+  --texture-blur: 5px;
+  --highlight-blur: 10px;
+}
+
+.shaded.frosted .shaded::before, .shaded.frosted::before {
+  filter: blur(var(--texture-blur));
+}
+.shaded.frosted .shaded::after, .shaded.frosted::after {
+  filter: blur(var(--highlight-blur));
+}
+
+/******************************************************************************\
+|                                                                              |
 |                                _textures.scss                                |
 |                                                                              |
 |******************************************************************************|

@@ -3287,6 +3287,18 @@ ul.nav-tabs li.active > a {
   }
 }
 
+:root {
+  --texture-blur: 5px;
+  --highlight-blur: 10px;
+}
+
+.shaded.frosted .shaded::before, .shaded.frosted::before {
+  filter: blur(var(--texture-blur));
+}
+.shaded.frosted .shaded::after, .shaded.frosted::after {
+  filter: blur(var(--highlight-blur));
+}
+
 .textured {
   position: relative;
 }

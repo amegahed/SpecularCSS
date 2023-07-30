@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                 _index.scss                                  |
+|                                _frosting.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,6 +15,46 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "frosting";
-@use "textures";
-@use "texture-maps";
+//
+// variables
+//
+
+$texture-blur: 5px;
+$highlight-blur: 10px;
+
+//
+// mixins
+//
+
+@mixin frosted() {
+	&::before {
+		filter: blur(var(--texture-blur));
+	}
+	&::after {
+		filter: blur(var(--highlight-blur));
+	}
+}
+
+@mixin unfrosted() {
+	&::before {
+		filter: none;
+	}
+	&::after {
+		filter: none;
+	}
+}
+
+//
+// styles
+//
+
+:root {
+	--texture-blur: #{$texture-blur};
+	--highlight-blur: #{$highlight-blur};
+}
+
+.shaded {
+	&.frosted .shaded, &.frosted {
+		@include frosted();
+	}
+}

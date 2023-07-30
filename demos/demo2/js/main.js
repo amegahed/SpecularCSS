@@ -73,6 +73,14 @@ function setMaterial(material, element) {
 	element.addClass(material);
 }
 
+function setFrosted(frosted, element) {
+	if (frosted) {
+		$(element).addClass('frosted');
+	} else {
+		$(element).removeClass('frosted');
+	}
+}
+
 function setTexture(texture, element) {
 	let textures = this.getTextures();
 
@@ -128,6 +136,15 @@ $(document).ready(() => {
 		// set material of panel
 		//
 		setMaterial(material, panel);
+	});
+
+	$('.frosted input[type="checkbox"]').change((event) => {
+		let frosted = $(event.target).is(':checked');
+		let panel = $(event.target).closest('.panel');
+
+		// set frosting of panel
+		//
+		setFrosted(frosted, panel);
 	});
 
 	$('.texture-selector').change((event) => {
