@@ -22,10 +22,8 @@
 //
 
 $highlight-size: 25%;
-$highlight-strength: 100%;
 $specular-size: 50%;
 $specular-strength: 50%;
-$reflection-strength: 0%;
 
 //
 // mixins
@@ -37,21 +35,20 @@ $reflection-strength: 0%;
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, 0%) 10%) no-repeat,
+			white 0%,
+			transparent 5px) no-repeat,
 
 		// specular
 		//
 		linear-gradient(to bottom,
 			colors.faded(white, $specular-strength) 0%,
-			colors.faded(white, 0%) 10px) no-repeat,
+			transparent 10px) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 20%) 0%,
-			$color 5px,
-			$color 100%) no-repeat;
+			colors.lightened($color, 50%) 0%,
+			$color 5px) no-repeat;
 
 	// borders
 	//
@@ -89,14 +86,14 @@ $reflection-strength: 0%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, 0%) 10%) no-repeat,
+				white 0%,
+				transparent 10%) no-repeat,
 
 			// specular
 			//
 			linear-gradient(to bottom,
 				colors.faded(white, $specular-strength) 0%,
-				colors.faded(white, 0%) 10px) no-repeat;
+				transparent 10px) no-repeat;
 	}
 
 	// borders

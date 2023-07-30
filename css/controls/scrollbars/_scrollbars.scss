@@ -22,7 +22,7 @@
 //
 
 $width: 12px;
-$border-radius: var(--border-radius);
+$border-radius: calc($width / 2);
 $thumb-border-width: 2px;
 
 //

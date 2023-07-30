@@ -1,32 +1,5 @@
 /******************************************************************************\
 |                                                                              |
-|                                  styles.scss                                 |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines the visual styling rules used in this application.       |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
-\******************************************************************************/
-/******************************************************************************\
-|                                                                              |
-|                                   styles.scss                                |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines the visual styling rules used in this application.       |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
-\******************************************************************************/
-/******************************************************************************\
-|                                                                              |
 |                                keyframes.scss                                |
 |                                                                              |
 |******************************************************************************|
@@ -39,7 +12,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 @keyframes blinking-keyframes {
   0% {
@@ -226,7 +199,7 @@
 }
 /******************************************************************************\
 |                                                                              |
-|                                animation.scss                                |
+|                               _animation.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -238,7 +211,7 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .blinking {
   animation: blinking-keyframes 0.3s ease-in-out;
@@ -292,62 +265,9 @@
   animation: wobbling-keyframes 0.3s ease-in-out;
 }
 
-.icon-spinning .icon, .icon-spinning .tile, .icon-spinning .spinning3d, .icon-spinning .profile.photo {
-  animation-name: spinning3d-keyframes;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  -webkit-animation-name: spinning3d-keyframes;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 5s;
-}
-
-.icon-spinning .item:nth-child(10n+0) .icon, .icon-spinning .item:nth-child(10n+0) .tile, .icon-spinning li:nth-child(10n+0) .icon, .icon-spinning li:nth-child(10n+0) .tile {
-  animation-delay: 0s;
-}
-.icon-spinning .item:nth-child(10n+1) .icon, .icon-spinning .item:nth-child(10n+1) .tile, .icon-spinning li:nth-child(10n+1) .icon, .icon-spinning li:nth-child(10n+1) .tile {
-  animation-delay: 0.3s;
-}
-.icon-spinning .item:nth-child(10n+2) .icon, .icon-spinning .item:nth-child(10n+2) .tile, .icon-spinning li:nth-child(10n+2) .icon, .icon-spinning li:nth-child(10n+2) .tile {
-  animation-delay: 0.6s;
-}
-.icon-spinning .item:nth-child(10n+3) .icon, .icon-spinning .item:nth-child(10n+3) .tile, .icon-spinning li:nth-child(10n+3) .icon, .icon-spinning li:nth-child(10n+3) .tile {
-  animation-delay: 0.9s;
-}
-.icon-spinning .item:nth-child(10n+4) .icon, .icon-spinning .item:nth-child(10n+4) .tile, .icon-spinning li:nth-child(10n+4) .icon, .icon-spinning li:nth-child(10n+4) .tile {
-  animation-delay: 1.2s;
-}
-.icon-spinning .item:nth-child(10n+5) .icon, .icon-spinning .item:nth-child(10n+5) .tile, .icon-spinning li:nth-child(10n+5) .icon, .icon-spinning li:nth-child(10n+5) .tile {
-  animation-delay: 1.5s;
-}
-.icon-spinning .item:nth-child(10n+6) .icon, .icon-spinning .item:nth-child(10n+6) .tile, .icon-spinning li:nth-child(10n+6) .icon, .icon-spinning li:nth-child(10n+6) .tile {
-  animation-delay: 1.8s;
-}
-.icon-spinning .item:nth-child(10n+7) .icon, .icon-spinning .item:nth-child(10n+7) .tile, .icon-spinning li:nth-child(10n+7) .icon, .icon-spinning li:nth-child(10n+7) .tile {
-  animation-delay: 2.1s;
-}
-.icon-spinning .item:nth-child(10n+8) .icon, .icon-spinning .item:nth-child(10n+8) .tile, .icon-spinning li:nth-child(10n+8) .icon, .icon-spinning li:nth-child(10n+8) .tile {
-  animation-delay: 2.4s;
-}
-.icon-spinning .item:nth-child(10n+9) .icon, .icon-spinning .item:nth-child(10n+9) .tile, .icon-spinning li:nth-child(10n+9) .icon, .icon-spinning li:nth-child(10n+9) .tile {
-  animation-delay: 2.7s;
-}
-
 /******************************************************************************\
 |                                                                              |
-|                                  styles.scss                                 |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines the visual styling rules used in this application.       |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
-\******************************************************************************/
-/******************************************************************************\
-|                                                                              |
-|                                   styles.scss                                |
+|                                 _index.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -359,22 +279,38 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                   colors.scss                                |
+|                                  _index.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                             colored-sliders.scss                             |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _colored-sliders.scss                             |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -386,18 +322,18 @@
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                   theme.scss                                 |
+|                                  _theme.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .navbar-inverse .navbar-nav > li.active > a, .navbar-inverse .navbar-nav > li.active a:hover, .navbar-inverse .navbar-nav > li.active a:focus {
   background-color: darkened(var(--primary-color), 10%);
@@ -414,51 +350,29 @@
   color: var(--primary-color);
 }
 
-/*
-.form-group label {
-	color: $primary-color;
-}
-*/
-input[type=range]::-webkit-slider-runnable-track {
-  background-color: #ececee;
-  border-color: #ececee;
-}
-input[type=range]::-moz-range-track {
-  background-color: #ececee;
-  border-color: #ececee;
-}
-input[type=range]::-webkit-slider-thumb {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-}
-input[type=range]::-webkit-slider-thumb:hover {
-  background-color: darkened(var(--primary-color), 10%);
-  border-color: darkened(var(--primary-color), 10%);
-}
-input[type=range]::-moz-range-thumb {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-}
-input[type=range]::-moz-range-thumb:hover {
-  background-color: darkened(var(--primary-color), 10%);
-  border-color: darkened(var(--primary-color), 10%);
-}
-input[type=range]::-ms-thumb {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-}
-input[type=range]::-ms-thumb:hover {
-  background-color: darkened(var(--primary-color), 10%);
-  border-color: darkened(var(--primary-color), 10%);
-}
-
 .error-icon {
   color: var(--primary-color);
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #303040;
+    color: #cfcfe1;
+  }
+  .splash .brand .last {
+    color: #7070a7 !important;
+  }
+  select, button {
+    color: black;
+  }
+  .panel, .section {
+    background: #1d1d2e !important;
+    border-color: #30304e !important;
+  }
+}
 /******************************************************************************\
 |                                                                              |
-|                                   styles.scss                                |
+|                                 _index.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -470,7 +384,7 @@ input[type=range]::-ms-thumb:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
@@ -486,7 +400,7 @@ input[type=range]::-ms-thumb:hover {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .modal {
   pointer-events: none;
@@ -659,7 +573,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 
 /******************************************************************************\
 |                                                                              |
-|                            dialog-transitions.scss                           |
+|                           _dialog-transitions.scss                           |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -671,7 +585,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .modal.opening {
   -webkit-animation: opening 0.5s;
@@ -683,16 +597,10 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 @keyframes opening {
   from {
     opacity: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
@@ -707,16 +615,10 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 @keyframes closing {
   from {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0);
   }
   to {
     opacity: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
 }
@@ -767,7 +669,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 
 /******************************************************************************\
 |                                                                              |
-|                                   styles.scss                                |
+|                                 _index.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -779,25 +681,24 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                   badges.js                                  |
+|                                  _badges.js                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .badge {
   font-weight: bold;
   padding: 1px 3px;
   border-width: 2px;
   border-style: solid;
-  border-radius: 5px;
   border-color: white;
   background: var(--primary-color);
 }
@@ -820,9 +721,17 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
   display: none;
 }
 
+.round .badge {
+  border-radius: 10px;
+}
+
+.rounded .badge {
+  border-radius: 5px;
+}
+
 /******************************************************************************\
 |                                                                              |
-|                                   buttons.scss                               |
+|                                  _buttons.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -834,7 +743,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .buttons button {
   font-size: 16px !important;
@@ -848,15 +757,15 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 
 .btn {
   outline: none !important;
-  background: #ececee;
+  background: #9090ba;
   border: none;
 }
 .btn i {
   margin-right: 5px;
 }
 .btn:hover, .btn:active {
-  background: #d0d0d7;
-  border-color: #d0d0d7;
+  background: #7070a7;
+  border-color: #7070a7;
 }
 
 .btn-primary {
@@ -887,7 +796,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 
 /******************************************************************************\
 |                                                                              |
-|                                 controls.scss                                |
+|                                _controls.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -899,7 +808,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .controls .control {
   margin: 10px;
@@ -916,7 +825,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 
 /******************************************************************************\
 |                                                                              |
-|                                   forms.scss                                 |
+|                                  _forms.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -928,7 +837,7 @@ body[device=phone] .modal-dialog .modal-content .modal-footer {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 input {
   outline: none !important;
@@ -1106,7 +1015,7 @@ label.error.valid {
 }
 /******************************************************************************\
 |                                                                              |
-|                                  inputs.scss                                 |
+|                                 _inputs.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1118,7 +1027,7 @@ label.error.valid {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .input {
   text-align: center;
@@ -1172,14 +1081,14 @@ input[type=color i]::-webkit-color-swatch {
 
 /******************************************************************************\
 |                                                                              |
-|                                popovers.scss                                 |
+|                               _popovers.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .popover {
   max-width: 500px;
@@ -1248,7 +1157,7 @@ input[type=color i]::-webkit-color-swatch {
 
 /******************************************************************************\
 |                                                                              |
-|                                scrollbars.scss                               |
+|                               _scrollbars.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1260,7 +1169,7 @@ input[type=color i]::-webkit-color-swatch {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .scrollbars ::-webkit-scrollbar-track {
   background-color: white;
@@ -1307,7 +1216,7 @@ input[type=color i]::-webkit-color-swatch {
 
 /******************************************************************************\
 |                                                                              |
-|                                  sliders.scss                                |
+|                                 _sliders.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1319,7 +1228,7 @@ input[type=color i]::-webkit-color-swatch {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 input[type=range] {
   -webkit-appearance: none;
@@ -1355,17 +1264,17 @@ input[type=range]::-moz-range-thumb {
 
 /******************************************************************************\
 |                                                                              |
-|                                   tabs.scss                                  |
+|                                  _tabs.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .nav-tabs {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid #9090ba;
   margin-bottom: 10px;
 }
 .nav-tabs > li {
@@ -1386,14 +1295,14 @@ input[type=range]::-moz-range-thumb {
 
 /******************************************************************************\
 |                                                                              |
-|                                tooltips.scss                                 |
+|                               _tooltips.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .tooltip-inner {
   max-width: 400px;
@@ -1401,11 +1310,11 @@ input[type=range]::-moz-range-thumb {
 
 /******************************************************************************\
 |                                                                              |
-|                                   styles.scss                                |
+|                                 _index.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines various CSS styles used in this application.             |
+|        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1413,11 +1322,11 @@ input[type=range]::-moz-range-thumb {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                   items.scss                                 |
+|                              _item-icons.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1429,112 +1338,7 @@ input[type=range]::-moz-range-thumb {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
-\******************************************************************************/
-.items {
-  width: 100%;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  /*
-  .dragged {
-  	visibility: hidden;
-  }
-  .drag-image, .drag-image .dragged {
-  	visibility: visible;
-  }
-  */
-}
-.items > :first-child {
-  width: 100%;
-  min-height: 100%;
-  padding: 10px;
-}
-.items .item.highlighted::after {
-  border: none;
-}
-.items.drag-selectable > :first-child {
-  position: relative;
-}
-.items.drag-selectable > .icon-grid {
-  padding-right: 0;
-}
-.items.drag-selectable > .tile-grid {
-  padding-right: 0;
-  padding-bottom: 0;
-}
-.items .empty {
-  text-align: left;
-  padding: 5px;
-}
-.items .owner {
-  background: none !important;
-}
-
-.panel .items > :first-child {
-  padding: 0;
-}
-
-.item .icon > .marker {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-top: -12px;
-  margin-left: -12px;
-  border-radius: 12px;
-  border-width: 2px;
-  border-style: solid;
-}
-.item .icon > .marker i {
-  line-height: 24px;
-}
-.item .details {
-  pointer-events: auto;
-}
-.item .details i.fa.fa-star {
-  font-size: 10px !important;
-  vertical-align: top;
-  text-align: center;
-  margin: 2px;
-}
-
-form > .items {
-  text-align: center;
-  height: auto;
-}
-
-.form-group .items > :first-child {
-  padding: 0;
-}
-
-@media (min-width: 480px) {
-  form .items.inline {
-    margin: -5px;
-    padding: 5px;
-    padding-bottom: 0;
-  }
-  form .items.inline > :first-child {
-    margin: 0;
-    padding: 0;
-    position: static;
-  }
-}
-/******************************************************************************\
-|                                                                              |
-|                               item-icons.scss                                |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines various CSS styles used in this application.             |
-|                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.txt', which is part of this source code distribution.        |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .icon-grid {
   font-size: 90%;
@@ -1780,11 +1584,11 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 }
 /******************************************************************************\
 |                                                                              |
-|                                   styles.scss                                |
+|                                  _items.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the visual styling rules used in this application.       |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -1792,18 +1596,115 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+.items {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.items > :first-child {
+  width: 100%;
+  min-height: 100%;
+  padding: 10px;
+}
+.items .item.highlighted::after {
+  border: none;
+}
+.items.drag-selectable > :first-child {
+  position: relative;
+}
+.items.drag-selectable > .icon-grid {
+  padding-right: 0;
+}
+.items.drag-selectable > .tile-grid {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.items .empty {
+  text-align: left;
+  padding: 5px;
+}
+.items .owner {
+  background: none !important;
+}
+
+.panel .items > :first-child {
+  padding: 0;
+}
+
+.item .icon > .marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+}
+.item .icon > .marker i {
+  line-height: 24px;
+}
+.item .details {
+  pointer-events: auto;
+}
+.item .details i.fa.fa-star {
+  font-size: 10px !important;
+  vertical-align: top;
+  text-align: center;
+  margin: 2px;
+}
+
+form > .items {
+  text-align: center;
+  height: auto;
+}
+
+.form-group .items > :first-child {
+  padding: 0;
+}
+
+@media (min-width: 480px) {
+  form .items.inline {
+    margin: -5px;
+    padding: 5px;
+    padding-bottom: 0;
+  }
+  form .items.inline > :first-child {
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+}
+/******************************************************************************\
+|                                                                              |
+|                                   _index.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 /******************************************************************************\
 |                                                                              |
-|                                 headers.scss                                 |
+|                                _headers.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 #header #brand {
   display: flex;
@@ -1852,14 +1753,14 @@ body[device=phone] .icon-grid, body[device=tablet] .icon-grid {
 
 /******************************************************************************\
 |                                                                              |
-|                                  icons.scss                                  |
+|                                 _icons.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .alert-icon {
   color: var(--primary-color);
@@ -1890,14 +1791,14 @@ i.rotated.reversed {
 
 /******************************************************************************\
 |                                                                              |
-|                                  layout.scss                                 |
+|                                 _layout.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 html,
 body {
@@ -2121,14 +2022,14 @@ body[device=tablet] .desktop-only {
 }
 /******************************************************************************\
 |                                                                              |
-|                                  pages.scss                                  |
+|                                 _pages.scss                                  |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 #page {
   display: flex;
@@ -2159,6 +2060,11 @@ body[device=tablet] .desktop-only {
 #page .material.swatch.round {
   border-radius: 50%;
 }
+#page .material.swatch.round.long {
+  width: 300px;
+  border-radius: 100px;
+  --border-radius: 100px;
+}
 #page .material.swatch.rounded {
   border-radius: 25%;
 }
@@ -2175,8 +2081,8 @@ body[device=tablet] .desktop-only {
 #page #footer {
   bottom: 0;
   width: 100%;
-  color: lightgrey;
-  background: #494949;
+  color: #9090ba;
+  background: #404050;
   border-top: 5px solid var(--primary-color);
 }
 #page #footer .container {
@@ -2193,10 +2099,10 @@ body[device=tablet] .desktop-only {
   color: white;
 }
 #page i.success {
-  color: hsl(135, 33%, 50%);
+  color: #63cf7e;
 }
 #page i.warning {
-  color: hsl(0, 66%, 50%);
+  color: #f56e3e;
 }
 
 @media (min-width: 768px) {
@@ -2215,7 +2121,7 @@ body[device=tablet] .desktop-only {
 }
 /******************************************************************************\
 |                                                                              |
-|                                  panels.scss                                 |
+|                                 _panels.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -2227,7 +2133,7 @@ body[device=tablet] .desktop-only {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .panel {
   padding: 10px;
@@ -2236,9 +2142,6 @@ body[device=tablet] .desktop-only {
   border-color: #e0e0f0;
   border-radius: 10px;
 }
-.panel .header {
-  height: 30px;
-}
 .panel .header label {
   text-align: left;
   font-size: 20px;
@@ -2246,6 +2149,7 @@ body[device=tablet] .desktop-only {
   margin-bottom: 10px;
 }
 .panel .header input[type=color] {
+  height: 25px;
   float: right;
 }
 .panel label {
@@ -2268,14 +2172,14 @@ body[device=tablet] .desktop-only {
 
 /******************************************************************************\
 |                                                                              |
-|                                   plots.scss                                 |
+|                                  _plots.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .plot {
   display: flex;
@@ -2301,7 +2205,7 @@ body[device=tablet] .desktop-only {
 
 /******************************************************************************\
 |                                                                              |
-|                                 sections.scss                                |
+|                                _sections.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -2313,14 +2217,12 @@ body[device=tablet] .desktop-only {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 #page .section {
   padding: 30px 50px;
   margin: 30px -50px;
-}
-#page .section:nth-child(odd) {
-  background-color: #ececee;
+  background-color: #eeeef5;
 }
 #page .section:last-child {
   padding-bottom: 0;
@@ -2395,120 +2297,7 @@ body[device=phone] #page .section > .row > div + div {
 
 /******************************************************************************\
 |                                                                              |
-|                                 sidebar.scss                                 |
-|                                                                              |
-|******************************************************************************|
-|                                                                              |
-|        This defines the visual styling rules used in this application.       |
-|                                                                              |
-|******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
-\******************************************************************************/
-.sidebar {
-  overflow: auto;
-  color: #303030;
-  background-color: #ececee;
-  word-break: break-word;
-}
-.sidebar .panel {
-  margin: 10px;
-  padding: 10px;
-  min-width: 300px;
-}
-.sidebar .panel .header > label {
-  font-size: 18px;
-}
-.sidebar .panel .header > label > i {
-  margin-right: 5px;
-}
-.sidebar .panel .header .radio-buttons {
-  float: right;
-}
-.sidebar .panel > .radio-buttons {
-  text-align: center;
-}
-.sidebar .panel .params {
-  width: 100%;
-}
-.sidebar .panel .params .param {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #d0d0d7;
-}
-.sidebar .panel .params .param input + input {
-  margin-top: 10px;
-}
-.sidebar .panel .params .param + .param {
-  margin-top: 10px;
-}
-.sidebar .panel .params .param .impact {
-  display: inline-block;
-  width: 30px;
-  padding-left: 3px;
-  font-size: 8px;
-  float: right;
-  border-radius: 3px;
-  background: #ededed;
-  color: var(--primary-color);
-}
-.sidebar .panel .params .param .impact i:nth-child(1) {
-  color: limegreen;
-}
-.sidebar .panel .params .param .impact i:nth-child(2) {
-  color: orange;
-}
-.sidebar .panel .params .param .impact i:nth-child(3) {
-  color: red;
-}
-.sidebar .panel .params .param .lock {
-  float: right;
-  margin-left: 5px;
-}
-.sidebar .panel .params .param.locked input {
-  pointer-events: none;
-}
-.sidebar .panel .params .param.locked .lock {
-  background: red;
-  color: white;
-}
-.sidebar .panel .description + .list {
-  margin-top: 10px;
-}
-.sidebar .panel .list {
-  max-height: 200px;
-  overflow: auto;
-  cursor: default;
-}
-.sidebar .panel .list table {
-  width: 100%;
-}
-.sidebar .panel .params {
-  overflow: auto;
-}
-.sidebar .buttons {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: -10px;
-}
-.sidebar .buttons .btn {
-  width: 150px;
-  margin-bottom: 10px;
-}
-.sidebar .buttons .btn + .btn {
-  margin-left: 5px;
-}
-
-@media (max-width: 480px) {
-  .sidebar .buttons .btn {
-    width: 125px;
-  }
-  .sidebar .buttons .btn i {
-    display: none;
-  }
-}
-/******************************************************************************\
-|                                                                              |
-|                                  spinners.scss                               |
+|                                 _spinners.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -2520,7 +2309,7 @@ body[device=phone] #page .section > .row > div + div {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .spinner {
   display: none;
@@ -2537,7 +2326,7 @@ body[device=phone] #page .section > .row > div + div {
   margin-top: -50px;
   object-fit: cover;
   box-shadow: none;
-  border-color: #e0e0f0;
+  border-color: #9090ba;
   border-top-color: var(--primary-color);
 }
 
@@ -2564,7 +2353,7 @@ body[device=phone] #page .section > .row > div + div {
 
 /******************************************************************************\
 |                                                                              |
-|                                splitters.scss                                |
+|                               _splitters.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -2576,7 +2365,7 @@ body[device=phone] #page .section > .row > div + div {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 .split-view {
   display: block;
@@ -2598,8 +2387,8 @@ body[device=phone] #page .section > .row > div + div {
   background-position: 50%;
   border-style: solid;
   overflow: hidden;
-  background: #ececee;
-  border-color: #d0d0d7;
+  background: #9090ba;
+  border-color: #7070a7;
 }
 .split-view > .gutter .handle {
   margin: auto;
@@ -2649,27 +2438,16 @@ body:not(.binary) .desktop.app .contents.split-view > .split.mainbar::after {
   box-shadow: none;
 }
 
-/*
-body[device="phone"] {
-	.gutter.gutter-vertical {
-		padding: 2px;
-
-		.handle {
-			width: 90%;
-		}
-	}
-}
-*/
 /******************************************************************************\
 |                                                                              |
-|                                    tables.scss                               |
+|                                 _tables.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 table {
   display: table;
@@ -2682,10 +2460,10 @@ table th {
   outline: none;
   white-space: nowrap;
   text-align: center;
-  background: #ececee;
+  background: #9090ba;
   border-width: 1px;
   border-style: solid;
-  border-color: #d0d0d7;
+  border-color: #7070a7;
 }
 table th:not(:last-child) {
   border-right-width: 0;
@@ -2727,20 +2505,20 @@ table tbody tr:not(.first) td.duplicate {
 
 /******************************************************************************\
 |                                                                              |
-|                                 toolbar.scss                                 |
+|                               _toolbars.scss                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 #toolbar {
   text-align: center;
   padding: 2px;
-  background-color: #ececee;
-  border-bottom: 1px solid #d0d0d7;
+  background-color: #9090ba;
+  border-bottom: 1px solid #7070a7;
 }
 
 @media (max-width: 767px) {
@@ -2760,7 +2538,7 @@ table tbody tr:not(.first) td.duplicate {
 |        This defines the visual styling rules used in this application.       |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -2841,7 +2619,7 @@ body[device=phone] h3 {
 
 /******************************************************************************\
 |                                                                              |
-|                                  welcome.scss                                |
+|                                 _welcome.scss                                |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -2853,7 +2631,7 @@ body[device=phone] h3 {
 |        'LICENSE.txt', which is part of this source code distribution.        |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2023, Specular CSS, https://www.specularcss.org         |
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 #page.welcome .masthead {
   display: flex;
@@ -2942,8 +2720,8 @@ body[device=phone] h3 {
 }
 #page.welcome .materials.panel .row a .material {
   display: inline-flex;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin: 10px;
   border-width: 3px;
   border-style: solid;
@@ -2955,12 +2733,16 @@ body[device=phone] h3 {
   color: white;
   display: block;
   margin: auto;
+  pointer-events: none;
 }
 #page.welcome .materials.panel .row a .material.rounded {
   border-radius: 25%;
 }
 #page.welcome .materials.panel .row a .material.round {
   border-radius: 50%;
+}
+#page.welcome .sliders.panel .control {
+  height: 35px;
 }
 #page.welcome .radio-buttons.panel .row {
   text-align: center;
@@ -3049,5 +2831,37 @@ body[device=phone] h3 {
     font-size: 2em;
   }
 }
+@-moz-document url-prefix() {
+  #page.welcome .scrollbars.panel {
+    display: none;
+  }
+}
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the visual styling rules used in this application.       |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                  styles.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the visual styling rules used in this application.       |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 
 /*# sourceMappingURL=styles.css.map */

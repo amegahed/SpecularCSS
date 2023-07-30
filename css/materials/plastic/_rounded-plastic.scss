@@ -22,10 +22,8 @@
 //
 
 $highlight-size: 25%;
-$highlight-strength: 100%;
 $specular-size: 50%;
 $specular-strength: 50%;
-$reflection-strength: 0%;
 
 //
 // mixins
@@ -37,13 +35,13 @@ $reflection-strength: 0%;
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, 0%) 25%) no-repeat,
+			white 0%,
+			transparent 25%) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 20%) 0,
+			colors.lightened($color, 10%) 0,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
 
@@ -62,7 +60,7 @@ $reflection-strength: 0%;
 		// diffuse
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 20%) 0,
+			colors.lightened($color, 10%) 0,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
 
@@ -83,8 +81,8 @@ $reflection-strength: 0%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, 0%) 25%) no-repeat;
+				white 0%,
+				transparent 25%) no-repeat;
 	}
 
 	// borders

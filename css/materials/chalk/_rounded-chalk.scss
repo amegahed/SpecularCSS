@@ -34,7 +34,7 @@ $highlight-strength: 75%;
 		//
 		linear-gradient(to $direction,
 			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, 0%) 25%) no-repeat,
+			transparent 25%) no-repeat,
 
 		// diffuse
 		//
@@ -80,7 +80,7 @@ $highlight-strength: 75%;
 			//
 			linear-gradient(to $direction,
 				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, 0%) 25%) no-repeat;
+				transparent 25%) no-repeat;
 	}
 
 	// borders

@@ -24,33 +24,30 @@
 $specular-size: 50%;
 $specular-strength: 50%;
 $highlight-size: 25%;
-$highlight-strength: 100%;
-$transmission-strength: 100%;
-$min-plate-opacity: 50%;
 
 //
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset, $opacity: $min-plate-opacity) {
+@mixin shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, 0%) 10%) no-repeat,
+			white 0%,
+			transparent 10%) no-repeat,
 		
 		// specular
 		//
 		linear-gradient(to bottom,
 			colors.faded(white, $specular-strength) 0%,
-			colors.faded(white, 0%) 20%) no-repeat,
+			transparent 20%) no-repeat,
 
 		// reflected
 		//
 		linear-gradient(to bottom,
-			colors.faded($color, 0%) 50%,
+			transparent 50%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
@@ -68,13 +65,13 @@ $min-plate-opacity: 50%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $opacity: $min-plate-opacity) {
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// reflected
 		//
 		linear-gradient(to bottom,
-			colors.faded($color, 0%) 50%,
+			transparent 50%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
@@ -100,13 +97,13 @@ $min-plate-opacity: 50%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, 0%) 10%) no-repeat,
+				white 0%,
+				transparent 10%) no-repeat,
 
 			// specular
 			//
 			linear-gradient(to bottom,
 				colors.faded(white, $specular-strength) 0%,
-				colors.faded(white, 0%) 20%) no-repeat;
+				transparent 20%) no-repeat;
 	}
 }

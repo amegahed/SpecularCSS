@@ -40,7 +40,7 @@ $highlight-voffset: 10%;
 		radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
 			colors.faded(white, $highlight-strength) 0%,
 			colors.faded(white, $highlight-strength) $highlight-size,
-			colors.faded(white, 0%) 100%) no-repeat,
+			transparent 100%) no-repeat,
 
 		// diffuse
 		//
@@ -87,7 +87,7 @@ $highlight-voffset: 10%;
 			radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
 				colors.faded(white, $highlight-strength) 0%,
 				colors.faded(white, $highlight-strength) $highlight-size,
-				colors.faded(white, 0%) 100%) no-repeat;
+				transparent 100%) no-repeat;
 	}
 
 	// borders

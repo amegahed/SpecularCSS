@@ -28,8 +28,7 @@
 		//
 		linear-gradient(to $direction,
 			colors.lightened($color, 50%) 0%,
-			$color 5px,
-			$color 100%) no-repeat;
+			$color 5px) no-repeat;
 
 	// borders
 	//
@@ -47,8 +46,7 @@
 		//
 		linear-gradient(to $direction,
 			colors.lightened($color, 50%) 0%,
-			$color 5px,
-			$color 100%) no-repeat;
+			$color 5px) no-repeat;
 
 	// borders
 	//

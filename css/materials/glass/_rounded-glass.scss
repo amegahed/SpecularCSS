@@ -24,8 +24,6 @@
 $specular-size: 50%;
 $specular-strength: 50%;
 $highlight-size: 25%;
-$highlight-strength: 100%;
-$transmission-strength: 100%;
 
 $round-specular-width: 50%;
 $round-specular-height: 25%;
@@ -59,15 +57,15 @@ $round-highlight-voffset: 10%;
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, 0%) 30%) no-repeat,
+			white 0%,
+			transparent 30%) no-repeat,
 
 		// transmitted
 		//
 		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.faded(colors.lightened($color, 50%), $transmission-strength) 0%,
-			colors.faded($color, $transmission-strength) 50%,
-			colors.faded($color, 0%) 100%) no-repeat,
+			colors.lightened($color, 50%) 0%,
+			$color 50%,
+			transparent 100%) no-repeat,
 
 		// diffuse
 		//
@@ -100,9 +98,9 @@ $round-highlight-voffset: 10%;
 		// transmitted
 		//
 		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.faded(colors.lightened($color, 50%), $transmission-strength) 0%,
-			colors.faded($color, $transmission-strength) 50%,
-			colors.faded($color, 0%) 100%) no-repeat,
+			colors.lightened($color, 50%) 0%,
+			$color 50%,
+			transparent 100%) no-repeat,
 
 		// diffuse
 		//
@@ -125,8 +123,8 @@ $round-highlight-voffset: 10%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, 0%) 30%) no-repeat,
+				white 0%,
+				transparent 30%) no-repeat,
 	}
 
 	// borders
