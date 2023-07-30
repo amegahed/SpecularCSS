@@ -31,25 +31,26 @@ $reflection-strength: 0%;
 // mixins
 //
 
-@mixin horizontal-shading ($color: white, $width: 10px, $border-style: outset) {
+@mixin horizontal-shading ($color: white, $border-radius: 50%, $border-style: outset) {
 	background:
 
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to bottom,
 			colors.faded(white, 0%) 0%,
+			colors.faded(white, $highlight-strength) 20%,
 			colors.faded(white, $highlight-strength) 25%,
 			colors.faded(white, 0%) 50%) no-repeat,
 
@@ -69,25 +70,26 @@ $reflection-strength: 0%;
 	}
 }
 
-@mixin vertical-shading ($color: white, $width: 10px, $border-style: outset) {
+@mixin vertical-shading ($color: white, $border-radius: 50%, $border-style: outset) {
 	background:
 
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to right,
 			colors.faded(white, 0%) 0%,
+			colors.faded(white, $highlight-strength) 20%,
 			colors.faded(white, $highlight-strength) 25%,
 			colors.faded(white, 0%) 50%) no-repeat,
 
@@ -107,11 +109,11 @@ $reflection-strength: 0%;
 	}
 }
 
-@mixin shading ($color: white, $direction: bottom, $width: 10px, $border-style: outset) {
+@mixin shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset) {
 	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-shading($color, $width, $border-style);
+		@include horizontal-shading($color, $border-radius, $border-style);
 	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-shading($color, $width, $border-style);
+		@include vertical-shading($color, $border-radius, $border-style);
 	}
 }
 
@@ -119,20 +121,20 @@ $reflection-strength: 0%;
 // multilayer mixins
 //
 
-@mixin horizontal-multilayer-shading ($color: white, $width: 10px, $border-style: outset, $background-color: white) {
+@mixin horizontal-multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $background-color: white) {
 	background:
 
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// diffuse
 		//
@@ -155,10 +157,23 @@ $reflection-strength: 0%;
 
 		background:
 
+			// left shading
+			//
+			linear-gradient(to right,
+				colors.darkened($color, 10%) 0%,
+				transparent $border-radius) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				colors.darkened($color, 10%) 0%,
+				transparent $border-radius) no-repeat,
+
 			// highlight
 			//
 			linear-gradient(to bottom,
 				colors.faded(white, 0%) 0%,
+				colors.faded(white, $highlight-strength) 20%,
 				colors.faded(white, $highlight-strength) 25%,
 				colors.faded(white, 0%) 50%) no-repeat;
 	}
@@ -172,20 +187,20 @@ $reflection-strength: 0%;
 	}
 }
 
-@mixin vertical-multilayer-shading ($color: white, $width: 10px, $border-style: outset, $background-color: white) {
+@mixin vertical-multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $background-color: white) {
 	background:
 
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 20%) 0%,
-			transparent calc($width / 2)) no-repeat,
+			colors.darkened($color, 10%) 0%,
+			transparent $border-radius) no-repeat,
 
 		// diffuse
 		//
@@ -212,6 +227,7 @@ $reflection-strength: 0%;
 			//
 			linear-gradient(to right,
 				colors.faded(white, 0%) 0%,
+				colors.faded(white, $highlight-strength) 20%,
 				colors.faded(white, $highlight-strength) 25%,
 				colors.faded(white, 0%) 50%) no-repeat;
 	}
@@ -225,10 +241,10 @@ $reflection-strength: 0%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $width: 10px, $border-style: outset, $background-color: white) {
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset, $background-color: white) {
 	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-multilayer-shading($color, $width, $border-style);
+		@include horizontal-multilayer-shading($color, $border-radius, $border-style);
 	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-multilayer-shading($color, $width, $border-style);
+		@include vertical-multilayer-shading($color, $border-radius, $border-style);
 	}
 }

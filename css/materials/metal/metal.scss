@@ -23,6 +23,12 @@
 @use "long-round-metal.scss";
 
 //
+// variables
+//
+
+$border-radius: var(--border-radius);
+
+//
 // mixins
 //
 
@@ -38,10 +44,10 @@
 	}
 
 	&.long.round {
-		@include long-round-metal.shading($color, bottom);
+		@include long-round-metal.shading($color, bottom, $border-radius);
 
 		&.vertical {
-			@include long-round-metal.shading($color, right);
+			@include long-round-metal.shading($color, right, $border-radius);
 		}
 	}
 }
@@ -58,10 +64,10 @@
 	}
 
 	&.long.round {
-		@include long-round-metal.multilayer-shading($color, bottom);
+		@include long-round-metal.multilayer-shading($color, bottom, $border-radius);
 
 		&.vertical {
-			@include long-round-metal.multilayer-shading($color, right);
+			@include long-round-metal.multilayer-shading($color, right, $border-radius);
 		}
 	}
 }

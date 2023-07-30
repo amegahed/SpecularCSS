@@ -113,6 +113,6 @@ $reflection-strength: 100%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: darkened($color, 10%);
+		border-color: colors.darkened($color, 10%);
 	}
 }

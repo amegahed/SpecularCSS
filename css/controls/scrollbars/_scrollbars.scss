@@ -22,7 +22,7 @@
 //
 
 $width: 12px;
-$border-radius: 10px;
+$border-radius: var(--border-radius);
 $thumb-border-width: 2px;
 
 //
@@ -57,6 +57,7 @@ $track-border-color: $track-color;
 	border-style: solid;
 	border-color: $thumb-border-color;
 	background-clip: content-box;
+	--border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

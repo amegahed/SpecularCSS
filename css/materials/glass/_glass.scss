@@ -23,6 +23,12 @@
 @use "long-round-glass.scss";
 
 //
+// variables
+//
+
+$border-radius: var(--border-radius);
+
+//
 // mixins
 //
 
@@ -38,10 +44,10 @@
 	}
 
 	&.long.round {
-		@include long-round-glass.shading($color, bottom);
+		@include long-round-glass.shading($color, bottom, $border-radius);
 
 		&.vertical {
-			@include long-round-glass.shading($color, right);
+			@include long-round-glass.shading($color, right, $border-radius);
 		}
 	}
 }
@@ -58,10 +64,10 @@
 	}
 
 	&.long.round {
-		@include long-round-glass.multilayer-shading($color, bottom);
+		@include long-round-glass.multilayer-shading($color, bottom, $border-radius);
 
 		&.vertical {
-			@include long-round-glass.multilayer-shading($color, right);
+			@include long-round-glass.multilayer-shading($color, right, $border-radius);
 		}
 	}
 }
