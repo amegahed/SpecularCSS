@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                                 _chalk.scss                                  |
+|                         _glass-radio-buttons.scss                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the dom and svg visual styles for this application.      |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,44 +15,16 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../materials/glass/shapes/round-glass";
 
 //
 // mixins
 //
 
-@mixin shading($color: white, $direction: bottom, $border-style: outset) {
-	background:
+@mixin shading($color) {
+	box-shadow: var(--radio-button-shadow);
 
-		// diffuse
-		//
-		linear-gradient(to $direction,
-			colors.lightened($color, 50%) 0%,
-			$color 5px) no-repeat;
-
-	// borders
-	//
-	@if ($border-style == inset) {
-		border-color: $color;
-	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
-	}
-}
-
-@mixin multilayer-shading($color: white, $direction: bottom, $border-style: outset) {
-	background:
-
-		// diffuse
-		//
-		linear-gradient(to $direction,
-			colors.lightened($color, 50%) 0%,
-			$color 5px) no-repeat;
-
-	// borders
-	//
-	@if ($border-style == inset) {
-		border-color: $color;
-	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+	&:checked {
+		@include round-glass.shading($color);
 	}
 }

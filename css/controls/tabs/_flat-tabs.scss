@@ -15,29 +15,8 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/flat/flat";
-@use "tabs";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-	> a {
-		@include flat.shading($color);
-		box-shadow: none;
-
-		&:hover {
-			@include flat.shading($hover-color);
-		}
-	}
-
-	&.active {
-		> a {
-			@include flat.shading($active-color);
-		}
-	}
-}
+@use "../../materials/flat/controls/flat-tabs";
+@use "../../controls/tabs/tabs";
 
 //
 // styles
@@ -50,5 +29,5 @@
 	// flat tabs
 	//
 
-	@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+	@include flat-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 }

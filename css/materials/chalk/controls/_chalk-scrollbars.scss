@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _chalk-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../../materials/chalk/shapes/long-round-chalk";
+
+//
+// mixins
+//
+
+@mixin shading($color, $hover-color, $active-color, $border-radius) {
+
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include long-round-chalk.shading($color, right, $border-radius, none);
+	}
+	&:vertical:hover {
+		@include long-round-chalk.shading($hover-color, right, $border-radius, none);
+	}
+	&:vertical:active {
+		@include long-round-chalk.shading($active-color, right, $border-radius, none);
+	}
+
+	// horizontal scrollbars
+	//
+	&:horizontal {
+		@include long-round-chalk.shading($color, bottom, $border-radius, none);
+	}
+	&:horizontal:hover {
+		@include long-round-chalk.shading($hover-color, bottom, $border-radius, none);
+	}
+	&:horizontal:active {
+		@include long-round-chalk.shading($active-color, bottom, $border-radius, none);
+	}
+}

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                              _round-metal.scss                               |
+|                            _rounded-plastic.scss                             |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,89 +15,54 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../colors/colors";
 
 //
 // variables
 //
 
-$highlight-size: 50%;
-$specular-size: 75%;
-
-$highlight-width: 50%;
-$highlight-height: 50%;
-$highlight-hoffset: 50%;
-$highlight-voffset: 15%;
-
-$specular-width: 100%;
-$specular-height: 50%;
-$specular-hoffset: 50%;
-$specular-voffset: 10%;
-
-$reflection-width: 100%;
-$reflection-height: 100%;
-$reflection-hoffset: 50%;
-$reflection-voffset: 0%;
+$highlight-size: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
 
 //
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset, $backgcolor: white) {
+@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
 	background:
 
 		// highlight
 		//
-		radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
-			white 0%,
-			colors.lightened($color, 30%) $highlight-size,
-			transparent 100%) no-repeat,
-
-		// specular
-		//
-		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-			$color 0%,
-			transparent $specular-size) no-repeat,
-
-		// reflected
-		//
 		linear-gradient(to $direction,
-			transparent 25%,
-			colors.faded($color, 50%) 66%,
-			colors.lightened($color, 30%) 100%) no-repeat,
+			white 0%,
+			transparent 25%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		linear-gradient(to $direction,
+			colors.lightened($color, 10%) 0,
+			$color 50%,
+			colors.darkened($color, 10%) 100%) no-repeat;
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darkened($color, 10%);
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $background-color: white) {
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
 	background:
-
-		// specular
-		//
-		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-			$color 0%,
-			transparent $specular-size) no-repeat,
-
-		// reflected
-		//
-		linear-gradient(to $direction,
-			transparent 25%,
-			colors.faded($color, 50%) 66%,
-			colors.lightened($color, 30%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		linear-gradient(to $direction,
+			colors.lightened($color, 10%) 0,
+			$color 50%,
+			colors.darkened($color, 10%) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -110,16 +75,14 @@ $reflection-voffset: 0%;
 		top: 0;
 		left: 0;
 		pointer-events: none;
-		mix-blend-mode: screen;
 
 		background:
 
 			// highlight
 			//
-			radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
+			linear-gradient(to $direction,
 				white 0%,
-				$color $highlight-size,
-				black 100%) no-repeat;
+				transparent 25%) no-repeat;
 	}
 
 	// borders
@@ -127,6 +90,6 @@ $reflection-voffset: 0%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darkened($color, 10%);
 	}
 }

@@ -15,30 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/plastic/rounded-plastic";
-@use "tabs";
-@use "flat-tabs";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-	> a {
-		@include rounded-plastic.shading($color);
-		box-shadow: var(--tab-shadow);
-
-		&:hover {
-			@include rounded-plastic.shading($hover-color);
-		}
-	}
-
-	&.active {
-		> a {
-			@include rounded-plastic.shading($active-color);
-		}
-	}
-}
+@use "../../materials/plastic/controls/plastic-tabs";
+@use "../../materials/flat/controls/flat-tabs";
+@use "../../controls/tabs/tabs";
 
 //
 // styles
@@ -52,7 +31,7 @@
 
 	.plastic .nav-tabs > li,
 	.nav-tabs > li.plastic.plastic {
-		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		@include plastic-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
 
@@ -63,7 +42,7 @@
 @supports not (color: color-mix(in srgb, white, black)) {
 
 	//
-	// plastic tabs
+	// flat tabs
 	//
 
 	.plastic .nav-tabs > li,

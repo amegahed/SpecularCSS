@@ -15,21 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/metal/round-metal";
-@use "radio-buttons";
-@use "flat-radio-buttons";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	box-shadow: var(--radio-button-shadow);
-
-	&:checked {
-		@include round-metal.shading($color);
-	}
-}
+@use "../../materials/metal/controls/metal-radio-buttons";
+@use "../../materials/flat/controls/flat-radio-buttons";
+@use "../../controls/radio-buttons/radio-buttons";
 
 //
 // styles
@@ -43,7 +31,7 @@
 
 	.metal input[type="radio"],
 	input[type="radio"].metal.metal {
-		@include shading(radio-buttons.$checked-color);
+		@include metal-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }
 

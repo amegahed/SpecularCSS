@@ -163,6 +163,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _flat-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 .flat .btn, .flat.btn.btn {
   background: #cfcfe1;
   border-color: #cfcfe1;
@@ -245,6 +261,22 @@
 |******************************************************************************|
 |                                                                              |
 |        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _chalk-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -406,6 +438,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _plastic-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic .btn, .plastic.btn.btn {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
@@ -542,6 +590,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _glass-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass .btn, .glass.btn.btn {
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, #cfcfe1) 0%, #cfcfe1 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, #cfcfe1 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
@@ -653,6 +717,22 @@
 |******************************************************************************|
 |                                                                              |
 |        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _metal-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -858,6 +938,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _flat-scrollbars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 .flat ::-webkit-scrollbar-thumb:vertical,
 .flat.flat::-webkit-scrollbar-thumb:vertical {
   background: var(--primary-color);
@@ -886,6 +982,22 @@
 /******************************************************************************\
 |                                                                              |
 |                           _long-round-chalk.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _chalk-scrollbars.scss                             |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -999,6 +1111,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                          _plastic-scrollbars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic ::-webkit-scrollbar-thumb:vertical,
   .plastic.plastic::-webkit-scrollbar-thumb:vertical {
@@ -1083,6 +1211,22 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _glass-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass ::-webkit-scrollbar-thumb:vertical,
   .glass.glass::-webkit-scrollbar-thumb:vertical {
@@ -1138,6 +1282,22 @@
 /******************************************************************************\
 |                                                                              |
 |                           _long-round-metal.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _metal-scrollbars.scss                             |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -1286,6 +1446,22 @@ input[type=radio]:checked {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                          _flat-radio-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 .flat input[type=radio],
 input[type=radio].flat.flat {
   box-shadow: none;
@@ -1306,6 +1482,22 @@ input[type=radio].flat.flat:checked.rounded {
   border-color: var(--primary-color);
 }
 
+/******************************************************************************\
+|                                                                              |
+|                         _chalk-radio-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                         _chalk-radio-buttons.scss                            |
@@ -1370,6 +1562,22 @@ input[type=radio].flat.flat:checked.rounded {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                        _plastic-radio-buttons.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic input[type=radio],
   input[type=radio].plastic.plastic {
@@ -1418,6 +1626,22 @@ input[type=radio].flat.flat:checked.rounded {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                         _glass-radio-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass input[type=radio],
   input[type=radio].glass.glass {
@@ -1450,6 +1674,22 @@ input[type=radio].flat.flat:checked.rounded {
     border-color: var(--primary-color);
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                         _metal-radio-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                         _metal-radio-buttons.scss                            |
@@ -1716,6 +1956,22 @@ input[type=range]::-ms-fill-upper {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _flat-sliders.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 .flat input[type=range],
 input[type=range].flat.flat {
   -webkit-appearance: none;
@@ -1887,6 +2143,22 @@ input[type=range].flat.flat::-moz-range-track.rounded {
   border-color: #cfcfe1;
 }
 
+/******************************************************************************\
+|                                                                              |
+|                              _chalk-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                              _chalk-sliders.scss                             |
@@ -2187,6 +2459,22 @@ input[type=range].flat.flat::-moz-range-track.rounded {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _plastic-sliders.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic input[type=range],
   input[type=range].plastic.plastic {
@@ -2471,6 +2759,22 @@ input[type=range].flat.flat::-moz-range-track.rounded {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _glass-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass input[type=range],
   input[type=range].glass.glass {
@@ -2739,6 +3043,22 @@ input[type=range].flat.flat::-moz-range-track.rounded {
     border-color: #cfcfe1;
   }
 }
+/******************************************************************************\
+|                                                                              |
+|                              _metal-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 /******************************************************************************\
 |                                                                              |
 |                              _metal-sliders.scss                             |
@@ -3100,6 +3420,22 @@ ul.nav-tabs li.active > a {
 
 /******************************************************************************\
 |                                                                              |
+|                               flat-tabs.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
 |                               _flat-tabs.scss                                |
 |                                                                              |
 |******************************************************************************|
@@ -3118,7 +3454,7 @@ ul.nav-tabs li.active > a {
 .nav-tabs > li.flat.flat > a {
   background: #cfcfe1;
   border-color: #cfcfe1;
-  box-shadow: none;
+  box-shadow: var(--tab-shadow);
 }
 .flat .nav-tabs > li > a.round,
 .nav-tabs > li.flat.flat > a.round {
@@ -3193,6 +3529,22 @@ ul.nav-tabs li.active > a {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _chalk-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .chalk .nav-tabs > li > a,
   .nav-tabs > li.chalk.chalk > a {
@@ -3216,7 +3568,7 @@ ul.nav-tabs li.active > a {
   .nav-tabs > li.chalk.chalk > a {
     background: #cfcfe1;
     border-color: #cfcfe1;
-    box-shadow: none;
+    box-shadow: var(--tab-shadow);
   }
   .chalk .nav-tabs > li > a.round,
   .nav-tabs > li.chalk.chalk > a.round {
@@ -3291,6 +3643,22 @@ ul.nav-tabs li.active > a {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _plastic-tabs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic .nav-tabs > li > a,
   .nav-tabs > li.plastic.plastic > a {
@@ -3314,7 +3682,7 @@ ul.nav-tabs li.active > a {
   .nav-tabs > li.plastic.plastic > a {
     background: #cfcfe1;
     border-color: #cfcfe1;
-    box-shadow: none;
+    box-shadow: var(--tab-shadow);
   }
   .plastic .nav-tabs > li > a.round,
   .nav-tabs > li.plastic.plastic > a.round {
@@ -3389,6 +3757,22 @@ ul.nav-tabs li.active > a {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _glass-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass .nav-tabs > li > a,
   .nav-tabs > li.glass > a {
@@ -3412,7 +3796,7 @@ ul.nav-tabs li.active > a {
   .nav-tabs > li.glass.glass > a {
     background: #cfcfe1;
     border-color: #cfcfe1;
-    box-shadow: none;
+    box-shadow: var(--tab-shadow);
   }
   .glass .nav-tabs > li > a.round,
   .nav-tabs > li.glass.glass > a.round {
@@ -3487,6 +3871,22 @@ ul.nav-tabs li.active > a {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _metal-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .metal .nav-tabs > li > a,
   .nav-tabs > li.metal > a {
@@ -3510,7 +3910,7 @@ ul.nav-tabs li.active > a {
   .nav-tabs > li.metal.metal > a {
     background: #cfcfe1;
     border-color: #cfcfe1;
-    box-shadow: none;
+    box-shadow: var(--tab-shadow);
   }
   .metal .nav-tabs > li > a.round,
   .nav-tabs > li.metal.metal > a.round {
@@ -4375,7 +4775,7 @@ ul.nav-tabs li.active > a {
   height: 100%;
   border-radius: inherit;
   mix-blend-mode: multiply;
-  background-size: 512px;
+  background-size: cover;
   background-position: center;
 }
 .textured > div {

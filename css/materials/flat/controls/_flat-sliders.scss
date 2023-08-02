@@ -1,0 +1,133 @@
+/******************************************************************************\
+|                                                                              |
+|                              _flat-sliders.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin thumb-shading($color, $hover-color) {
+	-webkit-appearance: none;
+
+	//
+	// flat slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		@include flat.shading($color);
+
+		&:hover {
+			@include flat.shading($hover-color);
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		@include flat.shading($color);
+
+		&:hover {
+			@include flat.shading($hover-color);
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		@include flat.shading($color);
+
+		&:hover {
+			@include flat.shading($hover-color);
+		}
+	}
+}
+
+//
+// flat active slider thumbs
+//
+
+@mixin active-thumb-shading($active-color) {
+	-webkit-appearance: none;
+
+	//
+	// flat slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:active {
+			@include flat.shading($active-color);
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:active {
+			@include flat.shading($active-color);
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:active {
+			@include flat.shading($active-color);
+		}
+	}
+}
+
+//
+// flat slider tracks
+//
+
+@mixin track-shading($color) {
+	&::-webkit-slider-runnable-track {
+		@include flat.shading($color);
+	}
+
+	&::-moz-range-track {
+		@include flat.shading($color);
+	}
+}
+
+//
+// flat sliders
+//
+
+@mixin shading($thumb-color, $thumb-hover-color, $thumb-active-color, $track-color) {
+
+	// slider thumbs
+	//
+	@include thumb-shading($thumb-color, $thumb-hover-color);
+
+	// active slider thumbs
+	//
+	@include active-thumb-shading($thumb-active-color);
+
+	// slider tracks
+	//
+	@include track-shading($track-color);
+}

@@ -15,21 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/glass/round-glass";
-@use "radio-buttons";
-@use "flat-radio-buttons";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	box-shadow: var(--radio-button-shadow);
-
-	&:checked {
-		@include round-glass.shading($color);
-	}
-}
+@use "../../materials/glass/controls/glass-radio-buttons";
+@use "../../materials/flat/controls/flat-radio-buttons";
+@use "../../controls/radio-buttons/radio-buttons";
 
 //
 // styles
@@ -43,7 +31,7 @@
 
 	.glass input[type="radio"],
 	input[type="radio"].glass.glass {
-		@include shading(radio-buttons.$checked-color);
+		@include glass-radio-buttons.shading(radio-buttons.$checked-color);
 	}
 }
 

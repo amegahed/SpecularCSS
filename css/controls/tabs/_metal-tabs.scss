@@ -15,30 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/metal/rounded-metal";
-@use "tabs";
-@use "flat-tabs";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-	> a {
-		@include rounded-metal.shading($color);
-		box-shadow: var(--tab-shadow);
-
-		&:hover {
-			@include rounded-metal.shading($hover-color);
-		}
-	}
-
-	&.active {
-		> a {
-			@include rounded-metal.shading($active-color);
-		}
-	}
-}
+@use "../../materials/metal/controls/metal-tabs";
+@use "../../materials/flat/controls/flat-tabs";
+@use "../../controls/tabs/tabs";
 
 //
 // styles
@@ -52,7 +31,7 @@
 
 	.metal .nav-tabs > li,
 	.nav-tabs > li.metal {
-		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		@include metal-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
 
@@ -63,7 +42,7 @@
 @supports not (color: color-mix(in srgb, white, black)) {
 
 	//
-	// metal tabs
+	// flat tabs
 	//
 
 	.metal .nav-tabs > li,

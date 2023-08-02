@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             _rounded-glass.scss                              |
+|                             _rounded-chalk.scss                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,61 +15,33 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../colors/colors";
 
 //
 // variables
 //
 
-$specular-size: 50%;
-$specular-strength: 50%;
-$highlight-size: 25%;
-
-$round-specular-width: 50%;
-$round-specular-height: 25%;
-$round-specular-hoffset: 50%;
-$round-specular-voffset: 10%;
-
-$round-highlight-width: 25%;
-$round-highlight-height: 12%;
-$round-highlight-hoffset: 50%;
-$round-highlight-voffset: 10%;
+$highlight-strength: 75%;
 
 //
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset, $border-radius: 10px) {
+@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
 	background:
-
-		// left shading
-		//
-		linear-gradient(to right,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
-			transparent $border-radius) no-repeat,
-
-		// right shading
-		//
-		linear-gradient(to left,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
-			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to $direction,
-			white 0%,
-			transparent 30%) no-repeat,
-
-		// transmitted
-		//
-		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.lightened($color, 50%) 0%,
-			$color 50%,
-			transparent 100%) no-repeat,
+			colors.faded(white, $highlight-strength) 0%,
+			transparent 25%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		linear-gradient(to $direction,
+			colors.lightened($color, 10%) 0%,
+			$color 50%,
+			colors.darkened($color, 10%) 100%) no-repeat;
 
 	// borders
 	//
@@ -80,31 +52,15 @@ $round-highlight-voffset: 10%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $border-radius: 10px) {
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
 	background:
-
-		// left shading
-		//
-		linear-gradient(to right,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
-			transparent $border-radius) no-repeat,
-
-		// right shading
-		//
-		linear-gradient(to left,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
-			transparent $border-radius) no-repeat,
-
-		// transmitted
-		//
-		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.lightened($color, 50%) 0%,
-			$color 50%,
-			transparent 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		linear-gradient(to $direction,
+			colors.lightened($color, 10%) 0%,
+			$color 50%,
+			colors.darkened($color, 10%) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -123,8 +79,8 @@ $round-highlight-voffset: 10%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				white 0%,
-				transparent 30%) no-repeat,
+				colors.faded(white, $highlight-strength) 0%,
+				transparent 25%) no-repeat;
 	}
 
 	// borders

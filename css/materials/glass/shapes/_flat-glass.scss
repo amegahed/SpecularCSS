@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                               _flat-metal.scss                               |
+|                               _flat-glass.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,44 +15,46 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../colors/colors";
 
 //
 // variables
 //
 
-$highlight-size: 50%;
-$specular-size: 75%;
+$specular-size: 50%;
+$specular-strength: 50%;
+$highlight-size: 25%;
 
 //
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 30%) 0%,
-			transparent 10%) 100% no-repeat,
-
+			white 0%,
+			transparent 10%) no-repeat,
+		
 		// specular
 		//
 		linear-gradient(to bottom,
-			colors.lightened($color, 30%) 0%,
-			transparent 20%) 100% no-repeat,
+			colors.faded(white, $specular-strength) 0%,
+			transparent 20%) no-repeat,
 
 		// reflected
 		//
-		linear-gradient(to $direction,
-			transparent 0%,
-			colors.faded($color, 50%) 66%,
-			$color) 100% no-repeat,
+		linear-gradient(to bottom,
+			transparent 50%,
+			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 10%), 100%) 0%,
+			colors.faded($color, $opacity) 100%) no-repeat;
 
 	// borders
 	//
@@ -63,19 +65,20 @@ $specular-size: 75%;
 	}
 }
 
-@mixin multilayer-shading($color: white, $direction: bottom, $border-style: outset) {
+@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// reflected
 		//
-		linear-gradient(to $direction,
-			transparent 0%,
-			colors.faded($color, 50%) 66%,
-			$color 100%) no-repeat,
+		linear-gradient(to bottom,
+			transparent 50%,
+			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		linear-gradient(to bottom,
+			colors.faded(colors.darkened($color, 10%), 100%) 0%,
+			colors.faded($color, $opacity) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -88,28 +91,19 @@ $specular-size: 75%;
 		top: 0;
 		left: 0;
 		pointer-events: none;
-		// mix-blend-mode: overlay;
 
 		background:
 
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.lightened($color, 30%) 0%,
-				transparent 10%) 100% no-repeat,
+				white 0%,
+				transparent 10%) no-repeat,
 
 			// specular
 			//
 			linear-gradient(to bottom,
-				colors.lightened($color, 30%) 0%,
-				transparnt 20%) no-repeat;
-	}
-
-	// borders
-	//
-	@if ($border-style == inset) {
-		border-color: $color;
-	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+				colors.faded(white, $specular-strength) 0%,
+				transparent 20%) no-repeat;
 	}
 }

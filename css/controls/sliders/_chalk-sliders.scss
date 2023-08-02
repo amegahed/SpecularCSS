@@ -15,131 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/flat/flat";
-@use "../../materials/chalk/round-chalk";
-@use "sliders";
-@use "flat-sliders";
-
-//
-// mixins
-//
-
-@mixin thumb-shading($color, $hover-color) {
-	-webkit-appearance: none;
-	@include sliders.thumb-shadow;
-
-	//
-	// Webkit slider thumbs
-	//
-
-	&::-webkit-slider-thumb {
-		@include round-chalk.shading($color);
-
-		&:hover {
-			@include round-chalk.shading($hover-color);
-		}
-	}
-
-	//
-	// Firefox slider thumbs
-	//
-
-	&::-moz-range-thumb {
-		@include round-chalk.shading($color);
-
-		&:hover {
-			@include round-chalk.shading($hover-color);
-		}
-	}
-
-	//
-	// IE slider thumbs
-	//
-
-	&::-ms-thumb {
-		@include round-chalk.shading($color);
-
-		&:hover {
-			@include round-chalk.shading($hover-color);
-		}
-	}
-}
-
-//
-// chalk active slider thumbs
-//
-
-@mixin active-thumb-shading($active-color) {
-	-webkit-appearance: none;
-
-	//
-	// Webkit active slider thumbs
-	//
-
-	&::-webkit-slider-thumb {
-		&:active {
-			@include round-chalk.shading($active-color);
-		}
-	}
-
-	//
-	// Firefox active slider thumbs
-	//
-
-	&::-moz-range-thumb {
-		&:active {
-			@include round-chalk.shading($active-color);
-		}
-	}
-
-	//
-	// IE active slider thumbs
-	//
-
-	&::-ms-thumb {
-		&:active {
-			@include round-chalk.shading($active-color);
-		}
-	}
-}
-
-//
-// chalk slider tracks
-//
-
-@mixin track-shading($color) {
-	-webkit-appearance: none;
-	box-shadow: none;
-
-	&::-webkit-slider-runnable-track {
-		@include flat.shading($color);
-	}
-
-	&::-moz-range-track {
-		@include flat.shading($color);
-	}
-}
-
-//
-// glass sliders
-//
-
-@mixin shading($thumb-color, $thumb-hover-color, $thumb-active-color) {
-
-	@include thumb-shading(sliders.$thumb-color, sliders.$thumb-hover-color);
-
-	//
-	// active slider thumbs
-	//
-
-	@include active-thumb-shading(sliders.$thumb-active-color);
-
-	//
-	// slider tracks
-	//
-
-	@include track-shading(sliders.$track-color);
-}
+@use "../../materials/chalk/controls/chalk-sliders";
+@use "../../materials/flat/controls/flat-sliders";
+@use "../../controls/sliders/sliders";
 
 //
 // styles
@@ -153,7 +31,7 @@
 
 	.chalk input[type="range"],
 	input[type="range"].chalk.chalk {
-		@include shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		@include chalk-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color, sliders.$track-color);
 	}
 }
 
@@ -169,6 +47,6 @@
 
 	.chalk input[type="range"],
 	input[type="range"].chalk.chalk {
-		@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color);
+		@include flat-sliders.shading(sliders.$thumb-color, sliders.$thumb-hover-color, sliders.$thumb-active-color, sliders.$track-color);
 	}
 }

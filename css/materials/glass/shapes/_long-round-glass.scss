@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                          _long-round-plastic.scss                            |
+|                            _long-round-glass.scss                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,17 +15,19 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../colors/colors";
 
 //
 // variables
 //
 
-$highlight-size: 25%;
 $specular-size: 50%;
 $specular-strength: 50%;
+$highlight-size: 25%;
 $highlight-offset: 10%;
 $highlight-width: 5%;
+$transmitted-offset: 75%;
+$transmitted-width: 10%;
 
 //
 // mixins
@@ -37,13 +39,13 @@ $highlight-width: 5%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
@@ -54,12 +56,17 @@ $highlight-width: 5%;
 			white calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc(33% + $border-width)) no-repeat,
 
-		// diffuse
+		// transmitted
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 10%) 0,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			transparent 33%,
+			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			$color 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
 
 	// borders
 	//
@@ -76,13 +83,13 @@ $highlight-width: 5%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
@@ -93,12 +100,17 @@ $highlight-width: 5%;
 			white calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc(33% + $border-width)) no-repeat,
 
-		// diffuse
+		// transmitted
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 10%) 0,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			transparent 33%,
+			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			$color 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
 
 	// borders
 	//
@@ -127,21 +139,26 @@ $highlight-width: 5%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to bottom,
+			transparent 33%,
+			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		linear-gradient(to bottom,
-			colors.darkened($color, 10%) 0,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+		colors.darkened($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -194,21 +211,26 @@ $highlight-width: 5%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 10%) 0%,
+			colors.darkened($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
+
+		// transmitted
+		//
+		linear-gradient(to right,
+			transparent 33%,
+			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		linear-gradient(to right,
-			colors.darkened($color, 10%) 0,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+		colors.darkened($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -240,10 +262,10 @@ $highlight-width: 5%;
 			// highlight
 			//
 			linear-gradient(to right,
-				colors.faded(white, 50%) 0%,
+				grey 0%,
 				white calc($highlight-offset - $highlight-width / 2 + $border-width),
 				white calc($highlight-offset + $highlight-width / 2 + $border-width),
-				transparent calc(33% + $border-width)) no-repeat;
+				black calc(33% + $border-width)) no-repeat;
 	}
 
 	// borders

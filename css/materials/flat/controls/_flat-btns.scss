@@ -1,0 +1,35 @@
+/******************************************************************************\
+|                                                                              |
+|                               _flat-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin shading($color, $hover-color, $active-color) {
+	@include flat.shading($color);
+	box-shadow: none;
+
+	&:hover {
+		@include flat.shading($hover-color);
+	}
+
+	&:active {
+		@include flat.shading($active-color);
+	}
+}

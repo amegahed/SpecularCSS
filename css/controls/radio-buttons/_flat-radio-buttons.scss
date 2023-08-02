@@ -15,20 +15,8 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/flat/flat";
-@use "radio-buttons";
-
-//
-// mixins
-//
-
-@mixin shading($color) {
-	box-shadow: none;
-
-	&:checked {
-		@include flat.shading($color);
-	}
-}
+@use "../../materials/flat/controls/flat-radio-buttons";
+@use "../../controls/radio-buttons/radio-buttons";
 
 //
 // styles
@@ -41,5 +29,5 @@ input[type="radio"].flat.flat {
 	// flat radio buttons
 	//
 
-	@include shading(radio-buttons.$checked-color);
+	@include flat-radio-buttons.shading(radio-buttons.$checked-color);
 }

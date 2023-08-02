@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _flat-scrollbars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin shading($color, $hover-color, $active-color) {
+
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include flat.filling($color);
+	}
+	&:vertical:hover {
+		@include flat.filling($hover-color);
+	}
+	&:vertical:active {
+		@include flat.filling($active-color);
+	}
+
+	// horizontal scrollbars
+	//
+	&:horizontal {
+		@include flat.filling($color);
+	}
+	&:horizontal:hover {
+		@include flat.filling($hover-color);
+	}
+	&:horizontal:active {
+		@include flat.filling($active-color);
+	}
+}

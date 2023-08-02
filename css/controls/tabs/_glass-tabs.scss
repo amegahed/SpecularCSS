@@ -15,30 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/glass/rounded-glass";
-@use "tabs";
-@use "flat-tabs";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-	> a {
-		@include rounded-glass.shading($color);
-		box-shadow: var(--tab-shadow);
-
-		&:hover {
-			@include rounded-glass.shading($hover-color);
-		}
-	}
-
-	&.active {
-		> a {
-			@include rounded-glass.shading($active-color);
-		}
-	}
-}
+@use "../../materials/glass/controls/glass-tabs";
+@use "../../materials/flat/controls/flat-tabs";
+@use "../../controls/tabs/tabs";
 
 //
 // styles
@@ -52,7 +31,7 @@
 
 	.glass .nav-tabs > li,
 	.nav-tabs > li.glass {
-		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		@include glass-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
 
@@ -63,7 +42,7 @@
 @supports not (color: color-mix(in srgb, white, black)) {
 
 	//
-	// glass tabs
+	// flat tabs
 	//
 
 	.glass .nav-tabs > li,

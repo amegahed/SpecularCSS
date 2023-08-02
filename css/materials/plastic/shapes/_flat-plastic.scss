@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             _rounded-chalk.scss                              |
+|                             _flat-plastic.scss                               |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,13 +15,15 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../colors/colors";
+@use "../../../colors/colors";
 
 //
 // variables
 //
 
-$highlight-strength: 75%;
+$highlight-size: 25%;
+$specular-size: 50%;
+$specular-strength: 50%;
 
 //
 // mixins
@@ -33,15 +35,20 @@ $highlight-strength: 75%;
 		// highlight
 		//
 		linear-gradient(to $direction,
-			colors.faded(white, $highlight-strength) 0%,
-			transparent 25%) no-repeat,
+			white 0%,
+			transparent 5px) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to bottom,
+			colors.faded(white, $specular-strength) 0%,
+			transparent 10px) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 10%) 0%,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.lightened($color, 50%) 0%,
+			$color 5px) no-repeat;
 
 	// borders
 	//
@@ -58,9 +65,9 @@ $highlight-strength: 75%;
 		// diffuse
 		//
 		linear-gradient(to $direction,
-			colors.lightened($color, 10%) 0%,
-			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.lightened($color, 20%) 0%,
+			$color 5px,
+			$color 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -79,8 +86,14 @@ $highlight-strength: 75%;
 			// highlight
 			//
 			linear-gradient(to $direction,
-				colors.faded(white, $highlight-strength) 0%,
-				transparent 25%) no-repeat;
+				white 0%,
+				transparent 10%) no-repeat,
+
+			// specular
+			//
+			linear-gradient(to bottom,
+				colors.faded(white, $specular-strength) 0%,
+				transparent 10px) no-repeat;
 	}
 
 	// borders

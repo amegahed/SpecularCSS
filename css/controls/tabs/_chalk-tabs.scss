@@ -15,30 +15,9 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/chalk/rounded-chalk";
-@use "tabs";
-@use "flat-tabs";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-	> a {
-		@include rounded-chalk.shading($color);
-		box-shadow: var(--tab-shadow);
-
-		&:hover {
-			@include rounded-chalk.shading($hover-color);
-		}
-	}
-
-	&.active {
-		> a {
-			@include rounded-chalk.shading($active-color);
-		}
-	}
-}
+@use "../../materials/chalk/controls/chalk-tabs";
+@use "../../materials/flat/controls/flat-tabs";
+@use "../../controls/tabs/tabs";
 
 //
 // styles
@@ -52,7 +31,7 @@
 
 	.chalk .nav-tabs > li,
 	.nav-tabs > li.chalk.chalk {
-		@include shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
+		@include chalk-tabs.shading(tabs.$color, tabs.$hover-color, tabs.$active-color);
 	}
 }
 

@@ -15,39 +15,8 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 
-@use "../../materials/flat/flat";
-@use "scrollbars";
-
-//
-// mixins
-//
-
-@mixin shading($color, $hover-color, $active-color) {
-
-	// vertical scrollbars
-	//
-	&:vertical {
-		@include flat.filling($color);
-	}
-	&:vertical:hover {
-		@include flat.filling($hover-color);
-	}
-	&:vertical:active {
-		@include flat.filling($active-color);
-	}
-
-	// horizontal scrollbars
-	//
-	&:horizontal {
-		@include flat.filling($color);
-	}
-	&:horizontal:hover {
-		@include flat.filling($hover-color);
-	}
-	&:horizontal:active {
-		@include flat.filling($active-color);
-	}
-}
+@use "../../materials/flat/controls/flat-scrollbars";
+@use "../../controls/scrollbars/scrollbars";
 
 //
 // styles
@@ -58,5 +27,5 @@
 
 	// flat scrollbars
 	//
-	@include shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
+	@include flat-scrollbars.shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);
 }
