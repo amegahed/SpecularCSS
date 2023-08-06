@@ -29,30 +29,30 @@ $highlight-size: 25%;
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
+@mixin shading ($color: white, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// highlight
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			white 0%,
 			transparent 10%) no-repeat,
 		
 		// specular
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			colors.faded(white, $specular-strength) 0%,
 			transparent 20%) no-repeat,
 
 		// reflected
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			transparent 50%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			colors.faded(colors.darkened($color, 10%), 100%) 0%,
 			colors.faded($color, $opacity) 100%) no-repeat;
 
@@ -65,18 +65,18 @@ $highlight-size: 25%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset, $opacity: 100%) {
+@mixin multilayer-shading ($color: white, $border-style: outset, $opacity: 100%) {
 	background:
 
 		// reflected
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			transparent 50%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			colors.faded(colors.darkened($color, 10%), 100%) 0%,
 			colors.faded($color, $opacity) 100%) no-repeat;
 
@@ -96,13 +96,13 @@ $highlight-size: 25%;
 
 			// highlight
 			//
-			linear-gradient(to $direction,
+			linear-gradient(var(--light-direction),
 				white 0%,
 				transparent 10%) no-repeat,
 
 			// specular
 			//
-			linear-gradient(to bottom,
+			linear-gradient(var(--light-direction),
 				colors.faded(white, $specular-strength) 0%,
 				transparent 20%) no-repeat;
 	}

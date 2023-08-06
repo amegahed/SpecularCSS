@@ -32,7 +32,7 @@ $specular-voffset: 10%;
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset, $background-color: white) {
+@mixin shading ($color: white, $border-style: outset, $background-color: white) {
 	background:
 
 		// left shading
@@ -49,14 +49,14 @@ $specular-voffset: 10%;
 
 		// specular
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 60%) 0%,
 			colors.lightened($color, 30%) 25%,
 			transparent 50%) no-repeat,
 
 		// reflected
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			transparent 66%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
@@ -73,7 +73,7 @@ $specular-voffset: 10%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin multilayer-shading ($color: white, $border-style: outset) {
 	background:
 
 		// specular
@@ -84,7 +84,7 @@ $specular-voffset: 10%;
 
 		// reflected
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			transparent 0%,
 			colors.faded($color, 50%) 66%,
 			$color 100%) no-repeat,
@@ -122,7 +122,7 @@ $specular-voffset: 10%;
 
 			// highlight
 			//
-			linear-gradient(to $direction,
+			linear-gradient(var(--light-direction),
 				colors.lightened($color, 90%) 0%,
 				colors.lightened($color, 30%) 25%,
 				transparent 50%) no-repeat;

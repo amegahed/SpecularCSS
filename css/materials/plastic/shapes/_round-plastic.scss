@@ -39,7 +39,7 @@ $specular-voffset: 10%;
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin shading ($color: white, $border-style: outset) {
 	background:
 
 		// highlight
@@ -57,7 +57,7 @@ $specular-voffset: 10%;
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -71,12 +71,12 @@ $specular-voffset: 10%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin multilayer-shading ($color: white, $border-style: outset) {
 	background:
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -107,6 +107,13 @@ $specular-voffset: 10%;
 				colors.faded(white, $specular-strength) 0%,
 				colors.faded(white, $specular-strength) $specular-size,
 				transparent 100%) no-repeat,
+	}
+
+	// highlight angle
+	//
+	&:not(.long):after {
+		transform: scale(-1) rotate(var(--light-direction));
+		border-radius: 50%;
 	}
 
 	// borders

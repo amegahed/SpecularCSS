@@ -21,12 +21,12 @@
 // mixins
 //
 
-@mixin shading($color: white, $direction: bottom, $border-style: outset) {
+@mixin shading($color: white, $border-style: outset) {
 	background:
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 50%) 0%,
 			$color 5px) no-repeat;
 
@@ -39,12 +39,12 @@
 	}
 }
 
-@mixin multilayer-shading($color: white, $direction: bottom, $border-style: outset) {
+@mixin multilayer-shading($color: white, $border-style: outset) {
 	background:
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 50%) 0%,
 			$color 5px) no-repeat;
 

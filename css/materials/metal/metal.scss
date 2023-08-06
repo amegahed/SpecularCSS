@@ -44,10 +44,10 @@ $border-radius: var(--border-radius);
 	}
 
 	&.long.round {
-		@include long-round-metal.shading($color, bottom, $border-radius);
+		@include long-round-metal.shading($color, $border-radius);
 
 		&.vertical {
-			@include long-round-metal.shading($color, right, $border-radius);
+			@include long-round-metal.vertical-shading($color, $border-radius);
 		}
 	}
 }
@@ -64,10 +64,10 @@ $border-radius: var(--border-radius);
 	}
 
 	&.long.round {
-		@include long-round-metal.multilayer-shading($color, bottom, $border-radius);
+		@include long-round-metal.multilayer-shading($color, $border-radius);
 
 		&.vertical {
-			@include long-round-metal.multilayer-shading($color, right, $border-radius);
+			@include long-round-metal.vertical-multilayer-shading($color, $border-radius);
 		}
 	}
 }

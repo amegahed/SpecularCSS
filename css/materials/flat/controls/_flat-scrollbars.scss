@@ -23,18 +23,6 @@
 
 @mixin shading($color, $hover-color, $active-color) {
 
-	// vertical scrollbars
-	//
-	&:vertical {
-		@include flat.filling($color);
-	}
-	&:vertical:hover {
-		@include flat.filling($hover-color);
-	}
-	&:vertical:active {
-		@include flat.filling($active-color);
-	}
-
 	// horizontal scrollbars
 	//
 	&:horizontal {
@@ -44,6 +32,18 @@
 		@include flat.filling($hover-color);
 	}
 	&:horizontal:active {
+		@include flat.filling($active-color);
+	}
+
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include flat.filling($color);
+	}
+	&:vertical:hover {
+		@include flat.filling($hover-color);
+	}
+	&:vertical:active {
 		@include flat.filling($active-color);
 	}
 }

@@ -23,27 +23,27 @@
 
 @mixin shading($color, $hover-color, $active-color, $border-radius) {
 
-	// vertical scrollbars
-	//
-	&:vertical {
-		@include long-round-metal.shading($color, right, $border-radius, none);
-	}
-	&:vertical:hover {
-		@include long-round-metal.shading($hover-color, right, $border-radius, none);
-	}
-	&:vertical:active {
-		@include long-round-metal.shading($active-color, right, $border-radius, none);
-	}
-
 	// horizontal scrollbars
 	//
 	&:horizontal {
-		@include long-round-metal.shading($color, bottom, $border-radius, none);
+		@include long-round-metal.shading($color, $border-radius, none);
 	}
 	&:horizontal:hover {
-		@include long-round-metal.shading($hover-color, bottom, $border-radius, none);
+		@include long-round-metal.shading($hover-color, $border-radius, none);
 	}
 	&:horizontal:active {
-		@include long-round-metal.shading($active-color, bottom, $border-radius, none);
+		@include long-round-metal.shading($active-color, $border-radius, none);
+	}
+
+	// vertical scrollbars
+	//
+	&:vertical {
+		@include long-round-metal.vertical-shading($color, $border-radius, none);
+	}
+	&:vertical:hover {
+		@include long-round-metal.vertical-shading($hover-color, $border-radius, none);
+	}
+	&:vertical:active {
+		@include long-round-metal.vertical-shading($active-color, $border-radius, none);
 	}
 }

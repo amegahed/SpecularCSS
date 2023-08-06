@@ -33,6 +33,7 @@
 
 	&::-webkit-slider-thumb {
 		@include round-metal.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 
 		&:hover {
 			@include round-metal.shading($hover-color);
@@ -45,6 +46,7 @@
 
 	&::-moz-range-thumb {
 		@include round-metal.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 
 		&:hover {
 			@include round-metal.shading($hover-color);
@@ -57,6 +59,7 @@
 
 	&::-ms-thumb {
 		@include round-metal.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 
 		&:hover {
 			@include round-metal.shading($hover-color);
@@ -78,6 +81,7 @@
 	&::-webkit-slider-thumb {
 		&:active {
 			@include round-metal.shading($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
 		}
 	}
 
@@ -88,6 +92,7 @@
 	&::-moz-range-thumb {
 		&:active {
 			@include round-metal.shading($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
 		}
 	}
 
@@ -98,6 +103,7 @@
 	&::-ms-thumb {
 		&:active {
 			@include round-metal.shading($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
 		}
 	}
 }

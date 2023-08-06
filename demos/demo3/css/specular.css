@@ -304,29 +304,29 @@
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .chalk .btn, .chalk.btn.btn {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, #cfcfe1);
     box-shadow: var(--btn-shadow);
   }
   .chalk .btn:hover, .chalk.btn.btn:hover {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .chalk .btn:active, .chalk.btn.btn:active {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1));
   }
   .chalk .btn-primary, .chalk.btn.btn-primary {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
     box-shadow: var(--btn-shadow);
   }
   .chalk .btn-primary:hover, .chalk.btn.btn-primary:hover {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .chalk .btn-primary:active, .chalk.btn.btn-primary:active {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
 }
@@ -456,29 +456,29 @@
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic .btn, .plastic.btn.btn {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, #cfcfe1);
     box-shadow: var(--btn-shadow);
   }
   .plastic .btn:hover, .plastic.btn.btn:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .plastic .btn:active, .plastic.btn.btn:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, #cfcfe1));
   }
   .plastic .btn-primary, .plastic.btn.btn-primary {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
     box-shadow: var(--btn-shadow);
   }
   .plastic .btn-primary:hover, .plastic.btn.btn-primary:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .plastic .btn-primary:active, .plastic.btn.btn-primary:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
 }
@@ -608,29 +608,29 @@
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass .btn, .glass.btn.btn {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, #cfcfe1) 0%, #cfcfe1 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, #cfcfe1 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, #cfcfe1) 0%, #cfcfe1 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #cfcfe1 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
     border-color: color-mix(in srgb, black 20%, #cfcfe1);
     box-shadow: var(--btn-shadow);
   }
   .glass .btn:hover, .glass.btn.btn:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .glass .btn:active, .glass.btn.btn:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, #cfcfe1));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, #cfcfe1)) 0%, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, #cfcfe1));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, #cfcfe1));
   }
   .glass .btn-primary, .glass.btn.btn-primary {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
     box-shadow: var(--btn-shadow);
   }
   .glass .btn-primary:hover, .glass.btn.btn-primary:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .glass .btn-primary:active, .glass.btn.btn-primary:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
 }
@@ -760,29 +760,29 @@
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .metal .btn, .metal.btn.btn {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, #cfcfe1) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, #cfcfe1 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, #cfcfe1 50%, transparent) 66%, color-mix(in srgb, white 30%, #cfcfe1) 100%) no-repeat, color-mix(in srgb, black 50%, #cfcfe1);
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, #cfcfe1) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, #cfcfe1 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #cfcfe1 50%, transparent) 66%, color-mix(in srgb, white 30%, #cfcfe1) 100%) no-repeat, color-mix(in srgb, black 50%, #cfcfe1);
     border-color: color-mix(in srgb, black 20%, #cfcfe1);
     box-shadow: var(--btn-shadow);
   }
   .metal .btn:hover, .metal.btn.btn:hover {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, #cfcfe1) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, #cfcfe1));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, #cfcfe1) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, #cfcfe1));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .metal .btn:active, .metal.btn.btn:active {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, #cfcfe1)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, #cfcfe1) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, #cfcfe1));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, #cfcfe1)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, #cfcfe1) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, #cfcfe1));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, #cfcfe1));
   }
   .metal .btn-primary, .metal.btn.btn-primary {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
     box-shadow: var(--btn-shadow);
   }
   .metal .btn-primary:hover, .metal.btn.btn-primary:hover {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .metal .btn-primary:active, .metal.btn.btn-primary:active {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
 }
@@ -954,18 +954,6 @@
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
-.flat ::-webkit-scrollbar-thumb:vertical,
-.flat.flat::-webkit-scrollbar-thumb:vertical {
-  background: var(--primary-color);
-}
-.flat ::-webkit-scrollbar-thumb:vertical:hover,
-.flat.flat::-webkit-scrollbar-thumb:vertical:hover {
-  background: color-mix(in srgb, black 10%, var(--primary-color));
-}
-.flat ::-webkit-scrollbar-thumb:vertical:active,
-.flat.flat::-webkit-scrollbar-thumb:vertical:active {
-  background: color-mix(in srgb, black 20%, var(--primary-color));
-}
 .flat ::-webkit-scrollbar-thumb:horizontal,
 .flat.flat::-webkit-scrollbar-thumb:horizontal {
   background: var(--primary-color);
@@ -976,6 +964,18 @@
 }
 .flat ::-webkit-scrollbar-thumb:horizontal:active,
 .flat.flat::-webkit-scrollbar-thumb:horizontal:active {
+  background: color-mix(in srgb, black 20%, var(--primary-color));
+}
+.flat ::-webkit-scrollbar-thumb:vertical,
+.flat.flat::-webkit-scrollbar-thumb:vertical {
+  background: var(--primary-color);
+}
+.flat ::-webkit-scrollbar-thumb:vertical:hover,
+.flat.flat::-webkit-scrollbar-thumb:vertical:hover {
+  background: color-mix(in srgb, black 10%, var(--primary-color));
+}
+.flat ::-webkit-scrollbar-thumb:vertical:active,
+.flat.flat::-webkit-scrollbar-thumb:vertical:active {
   background: color-mix(in srgb, black 20%, var(--primary-color));
 }
 
@@ -1028,6 +1028,18 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
+  .chalk ::-webkit-scrollbar-thumb:horizontal,
+  .chalk.chalk::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+  }
+  .chalk ::-webkit-scrollbar-thumb:horizontal:hover,
+  .chalk.chalk::-webkit-scrollbar-thumb:horizontal:hover {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+  }
+  .chalk ::-webkit-scrollbar-thumb:horizontal:active,
+  .chalk.chalk::-webkit-scrollbar-thumb:horizontal:active {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+  }
   .chalk ::-webkit-scrollbar-thumb:vertical,
   .chalk.chalk::-webkit-scrollbar-thumb:vertical {
     background: linear-gradient(to top, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
@@ -1040,20 +1052,20 @@
   .chalk.chalk::-webkit-scrollbar-thumb:vertical:active {
     background: linear-gradient(to top, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
   }
+}
+@supports not (color: color-mix(in srgb, white, black)) {
   .chalk ::-webkit-scrollbar-thumb:horizontal,
   .chalk.chalk::-webkit-scrollbar-thumb:horizontal {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: var(--primary-color);
   }
   .chalk ::-webkit-scrollbar-thumb:horizontal:hover,
   .chalk.chalk::-webkit-scrollbar-thumb:horizontal:hover {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk ::-webkit-scrollbar-thumb:horizontal:active,
   .chalk.chalk::-webkit-scrollbar-thumb:horizontal:active {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: color-mix(in srgb, black 20%, var(--primary-color));
   }
-}
-@supports not (color: color-mix(in srgb, white, black)) {
   .chalk ::-webkit-scrollbar-thumb:vertical,
   .chalk.chalk::-webkit-scrollbar-thumb:vertical {
     background: var(--primary-color);
@@ -1064,18 +1076,6 @@
   }
   .chalk ::-webkit-scrollbar-thumb:vertical:active,
   .chalk.chalk::-webkit-scrollbar-thumb:vertical:active {
-    background: color-mix(in srgb, black 20%, var(--primary-color));
-  }
-  .chalk ::-webkit-scrollbar-thumb:horizontal,
-  .chalk.chalk::-webkit-scrollbar-thumb:horizontal {
-    background: var(--primary-color);
-  }
-  .chalk ::-webkit-scrollbar-thumb:horizontal:hover,
-  .chalk.chalk::-webkit-scrollbar-thumb:horizontal:hover {
-    background: color-mix(in srgb, black 10%, var(--primary-color));
-  }
-  .chalk ::-webkit-scrollbar-thumb:horizontal:active,
-  .chalk.chalk::-webkit-scrollbar-thumb:horizontal:active {
     background: color-mix(in srgb, black 20%, var(--primary-color));
   }
 }
@@ -1128,6 +1128,18 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
+  .plastic ::-webkit-scrollbar-thumb:horizontal,
+  .plastic.plastic::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+  }
+  .plastic ::-webkit-scrollbar-thumb:horizontal:hover,
+  .plastic.plastic::-webkit-scrollbar-thumb:horizontal:hover {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+  }
+  .plastic ::-webkit-scrollbar-thumb:horizontal:active,
+  .plastic.plastic::-webkit-scrollbar-thumb:horizontal:active {
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+  }
   .plastic ::-webkit-scrollbar-thumb:vertical,
   .plastic.plastic::-webkit-scrollbar-thumb:vertical {
     background: linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
@@ -1140,20 +1152,20 @@
   .plastic.plastic::-webkit-scrollbar-thumb:vertical:active {
     background: linear-gradient(to bottom, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
   }
+}
+@supports not (color: color-mix(in srgb, white, black)) {
   .plastic ::-webkit-scrollbar-thumb:horizontal,
   .plastic.plastic::-webkit-scrollbar-thumb:horizontal {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: var(--primary-color);
   }
   .plastic ::-webkit-scrollbar-thumb:horizontal:hover,
   .plastic.plastic::-webkit-scrollbar-thumb:horizontal:hover {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic ::-webkit-scrollbar-thumb:horizontal:active,
   .plastic.plastic::-webkit-scrollbar-thumb:horizontal:active {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: color-mix(in srgb, black 20%, var(--primary-color));
   }
-}
-@supports not (color: color-mix(in srgb, white, black)) {
   .plastic ::-webkit-scrollbar-thumb:vertical,
   .plastic.plastic::-webkit-scrollbar-thumb:vertical {
     background: var(--primary-color);
@@ -1164,18 +1176,6 @@
   }
   .plastic ::-webkit-scrollbar-thumb:vertical:active,
   .plastic.plastic::-webkit-scrollbar-thumb:vertical:active {
-    background: color-mix(in srgb, black 20%, var(--primary-color));
-  }
-  .plastic ::-webkit-scrollbar-thumb:horizontal,
-  .plastic.plastic::-webkit-scrollbar-thumb:horizontal {
-    background: var(--primary-color);
-  }
-  .plastic ::-webkit-scrollbar-thumb:horizontal:hover,
-  .plastic.plastic::-webkit-scrollbar-thumb:horizontal:hover {
-    background: color-mix(in srgb, black 10%, var(--primary-color));
-  }
-  .plastic ::-webkit-scrollbar-thumb:horizontal:active,
-  .plastic.plastic::-webkit-scrollbar-thumb:horizontal:active {
     background: color-mix(in srgb, black 20%, var(--primary-color));
   }
 }
@@ -1228,6 +1228,18 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
+  .glass ::-webkit-scrollbar-thumb:horizontal,
+  .glass.glass::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+  }
+  .glass ::-webkit-scrollbar-thumb:horizontal:hover,
+  .glass.glass::-webkit-scrollbar-thumb:horizontal:hover {
+    background: linear-gradient(to right, color-mix(in srgb, black 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) calc(70% + 1px), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) calc(80% + 1px), color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+  }
+  .glass ::-webkit-scrollbar-thumb:horizontal:active,
+  .glass.glass::-webkit-scrollbar-thumb:horizontal:active {
+    background: linear-gradient(to right, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(70% + 1px), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(80% + 1px), color-mix(in srgb, black 20%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+  }
   .glass ::-webkit-scrollbar-thumb:vertical,
   .glass.glass::-webkit-scrollbar-thumb:vertical {
     background: linear-gradient(to bottom, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
@@ -1240,20 +1252,20 @@
   .glass.glass::-webkit-scrollbar-thumb:vertical:active {
     background: linear-gradient(to bottom, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(70% + 1px), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(80% + 1px), color-mix(in srgb, black 20%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
+}
+@supports not (color: color-mix(in srgb, white, black)) {
   .glass ::-webkit-scrollbar-thumb:horizontal,
   .glass.glass::-webkit-scrollbar-thumb:horizontal {
-    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: var(--primary-color);
   }
   .glass ::-webkit-scrollbar-thumb:horizontal:hover,
   .glass.glass::-webkit-scrollbar-thumb:horizontal:hover {
-    background: linear-gradient(to right, color-mix(in srgb, black 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) calc(70% + 1px), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) calc(80% + 1px), color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .glass ::-webkit-scrollbar-thumb:horizontal:active,
   .glass.glass::-webkit-scrollbar-thumb:horizontal:active {
-    background: linear-gradient(to right, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(70% + 1px), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) calc(80% + 1px), color-mix(in srgb, black 20%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: color-mix(in srgb, black 20%, var(--primary-color));
   }
-}
-@supports not (color: color-mix(in srgb, white, black)) {
   .glass ::-webkit-scrollbar-thumb:vertical,
   .glass.glass::-webkit-scrollbar-thumb:vertical {
     background: var(--primary-color);
@@ -1264,18 +1276,6 @@
   }
   .glass ::-webkit-scrollbar-thumb:vertical:active,
   .glass.glass::-webkit-scrollbar-thumb:vertical:active {
-    background: color-mix(in srgb, black 20%, var(--primary-color));
-  }
-  .glass ::-webkit-scrollbar-thumb:horizontal,
-  .glass.glass::-webkit-scrollbar-thumb:horizontal {
-    background: var(--primary-color);
-  }
-  .glass ::-webkit-scrollbar-thumb:horizontal:hover,
-  .glass.glass::-webkit-scrollbar-thumb:horizontal:hover {
-    background: color-mix(in srgb, black 10%, var(--primary-color));
-  }
-  .glass ::-webkit-scrollbar-thumb:horizontal:active,
-  .glass.glass::-webkit-scrollbar-thumb:horizontal:active {
     background: color-mix(in srgb, black 20%, var(--primary-color));
   }
 }
@@ -1328,44 +1328,32 @@
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
-  .metal ::-webkit-scrollbar-thumb:vertical,
-  .metal.metal::-webkit-scrollbar-thumb:vertical {
-    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
-  }
-  .metal ::-webkit-scrollbar-thumb:vertical:hover,
-  .metal.metal::-webkit-scrollbar-thumb:vertical:hover {
-    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent) 0%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, black 10%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
-  }
-  .metal ::-webkit-scrollbar-thumb:vertical:active,
-  .metal.metal::-webkit-scrollbar-thumb:vertical:active {
-    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent) 0%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, black 20%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
-  }
   .metal ::-webkit-scrollbar-thumb:horizontal,
   .metal.metal::-webkit-scrollbar-thumb:horizontal {
-    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
   }
   .metal ::-webkit-scrollbar-thumb:horizontal:hover,
   .metal.metal::-webkit-scrollbar-thumb:horizontal:hover {
-    background: linear-gradient(to right, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent) 0%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, black 10%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: linear-gradient(to right, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, white 75%, color-mix(in srgb, black 10%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 75%, color-mix(in srgb, black 10%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, black 10%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .metal ::-webkit-scrollbar-thumb:horizontal:active,
   .metal.metal::-webkit-scrollbar-thumb:horizontal:active {
-    background: linear-gradient(to right, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent) 0%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, black 20%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: linear-gradient(to right, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, white 75%, color-mix(in srgb, black 20%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 75%, color-mix(in srgb, black 20%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, black 20%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical,
+  .metal.metal::-webkit-scrollbar-thumb:vertical {
+    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical:hover,
+  .metal.metal::-webkit-scrollbar-thumb:vertical:hover {
+    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, white 75%, color-mix(in srgb, black 10%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 75%, color-mix(in srgb, black 10%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, black 10%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical:active,
+  .metal.metal::-webkit-scrollbar-thumb:vertical:active {
+    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, transparent 6px) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, white 75%, color-mix(in srgb, black 20%, var(--primary-color))) calc(5% + 1px), color-mix(in srgb, white 75%, color-mix(in srgb, black 20%, var(--primary-color))) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, black 20%, var(--primary-color)) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
-  .metal ::-webkit-scrollbar-thumb:vertical,
-  .metal.metal::-webkit-scrollbar-thumb:vertical {
-    background: var(--primary-color);
-  }
-  .metal ::-webkit-scrollbar-thumb:vertical:hover,
-  .metal.metal::-webkit-scrollbar-thumb:vertical:hover {
-    background: color-mix(in srgb, black 10%, var(--primary-color));
-  }
-  .metal ::-webkit-scrollbar-thumb:vertical:active,
-  .metal.metal::-webkit-scrollbar-thumb:vertical:active {
-    background: color-mix(in srgb, black 20%, var(--primary-color));
-  }
   .metal ::-webkit-scrollbar-thumb:horizontal,
   .metal.metal::-webkit-scrollbar-thumb:horizontal {
     background: var(--primary-color);
@@ -1376,6 +1364,18 @@
   }
   .metal ::-webkit-scrollbar-thumb:horizontal:active,
   .metal.metal::-webkit-scrollbar-thumb:horizontal:active {
+    background: color-mix(in srgb, black 20%, var(--primary-color));
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical,
+  .metal.metal::-webkit-scrollbar-thumb:vertical {
+    background: var(--primary-color);
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical:hover,
+  .metal.metal::-webkit-scrollbar-thumb:vertical:hover {
+    background: color-mix(in srgb, black 10%, var(--primary-color));
+  }
+  .metal ::-webkit-scrollbar-thumb:vertical:active,
+  .metal.metal::-webkit-scrollbar-thumb:vertical:active {
     background: color-mix(in srgb, black 20%, var(--primary-color));
   }
 }
@@ -1521,8 +1521,9 @@ input[type=radio].flat.flat:checked.rounded {
   }
   .chalk input[type=radio]:checked,
   input[type=radio].chalk.chalk:checked {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -1585,8 +1586,9 @@ input[type=radio].flat.flat:checked.rounded {
   }
   .plastic input[type=radio]:checked,
   input[type=radio].plastic.plastic:checked {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -1649,8 +1651,9 @@ input[type=radio].flat.flat:checked.rounded {
   }
   .glass input[type=radio]:checked,
   input[type=radio].glass.glass:checked {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -1713,8 +1716,9 @@ input[type=radio].flat.flat:checked.rounded {
   }
   .metal input[type=radio]:checked,
   input[type=radio].metal.metal:checked {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -2197,48 +2201,54 @@ input[type=range].flat.flat::-moz-range-track.rounded {
   }
   .chalk input[type=range]::-webkit-slider-thumb,
   input[type=range].chalk.chalk::-webkit-slider-thumb {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-webkit-slider-thumb:hover,
   input[type=range].chalk.chalk::-webkit-slider-thumb:hover {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .chalk input[type=range]::-moz-range-thumb,
   input[type=range].chalk.chalk::-moz-range-thumb {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-moz-range-thumb:hover,
   input[type=range].chalk.chalk::-moz-range-thumb:hover {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .chalk input[type=range]::-ms-thumb,
   input[type=range].chalk.chalk::-ms-thumb {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-ms-thumb:hover,
   input[type=range].chalk.chalk::-ms-thumb:hover {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .chalk input[type=range]::-webkit-slider-thumb:active,
   input[type=range].chalk.chalk::-webkit-slider-thumb:active {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-moz-range-thumb:active,
   input[type=range].chalk.chalk::-moz-range-thumb:active {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-ms-thumb:active,
   input[type=range].chalk.chalk::-ms-thumb:active {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .chalk input[type=range]::-webkit-slider-runnable-track,
   input[type=range].chalk.chalk::-webkit-slider-runnable-track {
@@ -2497,47 +2507,50 @@ input[type=range].flat.flat::-moz-range-track.rounded {
   }
   .plastic input[type=range]::-webkit-slider-thumb,
   input[type=range].plastic.plastic::-webkit-slider-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .plastic input[type=range]::-webkit-slider-thumb:hover,
   input[type=range].plastic.plastic::-webkit-slider-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .plastic input[type=range]::-moz-range-thumb,
   input[type=range].plastic.plastic::-moz-range-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .plastic input[type=range]::-moz-range-thumb:hover,
   input[type=range].plastic.plastic::-moz-range-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .plastic input[type=range]::-ms-thumb,
   input[type=range].plastic.plastic::-ms-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .plastic input[type=range]::-ms-thumb:hover,
   input[type=range].plastic.plastic::-ms-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .plastic input[type=range]::-webkit-slider-thumb:active,
   input[type=range].plastic.plastic::-webkit-slider-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
   .plastic input[type=range]::-moz-range-thumb:active,
   input[type=range].plastic.plastic::-moz-range-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
   .plastic input[type=range]::-ms-thumb:active,
   input[type=range].plastic.plastic::-ms-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 20%, var(--primary-color)));
   }
   .plastic input[type=range]::-webkit-slider-runnable-track,
@@ -2797,48 +2810,54 @@ input[type=range].flat.flat::-moz-range-track.rounded {
   }
   .glass input[type=range]::-webkit-slider-thumb,
   input[type=range].glass.glass::-webkit-slider-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-webkit-slider-thumb:hover,
   input[type=range].glass.glass::-webkit-slider-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .glass input[type=range]::-moz-range-thumb,
   input[type=range].glass.glass::-moz-range-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-moz-range-thumb:hover,
   input[type=range].glass.glass::-moz-range-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .glass input[type=range]::-ms-thumb,
   input[type=range].glass.glass::-ms-thumb {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-ms-thumb:hover,
   input[type=range].glass.glass::-ms-thumb:hover {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, var(--primary-color))) 0%, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .glass input[type=range]::-webkit-slider-thumb:active,
   input[type=range].glass.glass::-webkit-slider-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-moz-range-thumb:active,
   input[type=range].glass.glass::-moz-range-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-ms-thumb:active,
   input[type=range].glass.glass::-ms-thumb:active {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 20%, var(--primary-color))) 0%, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .glass input[type=range]::-webkit-slider-runnable-track,
   input[type=range].glass.glass::-webkit-slider-runnable-track {
@@ -3097,48 +3116,54 @@ input[type=range].flat.flat::-moz-range-track.rounded {
   }
   .metal input[type=range]::-webkit-slider-thumb,
   input[type=range].metal.metal::-webkit-slider-thumb {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-webkit-slider-thumb:hover,
   input[type=range].metal.metal::-webkit-slider-thumb:hover {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .metal input[type=range]::-moz-range-thumb,
   input[type=range].metal.metal::-moz-range-thumb {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-moz-range-thumb:hover,
   input[type=range].metal.metal::-moz-range-thumb:hover {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .metal input[type=range]::-ms-thumb,
   input[type=range].metal.metal::-ms-thumb {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-ms-thumb:hover,
   input[type=range].metal.metal::-ms-thumb:hover {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 10%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, var(--primary-color)));
   }
   .metal input[type=range]::-webkit-slider-thumb:active,
   input[type=range].metal.metal::-webkit-slider-thumb:active {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-moz-range-thumb:active,
   input[type=range].metal.metal::-moz-range-thumb:active {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-ms-thumb:active,
   input[type=range].metal.metal::-ms-thumb:active {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, color-mix(in srgb, black 20%, var(--primary-color)) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 66%, color-mix(in srgb, white 30%, color-mix(in srgb, black 20%, var(--primary-color))) 100%) no-repeat, color-mix(in srgb, black 50%, color-mix(in srgb, black 20%, var(--primary-color)));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 20%, var(--primary-color)));
+    transform: scale(-1) rotate(var(--light-direction));
   }
   .metal input[type=range]::-webkit-slider-runnable-track,
   input[type=range].metal.metal::-webkit-slider-runnable-track {
@@ -3548,18 +3573,18 @@ ul.nav-tabs li.active > a {
 @supports (color: color-mix(in srgb, white, black)) {
   .chalk .nav-tabs > li > a,
   .nav-tabs > li.chalk.chalk > a {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, #cfcfe1) 0%, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, #cfcfe1);
     box-shadow: var(--tab-shadow);
   }
   .chalk .nav-tabs > li > a:hover,
   .nav-tabs > li.chalk.chalk > a:hover {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .chalk .nav-tabs > li.active > a,
   .nav-tabs > li.chalk.chalk.active > a {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
 }
@@ -3662,18 +3687,18 @@ ul.nav-tabs li.active > a {
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic .nav-tabs > li > a,
   .nav-tabs > li.plastic.plastic > a {
-    background: linear-gradient(to bottom, white 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, #cfcfe1) 0, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, #cfcfe1) 0, #cfcfe1 50%, color-mix(in srgb, black 10%, #cfcfe1) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, #cfcfe1);
     box-shadow: var(--tab-shadow);
   }
   .plastic .nav-tabs > li > a:hover,
   .nav-tabs > li.plastic.plastic > a:hover {
-    background: linear-gradient(to bottom, white 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 0, color-mix(in srgb, black 10%, #cfcfe1) 50%, color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .plastic .nav-tabs > li.active > a,
   .nav-tabs > li.plastic.plastic.active > a {
-    background: linear-gradient(to bottom, white 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
 }
@@ -3776,18 +3801,18 @@ ul.nav-tabs li.active > a {
 @supports (color: color-mix(in srgb, white, black)) {
   .glass .nav-tabs > li > a,
   .nav-tabs > li.glass > a {
-    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to bottom, white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, #cfcfe1) 0%, #cfcfe1 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
+    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, #cfcfe1) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, #cfcfe1) 0%, #cfcfe1 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
     border-color: color-mix(in srgb, black 10%, #cfcfe1);
     box-shadow: var(--tab-shadow);
   }
   .glass .nav-tabs > li > a:hover,
   .nav-tabs > li.glass > a:hover {
-    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to bottom, white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
+    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, black 10%, #cfcfe1) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
     border-color: color-mix(in srgb, black 10%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .glass .nav-tabs > li.active > a,
   .nav-tabs > li.glass.active > a {
-    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to bottom, white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
 }
@@ -3890,18 +3915,18 @@ ul.nav-tabs li.active > a {
 @supports (color: color-mix(in srgb, white, black)) {
   .metal .nav-tabs > li > a,
   .nav-tabs > li.metal > a {
-    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 60%, #cfcfe1) 0%, color-mix(in srgb, white 30%, #cfcfe1) 25%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, #cfcfe1) 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
+    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 60%, #cfcfe1) 0%, color-mix(in srgb, white 30%, #cfcfe1) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, #cfcfe1) 100%) no-repeat, color-mix(in srgb, black 30%, #cfcfe1);
     border-color: color-mix(in srgb, black 20%, #cfcfe1);
     box-shadow: var(--tab-shadow);
   }
   .metal .nav-tabs > li > a:hover,
   .nav-tabs > li.metal > a:hover {
-    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 60%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 25%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
+    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 60%, color-mix(in srgb, black 10%, #cfcfe1)) 0%, color-mix(in srgb, white 30%, color-mix(in srgb, black 10%, #cfcfe1)) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, color-mix(in srgb, black 10%, #cfcfe1)) 100%) no-repeat, color-mix(in srgb, black 30%, color-mix(in srgb, black 10%, #cfcfe1));
     border-color: color-mix(in srgb, black 20%, color-mix(in srgb, black 10%, #cfcfe1));
   }
   .metal .nav-tabs > li.active > a,
   .nav-tabs > li.metal.active > a {
-    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 60%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 60%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
 }
@@ -4035,19 +4060,19 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .chalk .shaded, .chalk.chalk.shaded {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.round, .chalk.chalk.shaded.round {
-    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.rounded, .chalk.chalk.shaded.rounded {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.long.round, .chalk.chalk.shaded.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 1px), color-mix(in srgb, white 50%, transparent) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.long.round.vertical, .chalk.chalk.shaded.long.round.vertical {
@@ -4055,11 +4080,11 @@ ul.nav-tabs li.active > a {
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.textured, .chalk.chalk.shaded.textured {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .chalk .shaded.textured.round, .chalk.chalk.shaded.textured.round {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4074,8 +4099,12 @@ ul.nav-tabs li.active > a {
     pointer-events: none;
     background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 25%, transparent 100%) no-repeat;
   }
+  .chalk .shaded.textured.round:not(.long):after, .chalk.chalk.shaded.textured.round:not(.long):after {
+    transform: scale(-1) rotate(var(--light-direction));
+    border-radius: 50%;
+  }
   .chalk .shaded.textured.rounded, .chalk.chalk.shaded.textured.rounded {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4088,10 +4117,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 25%) no-repeat;
   }
   .chalk .shaded.textured.long.round, .chalk.chalk.shaded.textured.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4109,7 +4138,7 @@ ul.nav-tabs li.active > a {
     background: linear-gradient(to right, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, grey 0%, white calc(5% + 1px), white calc(15% + 1px), black calc(50% + 1px)) no-repeat;
   }
   .chalk .shaded.textured.long.round.vertical, .chalk.chalk.shaded.textured.long.round.vertical {
-    background: linear-gradient(to top, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4124,7 +4153,7 @@ ul.nav-tabs li.active > a {
     pointer-events: none;
     mix-blend-mode: screen;
     opacity: 50%;
-    background: linear-gradient(to bottom, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, white calc(5% + 1px), white calc(15% + 1px), transparent calc(50% + 1px)) no-repeat;
+    background: linear-gradient(to right, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, grey 0%, white calc(5% + 1px), white calc(15% + 1px), black calc(50% + 1px)) no-repeat;
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -4203,19 +4232,19 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .plastic .shaded, .plastic.plastic.shaded {
-    background: linear-gradient(to bottom, white 0%, transparent 5px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 5px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 5px) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic .shaded.round, .plastic.plastic.shaded.round {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic .shaded.rounded, .plastic.plastic.shaded.rounded {
-    background: linear-gradient(to bottom, white 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic .shaded.long.round, .plastic.plastic.shaded.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic .shaded.long.round.vertical, .plastic.plastic.shaded.long.round.vertical {
@@ -4223,7 +4252,7 @@ ul.nav-tabs li.active > a {
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .plastic .shaded.textured, .plastic.plastic.shaded.textured {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 20%, var(--primary-color)) 0%, var(--primary-color) 5px, var(--primary-color) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 20%, var(--primary-color)) 0%, var(--primary-color) 5px, var(--primary-color) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4236,10 +4265,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, white 0%, transparent 10%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, transparent 10px) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, transparent) 0%, transparent 10px) no-repeat;
   }
   .plastic .shaded.textured.round, .plastic.plastic.shaded.textured.round {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0%, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4254,8 +4283,12 @@ ul.nav-tabs li.active > a {
     pointer-events: none;
     background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat;
   }
+  .plastic .shaded.textured.round:not(.long):after, .plastic.plastic.shaded.textured.round:not(.long):after {
+    transform: scale(-1) rotate(var(--light-direction));
+    border-radius: 50%;
+  }
   .plastic .shaded.textured.rounded, .plastic.plastic.shaded.textured.rounded {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4268,10 +4301,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, white 0%, transparent 25%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 25%) no-repeat;
   }
   .plastic .shaded.textured.long.round, .plastic.plastic.shaded.textured.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, black 10%, var(--primary-color)) 0, var(--primary-color) 50%, color-mix(in srgb, black 10%, var(--primary-color)) 100%) no-repeat;
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4381,19 +4414,19 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .glass .shaded, .glass.glass.shaded {
-    background: linear-gradient(to bottom, white 0%, transparent 10%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to bottom, transparent 50%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 100%, transparent) 0%, color-mix(in srgb, var(--primary-color) 100%, transparent) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 100%, transparent) 0%, color-mix(in srgb, var(--primary-color) 100%, transparent) 100%) no-repeat;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .glass .shaded.round, .glass.glass.shaded.round {
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
   .glass .shaded.rounded, .glass.glass.shaded.rounded {
-    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to bottom, white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .glass .shaded.long.round, .glass.glass.shaded.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), transparent calc(33% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .glass .shaded.long.round.vertical, .glass.glass.shaded.long.round.vertical {
@@ -4401,7 +4434,7 @@ ul.nav-tabs li.active > a {
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .glass .shaded.textured, .glass.glass.shaded.textured {
-    background: linear-gradient(to bottom, transparent 50%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 100%, transparent) 0%, color-mix(in srgb, var(--primary-color) 100%, transparent) 100%) no-repeat;
+    background: linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, black 10%, var(--primary-color)) 100%, transparent) 0%, color-mix(in srgb, var(--primary-color) 100%, transparent) 100%) no-repeat;
     position: relative;
     overflow: hidden;
   }
@@ -4413,10 +4446,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, white 0%, transparent 10%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 50%, transparent) 0%, transparent 20%) no-repeat;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 50%, transparent) 0%, transparent 20%) no-repeat;
   }
   .glass .shaded.textured.round, .glass.glass.shaded.textured.round {
-    background: radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--primary-color) 50%, transparent) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4429,10 +4462,15 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat;
+    mix-blend-mode: normal;
+    background: radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat;
+  }
+  .glass .shaded.textured.round:not(.long):after, .glass.glass.shaded.textured.round:not(.long):after {
+    transform: scale(-1) rotate(var(--light-direction));
+    border-radius: 50%;
   }
   .glass .shaded.textured.rounded, .glass.glass.shaded.textured.rounded {
-    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, color-mix(in srgb, black 20%, var(--primary-color)) 50%, transparent) 0%, transparent 10px) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4445,10 +4483,11 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, white 0%, transparent 30%) no-repeat;
+    mix-blend-mode: normal;
+    background: linear-gradient(var(--light-direction), white 0%, transparent 30%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, white 50%, var(--primary-color)) 0%, var(--primary-color) 50%, transparent 100%) no-repeat;
   }
   .glass .shaded.textured.long.round, .glass.glass.shaded.textured.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 25%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, white 10%, var(--primary-color)) calc(70% + 1px), color-mix(in srgb, white 10%, var(--primary-color)) calc(80% + 1px), var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4462,6 +4501,7 @@ ul.nav-tabs li.active > a {
     left: 0;
     pointer-events: none;
     mix-blend-mode: screen;
+    border-radius: 0;
     background: linear-gradient(to right, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, grey 0%, white calc(7.5% + 1px), white calc(12.5% + 1px), black calc(33% + 1px)) no-repeat;
   }
   .glass .shaded.textured.long.round.vertical, .glass.glass.shaded.textured.long.round.vertical {
@@ -4558,27 +4598,27 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 @supports (color: color-mix(in srgb, white, black)) {
   .metal .shaded, .metal.metal.shaded {
-    background: linear-gradient(to bottom, color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 10%) 100% no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 20%) 100% no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color)) 100% no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 10%) 100% no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 20%) 100% no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color)) 100% no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
   }
   .metal .shaded.round, .metal.metal.shaded.round {
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 30%, var(--primary-color)) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
   .metal .shaded.rounded, .metal.metal.shaded.rounded {
-    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 60%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 60%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
   .metal .shaded.long.round, .metal.metal.shaded.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
   .metal .shaded.long.round.vertical, .metal.metal.shaded.long.round.vertical {
-    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
   }
   .metal .shaded.textured, .metal.metal.shaded.textured {
-    background: linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 10%, var(--primary-color));
@@ -4591,10 +4631,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 10%) 100% no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparnt 20%) no-repeat;
+    background: linear-gradient(var(--light-direction), color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparent 10%) 100% no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 30%, var(--primary-color)) 0%, transparnt 20%) no-repeat;
   }
   .metal .shaded.textured.round, .metal.metal.shaded.textured.round {
-    background: radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 25%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, color-mix(in srgb, white 30%, var(--primary-color)) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
@@ -4607,11 +4647,15 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    mix-blend-mode: screen;
-    background: radial-gradient(ellipse 50% 50% at 50% 15%, white 0%, var(--primary-color) 50%, black 100%) no-repeat;
+    mix-blend-mode: normal;
+    background: radial-gradient(ellipse 50% 50% at 50% 10%, white 0%, color-mix(in srgb, white 10%, var(--primary-color)) 50%, transparent 100%) no-repeat;
+  }
+  .metal .shaded.textured.round:not(.long):after, .metal.metal.shaded.textured.round:not(.long):after {
+    transform: scale(-1) rotate(var(--light-direction));
+    border-radius: 50%;
   }
   .metal .shaded.textured.rounded, .metal.metal.shaded.textured.rounded {
-    background: radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
+    background: radial-gradient(ellipse 100% 50% at 50% 10%, var(--primary-color) 0%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, var(--primary-color) 50%, transparent) 66%, var(--primary-color) 100%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
@@ -4624,10 +4668,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 90%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat;
+    background: linear-gradient(to right, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 90%, var(--primary-color)) 0%, color-mix(in srgb, white 30%, var(--primary-color)) 25%, transparent 50%) no-repeat;
   }
   .metal .shaded.textured.long.round, .metal.metal.shaded.textured.long.round {
-    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to right, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
@@ -4640,10 +4684,10 @@ ul.nav-tabs li.active > a {
     top: 0;
     left: 0;
     mix-blend-mode: screen;
-    background: linear-gradient(to right, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to bottom, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to right, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat;
   }
   .metal .shaded.textured.long.round.vertical, .metal.metal.shaded.textured.long.round.vertical {
-    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, color-mix(in srgb, black 30%, var(--primary-color));
+    background: linear-gradient(to bottom, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, black 40%, var(--primary-color)) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, var(--primary-color) 25%, transparent 75%) no-repeat, color-mix(in srgb, black 50%, var(--primary-color));
     position: relative;
     overflow: hidden;
     border-color: color-mix(in srgb, black 20%, var(--primary-color));
@@ -4657,7 +4701,7 @@ ul.nav-tabs li.active > a {
     left: 0;
     pointer-events: none;
     mix-blend-mode: screen;
-    background: linear-gradient(to bottom, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, color-mix(in srgb, white 50%, var(--primary-color)) 50%, transparent) 0%, color-mix(in srgb, white 50%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 50%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat;
+    background: linear-gradient(to bottom, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, black 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, var(--primary-color)) 0%, color-mix(in srgb, white 75%, var(--primary-color)) calc(5% + 1px), color-mix(in srgb, white 75%, var(--primary-color)) calc(15% + 1px), transparent calc(50% + 1px)) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, white 10%, var(--primary-color)) 100%) no-repeat;
   }
 }
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -4718,6 +4762,10 @@ ul.nav-tabs li.active > a {
 |******************************************************************************|
 |        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
 \******************************************************************************/
+:root {
+  --light-direction: to bottom;
+}
+
 /******************************************************************************\
 |                                                                              |
 |                                _frosting.scss                                |
@@ -4736,7 +4784,7 @@ ul.nav-tabs li.active > a {
 \******************************************************************************/
 :root {
   --texture-blur: 5px;
-  --highlight-blur: 10px;
+  --highlight-blur: 5px;
 }
 
 .shaded.frosted .shaded::before, .shaded.frosted::before {

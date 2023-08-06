@@ -29,7 +29,7 @@ $highlight-width: 10%;
 // mixins
 //
 
-@mixin horizontal-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
+@mixin shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
 	background:
 
 		// left shading
@@ -54,7 +54,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -107,19 +107,11 @@ $highlight-width: 10%;
 	}
 }
 
-@mixin shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
-	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-shading($color, $border-radius, $border-style, $border-width);
-	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-shading($color, $border-radius, $border-style, $border-width);
-	}
-}
-
 //
 // multilayer mixins
 //
 
-@mixin horizontal-multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
+@mixin multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
 	background:
 
 		// left shading
@@ -136,7 +128,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -252,13 +244,5 @@ $highlight-width: 10%;
 		border-color: $color;
 	} @else if ($border-style == outset) {
 		border-color: colors.darkened($color, 10%);
-	}
-}
-
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
-	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-multilayer-shading($color, $border-radius, $border-style, $border-width);
-	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-multilayer-shading($color, $border-radius, $border-style, $border-width);
 	}
 }

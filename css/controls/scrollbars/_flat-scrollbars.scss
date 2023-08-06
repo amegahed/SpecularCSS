@@ -24,7 +24,6 @@
 
 .flat ::-webkit-scrollbar-thumb,
 .flat.flat::-webkit-scrollbar-thumb {
-
 	// flat scrollbars
 	//
 	@include flat-scrollbars.shading(scrollbars.$thumb-color, scrollbars.$thumb-hover-color, scrollbars.$thumb-active-color);

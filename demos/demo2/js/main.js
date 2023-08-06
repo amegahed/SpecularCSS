@@ -81,6 +81,21 @@ function setFrosted(frosted, element) {
 	}
 }
 
+function setRoughness(roughness, element) {
+	setFrosted(roughness != '0', element);
+
+	$(element).css({
+		'--texture-blur': roughness + 'px',
+		'--highlight-blur': roughness + 'px'
+	});
+}
+
+function setLightDirection(direction, element) {
+	$(element).css({
+		'--light-direction': direction + 'deg'
+	});
+}
+
 function setTexture(texture, element) {
 	let textures = this.getTextures();
 
@@ -145,6 +160,24 @@ $(document).ready(() => {
 		// set frosting of panel
 		//
 		setFrosted(frosted, panel);
+	});
+
+	$('.light-direction input[type="range"]').on('input', (event) => {
+		let direction = $(event.target).val();
+		let panel = $(event.target).closest('.panel');
+
+		// set direction of light
+		//
+		this.setLightDirection(direction, panel);
+	});
+
+	$('.roughness input[type="range"]').on('input', (event) => {
+		let roughness = $(event.target).val();
+		let panel = $(event.target).closest('.panel');
+
+		// set roughness of panel
+		//
+		this.setRoughness(roughness, panel);
 	});
 
 	$('.texture-selector').change((event) => {

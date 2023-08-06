@@ -30,7 +30,7 @@ $highlight-width: 10%;
 // mixins
 //
 
-@mixin horizontal-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
+@mixin shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
 	background:
 
 		// left shading
@@ -48,27 +48,27 @@ $highlight-width: 10%;
 		// highlight
 		//
 		linear-gradient(to bottom,
-			colors.faded(colors.lightened($color, 50%), 50%) 0%,
-			colors.lightened($color, 50%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-			colors.lightened($color, 50%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			colors.lightened($color, 25%) 0%,
+			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc($highlight-size + $border-width)) no-repeat,
 
 		// specular
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			transparent 0%,
 			$color 25%,
 			transparent $specular-size) no-repeat,
 
 		// reflected
 		//
-		linear-gradient(to bottom,
+		linear-gradient(var(--light-direction),
 			transparent 66%,
 			colors.lightened($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darkened($color, 50%);
 
 	// borders
 	//
@@ -97,9 +97,9 @@ $highlight-width: 10%;
 		// highlight
 		//
 		linear-gradient(to right,
-			colors.faded(colors.lightened($color, 50%), 50%) 0%,
-			colors.lightened($color, 50%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-			colors.lightened($color, 50%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			colors.lightened($color, 25%) 0%,
+			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc($highlight-size + $border-width)) no-repeat,
 
 		// specular
@@ -117,7 +117,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darkened($color, 50%);
 
 	// borders
 	//
@@ -128,19 +128,11 @@ $highlight-width: 10%;
 	}
 }
 
-@mixin shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
-	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-shading($color, $border-radius, $border-style, $border-width);
-	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-shading($color, $border-radius, $border-style, $border-width);
-	}
-}
-
 //
 // multilayer mixins
 //
 
-@mixin horizontal-multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
+@mixin multilayer-shading ($color: white, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
 	background:
 
 		// left shading
@@ -155,6 +147,14 @@ $highlight-width: 10%;
 			colors.darkened($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
+		// highlight
+		//
+		linear-gradient(to bottom,
+			colors.lightened($color, 25%) 0%,
+			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
 		// specular
 		//
 		linear-gradient(to bottom,
@@ -164,7 +164,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darkened($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -192,17 +192,9 @@ $highlight-width: 10%;
 				black 0%,
 				transparent $border-radius) no-repeat,
 
-			// highlight
-			//
-			linear-gradient(to bottom,
-				colors.faded(colors.lightened($color, 50%), 50%) 0%,
-				colors.lightened($color, 50%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-				colors.lightened($color, 50%) calc($highlight-offset + $highlight-width / 2 + $border-width),
-				transparent calc($highlight-size + $border-width)) no-repeat,
-
 			// reflected
 			//
-			linear-gradient(to bottom,
+			linear-gradient(var(--light-direction),
 				transparent 66%,
 				colors.lightened($color, 10%) 100%) no-repeat;
 	}
@@ -240,7 +232,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darkened($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -272,9 +264,9 @@ $highlight-width: 10%;
 			// highlight
 			//
 			linear-gradient(to right,
-				colors.faded(colors.lightened($color, 50%), 50%) 0%,
-				colors.lightened($color, 50%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-				colors.lightened($color, 50%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+				colors.lightened($color, 25%) 0%,
+				colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+				colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 				transparent calc($highlight-size + $border-width)) no-repeat,
 
 			// reflected
@@ -290,13 +282,5 @@ $highlight-width: 10%;
 		border-color: $color;
 	} @else if ($border-style == outset) {
 		border-color: colors.darkened($color, 20%);
-	}
-}
-
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-radius: 50%, $border-style: outset, $border-width: 1px) {
-	@if ($direction == bottom) or ($direction == top) {
-		@include horizontal-multilayer-shading($color, $border-radius, $border-style, $border-width);
-	} @else if ($direction == left) or ($direction == right) {
-		@include vertical-multilayer-shading($color, $border-radius, $border-style, $border-width);
 	}
 }

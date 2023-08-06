@@ -26,5 +26,6 @@
 
 	&:checked {
 		@include round-metal.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 	}
 }

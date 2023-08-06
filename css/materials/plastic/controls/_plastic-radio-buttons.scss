@@ -26,5 +26,6 @@
 
 	&:checked {
 		@include round-plastic.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 	}
 }

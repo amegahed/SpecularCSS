@@ -26,5 +26,6 @@
 
 	&:checked {
 		@include round-chalk.shading($color);
+		transform: scale(-1) rotate(var(--light-direction));
 	}
 }

@@ -27,18 +27,18 @@ $highlight-strength: 75%;
 // mixins
 //
 
-@mixin shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin shading ($color: white, $border-style: outset) {
 	background:
 
 		// highlight
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.faded(white, $highlight-strength) 0%,
 			transparent 25%) no-repeat,
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -52,12 +52,12 @@ $highlight-strength: 75%;
 	}
 }
 
-@mixin multilayer-shading ($color: white, $direction: bottom, $border-style: outset) {
+@mixin multilayer-shading ($color: white, $border-style: outset) {
 	background:
 
 		// diffuse
 		//
-		linear-gradient(to $direction,
+		linear-gradient(var(--light-direction),
 			colors.lightened($color, 10%) 0%,
 			$color 50%,
 			colors.darkened($color, 10%) 100%) no-repeat;
@@ -78,7 +78,7 @@ $highlight-strength: 75%;
 
 			// highlight
 			//
-			linear-gradient(to $direction,
+			linear-gradient(var(--light-direction),
 				colors.faded(white, $highlight-strength) 0%,
 				transparent 25%) no-repeat;
 	}
