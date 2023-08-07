@@ -4825,9 +4825,14 @@ ul.nav-tabs li.active > a {
   mix-blend-mode: multiply;
   background-size: cover;
   background-position: center;
+  opacity: var(--texture-opacity);
 }
 .textured > div {
   transform: translateZ(0);
+}
+
+:root {
+  --texture-opacity: 1;
 }
 
 /******************************************************************************\

@@ -115,6 +115,12 @@ function setTexture(texture, element) {
 	}
 }
 
+function setTextureOpacity(textureOpacity, element) {
+	$(element).css({
+		'--texture-opacity': textureOpacity
+	});
+}
+
 function setShape(shape, element) {
 	let shapes = this.getShapes();
 
@@ -182,16 +188,25 @@ $(document).ready(() => {
 
 	$('.texture-selector').change((event) => {
 		let texture = $(event.target).val();
-		let swatch = $(event.target).parent().find('.swatch');
+		let swatch = $(event.target).closest('.panel').find('.swatch');
 
 		// set texture of swatch
 		//
 		setTexture(texture, swatch);
 	});
 
+	$('.texture-opacity').on('input', (event) => {
+		let textureOpacity = $(event.target).val();
+		let swatch = $(event.target).closest('.panel').find('.swatch');
+
+		// set texture opacity of swatch
+		//
+		setTextureOpacity(textureOpacity, swatch);
+	});
+
 	$('.shape-selector').change((event) => {
 		let shape = $(event.target).val();
-		let swatch = $(event.target).parent().find('.swatch');
+		let swatch = $(event.target).closest('.panel').find('.swatch');
 
 		// set shape of swatch
 		//

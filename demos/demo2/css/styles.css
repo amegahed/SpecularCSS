@@ -883,7 +883,7 @@ input[type=number], input[type=text] {
 }
 
 form .material.swatch {
-  margin: 0 auto !important;
+  margin: 20px auto !important;
 }
 
 .form-control {
@@ -2022,6 +2022,61 @@ body[device=tablet] .desktop-only {
 }
 /******************************************************************************\
 |                                                                              |
+|                               _validation.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+.colored span.success {
+  color: #63cf7e;
+}
+.colored span.caution {
+  color: #f5af3e;
+}
+.colored span.warning {
+  color: #f56e3e;
+}
+.colored span.error {
+  color: #f47171;
+}
+
+label.error {
+  font-weight: bold;
+  color: #f47171;
+  padding-top: 0;
+  background: url(../images/forms/error.png) 5px 0px no-repeat;
+  padding-left: 30px;
+}
+
+label.error:empty {
+  display: none;
+}
+
+label.error.valid {
+  display: none;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border: 1px solid #f47171;
+}
+
+td.error {
+  outline: 1px solid #f56e3e;
+  outline-offset: -2px;
+}
+
+/******************************************************************************\
+|                                                                              |
 |                                 _pages.scss                                  |
 |                                                                              |
 |******************************************************************************|
@@ -2053,8 +2108,6 @@ body[device=tablet] .desktop-only {
   margin: 50px auto;
   border-width: 4px;
   border-style: solid;
-}
-#page .material.swatch:not(.flat) {
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
 #page .material.swatch.round {
@@ -2064,19 +2117,31 @@ body[device=tablet] .desktop-only {
   width: 300px;
   border-radius: 100px;
   --border-radius: 100px;
+  height: 150px;
+  margin: 45px auto !important;
 }
 #page .material.swatch.rounded {
   border-radius: 25%;
 }
-#page .material.swatch h1, #page .material.swatch h2 {
+#page .material.swatch h1, #page .material.swatch h2, #page .material.swatch h3, #page .material.swatch label {
   display: flex;
   margin: auto;
   color: white;
   z-index: 0;
   text-align: center;
+  pointer-events: none;
 }
-#page .buttons button {
-  margin-top: 10px;
+#page .flat.shaded .shaded.material.swatch {
+  box-shadow: none;
+}
+#page .chalk .shaded.material.swatch, #page .plastic .shaded.material.swatch, #page .glass .shaded.material.swatch, #page .metal .shaded.material.swatch {
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+#page .shaded.material.swatch.flat {
+  box-shadow: none;
+}
+#page .shaded.material.swatch.chalk, #page .shaded.material.swatch .plastic, #page .shaded.material.swatch .glass, #page .shaded.material.swatch .metal {
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
 #page #footer {
   bottom: 0;
@@ -2729,17 +2794,8 @@ body[device=phone] h3 {
 #page.welcome .materials.panel .row a .material:not(.flat) {
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
-#page.welcome .materials.panel .row a .material label {
-  color: white;
-  display: block;
-  margin: auto;
-  pointer-events: none;
-}
-#page.welcome .materials.panel .row a .material.rounded {
-  border-radius: 25%;
-}
-#page.welcome .materials.panel .row a .material.round {
-  border-radius: 50%;
+#page.welcome .buttons.panel .buttons button {
+  margin-top: 10px;
 }
 #page.welcome .sliders.panel .control {
   height: 35px;
