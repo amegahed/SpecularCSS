@@ -17,10 +17,10 @@
 
 @use "../../colors/colored";
 @use "../flat/flat";
-@use "shapes/flat-chalk";
-@use "shapes/round-chalk";
-@use "shapes/rounded-chalk";
-@use "shapes/long-round-chalk";
+@use "flat-chalk";
+@use "round-chalk";
+@use "rounded-chalk";
+@use "long-round-chalk";
 
 //
 // variables

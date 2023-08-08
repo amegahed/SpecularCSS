@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _tabs.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$border-width: 2px;
+$border-style: solid;
+$shadow: 5px 5px 10px faded(black, 15%);
+
+//
+// colors
+//
+
+$color: colors.$very-very-light-grey;
+$hover-color: colors.darkened($color, 10%);
+$active-color: var(--primary-color);
+
+//
+// styles
+//
+
+:root {
+	--tab-color: #{$color};
+	--tab-shadow: #{$shadow};
+}
+
+ul.nav-tabs {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	border-bottom: 2px solid $active-color;
+	padding-inline-start: 0;
+
+	&.centered {
+		justify-content: center;
+	}
+
+	li {
+		> a {
+			display: block;
+			padding: 3px 5px;
+			text-align: center;
+			background-color: $color;
+			border-width: $border-width;
+			border-bottom-width: 0 !important;
+			border-style: $border-style;
+			border-color: $color;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom: transparent;
+			color: colors.$dark-text-color !important;
+			width: 100%;
+			cursor: default;
+
+			&:hover {
+				background-color: darkened($color, 10%);
+				border-bottom-width: 0 !important;
+			}
+		}
+
+		&.active > a {
+			color: white !important;
+			border-color: $active-color;
+			background-color: $active-color;
+			border-bottom-width: 0 !important;
+		}
+	}
+}

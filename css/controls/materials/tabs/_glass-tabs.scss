@@ -1,0 +1,39 @@
+/******************************************************************************\
+|                                                                              |
+|                              _glass-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../../materials/glass/rounded-glass";
+
+//
+// mixins
+//
+
+@mixin shading($color, $hover-color, $active-color) {
+	> a {
+		@include rounded-glass.shading($color);
+		box-shadow: var(--tab-shadow);
+
+		&:hover {
+			@include rounded-glass.shading($hover-color);
+		}
+	}
+
+	&.active {
+		> a {
+			@include rounded-glass.shading($active-color);
+		}
+	}
+}

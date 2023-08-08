@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _btns.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$shadow: 2px 2px 5px colors.faded(black, 15%);
+
+//
+// colors
+//
+
+$color: colors.$very-very-light-grey;
+$hover-color: colors.darkened($color, 10%);
+$active-color: colors.darkened($color, 20%);
+$primary-color: var(--primary-color);
+$primary-hover-color: colors.darkened($primary-color, 10%);
+$primary-active-color: colors.darkened($primary-color, 20%);
+
+//
+// styles
+//
+
+:root {
+	--btn-color: #{var(--btn-color)};
+	--btn-shadow: #{$shadow};
+}
+
+.btn-primary {
+	color: white;
+	background-color: var(--primary-color);
+}

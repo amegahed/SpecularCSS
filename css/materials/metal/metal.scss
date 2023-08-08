@@ -17,10 +17,10 @@
 
 @use "../../colors/colored";
 @use "../flat/flat";
-@use "shapes/flat-metal";
-@use "shapes/round-metal";
-@use "shapes/rounded-metal";
-@use "shapes/long-round-metal";
+@use "flat-metal";
+@use "round-metal";
+@use "rounded-metal";
+@use "long-round-metal";
 
 //
 // variables

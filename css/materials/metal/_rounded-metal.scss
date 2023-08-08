@@ -1,0 +1,138 @@
+/******************************************************************************\
+|                                                                              |
+|                            _rounded-metal.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2023, Specular CSS, http://www.specularcss.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$specular-size: 75%;
+$specular-width: 100%;
+$specular-height: 50%;
+$specular-hoffset: 50%;
+$specular-voffset: 10%;
+
+//
+// mixins
+//
+
+@mixin shading ($color: white, $border-style: outset, $background-color: white) {
+	background:
+
+		// left shading
+		//
+		linear-gradient(to right,
+			colors.faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// right shading
+		//
+		linear-gradient(to left,
+			colors.faded(black, 15%) 0%,
+			transparent 25%) no-repeat,
+
+		// specular
+		//
+		linear-gradient(var(--light-direction),
+			colors.lightened($color, 60%) 0%,
+			colors.lightened($color, 30%) 25%,
+			transparent 50%) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(var(--light-direction),
+			transparent 66%,
+			colors.lightened($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 30%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
+
+@mixin multilayer-shading ($color: white, $border-style: outset) {
+	background:
+
+		// specular
+		//
+		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
+			$color 0%,
+			transparent $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(var(--light-direction),
+			transparent 0%,
+			colors.faded($color, 50%) 66%,
+			$color 100%) no-repeat,
+
+		// diffuse
+		//
+		colors.darkened($color, 50%);
+
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		// mix-blend-mode: overlay;
+
+		background:
+
+			// left shading
+			//
+			linear-gradient(to right,
+				colors.faded(black, 15%) 0%,
+				transparent 25%) no-repeat,
+
+			// right shading
+			//
+			linear-gradient(to left,
+				colors.faded(black, 15%) 0%,
+				transparent 25%) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(var(--light-direction),
+				colors.lightened($color, 90%) 0%,
+				colors.lightened($color, 30%) 25%,
+				transparent 50%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: $color;
+	} @else if ($border-style == outset) {
+		border-color: colors.darkened($color, 20%);
+	}
+}
