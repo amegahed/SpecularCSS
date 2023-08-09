@@ -30,8 +30,8 @@ $thumb-border-width: 2px;
 //
 
 $thumb-color: var(--primary-color);
-$thumb-hover-color: colors.darkened(var(--primary-color), 10%);
-$thumb-active-color: colors.darkened(var(--primary-color), 20%);
+$thumb-hover-color: colors.darken(var(--primary-color), 10%);
+$thumb-active-color: colors.darken(var(--primary-color), 20%);
 $track-color: colors.$very-very-very-light-grey;
 $thumb-border-color: $track-color;
 $track-border-color: $track-color;

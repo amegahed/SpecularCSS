@@ -39,19 +39,19 @@ $transmitted-width: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to bottom,
-			colors.faded(white, 50%) 0%,
+			colors.fade(white, 50%) 0%,
 			white calc($highlight-offset - $highlight-width / 2 + $border-width),
 			white calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc(33% + $border-width)) no-repeat,
@@ -60,20 +60,20 @@ $transmitted-width: 10%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 33%,
-			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
-			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -83,19 +83,19 @@ $transmitted-width: 10%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to right,
-			colors.faded(white, 50%) 0%,
+			colors.fade(white, 50%) 0%,
 			white calc($highlight-offset - $highlight-width / 2 + $border-width),
 			white calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc(33% + $border-width)) no-repeat,
@@ -104,20 +104,20 @@ $transmitted-width: 10%;
 		//
 		linear-gradient(to right,
 			transparent 33%,
-			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
-			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -131,26 +131,26 @@ $transmitted-width: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// transmitted
 		//
 		linear-gradient(var(--light-direction),
 			transparent 33%,
-			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
-			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -194,7 +194,7 @@ $transmitted-width: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -204,26 +204,26 @@ $transmitted-width: 10%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 25%) 0%,
+			colors.darken($color, 25%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// transmitted
 		//
 		linear-gradient(to right,
 			transparent 33%,
-			colors.lightened($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
-			colors.lightened($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset - $transmitted-width / 2 + $border-width),
+			colors.lighten($color, 10%) calc($transmitted-offset + $transmitted-width / 2 + $border-width),
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -266,6 +266,6 @@ $transmitted-width: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

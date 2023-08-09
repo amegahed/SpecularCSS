@@ -27,7 +27,7 @@
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 50%) 0%,
+			colors.lighten($color, 50%) 0%,
 			$color 5px) no-repeat;
 
 	// borders
@@ -35,7 +35,7 @@
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -45,7 +45,7 @@
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 50%) 0%,
+			colors.lighten($color, 50%) 0%,
 			$color 5px) no-repeat;
 
 	// borders
@@ -53,6 +53,6 @@
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

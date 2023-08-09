@@ -36,21 +36,21 @@ $highlight-width: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to bottom,
-			colors.lightened($color, 25%) 0%,
-			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			colors.lighten($color, 25%) 0%,
+			colors.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc($highlight-size + $border-width)) no-repeat,
 
 		// specular
@@ -64,18 +64,18 @@ $highlight-width: 10%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 66%,
-			colors.lightened($color, 10%) 100%) no-repeat,
+			colors.lighten($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }
 
@@ -85,21 +85,21 @@ $highlight-width: 10%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to right,
-			colors.lightened($color, 25%) 0%,
-			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			colors.lighten($color, 25%) 0%,
+			colors.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc($highlight-size + $border-width)) no-repeat,
 
 		// specular
@@ -113,18 +113,18 @@ $highlight-width: 10%;
 		//
 		linear-gradient(to right,
 			transparent 66%,
-			colors.lightened($color, 10%) 100%) no-repeat,
+			colors.lighten($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }
 
@@ -138,21 +138,21 @@ $highlight-width: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
 		//
 		linear-gradient(to bottom,
-			colors.lightened($color, 25%) 0%,
-			colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-			colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			colors.lighten($color, 25%) 0%,
+			colors.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			colors.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 			transparent calc($highlight-size + $border-width)) no-repeat,
 
 		// specular
@@ -164,7 +164,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -196,7 +196,7 @@ $highlight-width: 10%;
 			//
 			linear-gradient(var(--light-direction),
 				transparent 66%,
-				colors.lightened($color, 10%) 100%) no-repeat;
+				colors.lighten($color, 10%) 100%) no-repeat;
 	}
 
 	// borders
@@ -204,7 +204,7 @@ $highlight-width: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }
 
@@ -214,13 +214,13 @@ $highlight-width: 10%;
 		// top shading
 		//
 		linear-gradient(to bottom,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// bottom shading
 		//
 		linear-gradient(to top,
-			colors.darkened($color, 40%) 0%,
+			colors.darken($color, 40%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// specular
@@ -232,7 +232,7 @@ $highlight-width: 10%;
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -264,16 +264,16 @@ $highlight-width: 10%;
 			// highlight
 			//
 			linear-gradient(to right,
-				colors.lightened($color, 25%) 0%,
-				colors.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
-				colors.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+				colors.lighten($color, 25%) 0%,
+				colors.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+				colors.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
 				transparent calc($highlight-size + $border-width)) no-repeat,
 
 			// reflected
 			//
 			linear-gradient(to right,
 				transparent 66%,
-				colors.lightened($color, 10%) 100%) no-repeat;
+				colors.lighten($color, 10%) 100%) no-repeat;
 	}
 
 	// borders
@@ -281,6 +281,6 @@ $highlight-width: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }

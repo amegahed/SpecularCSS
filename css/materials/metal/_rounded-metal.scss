@@ -38,38 +38,38 @@ $specular-voffset: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.faded(black, 15%) 0%,
+			colors.fade(black, 15%) 0%,
 			transparent 25%) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.faded(black, 15%) 0%,
+			colors.fade(black, 15%) 0%,
 			transparent 25%) no-repeat,
 
 		// specular
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 60%) 0%,
-			colors.lightened($color, 30%) 25%,
+			colors.lighten($color, 60%) 0%,
+			colors.lighten($color, 30%) 25%,
 			transparent 50%) no-repeat,
 
 		// reflected
 		//
 		linear-gradient(var(--light-direction),
 			transparent 66%,
-			colors.lightened($color, 10%) 100%) no-repeat,
+			colors.lighten($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }
 
@@ -86,12 +86,12 @@ $specular-voffset: 10%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 0%,
-			colors.faded($color, 50%) 66%,
+			colors.fade($color, 50%) 66%,
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -111,20 +111,20 @@ $specular-voffset: 10%;
 			// left shading
 			//
 			linear-gradient(to right,
-				colors.faded(black, 15%) 0%,
+				colors.fade(black, 15%) 0%,
 				transparent 25%) no-repeat,
 
 			// right shading
 			//
 			linear-gradient(to left,
-				colors.faded(black, 15%) 0%,
+				colors.fade(black, 15%) 0%,
 				transparent 25%) no-repeat,
 
 			// highlight
 			//
 			linear-gradient(var(--light-direction),
-				colors.lightened($color, 90%) 0%,
-				colors.lightened($color, 30%) 25%,
+				colors.lighten($color, 90%) 0%,
+				colors.lighten($color, 30%) 25%,
 				transparent 50%) no-repeat;
 	}
 
@@ -133,6 +133,6 @@ $specular-voffset: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }

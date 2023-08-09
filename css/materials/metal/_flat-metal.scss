@@ -34,32 +34,32 @@ $specular-size: 75%;
 		// highlight
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 30%) 0%,
+			colors.lighten($color, 30%) 0%,
 			transparent 10%) 100% no-repeat,
 
 		// specular
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 30%) 0%,
+			colors.lighten($color, 30%) 0%,
 			transparent 20%) 100% no-repeat,
 
 		// reflected
 		//
 		linear-gradient(var(--light-direction),
 			transparent 0%,
-			colors.faded($color, 50%) 66%,
+			colors.fade($color, 50%) 66%,
 			$color) 100% no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -70,12 +70,12 @@ $specular-size: 75%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 0%,
-			colors.faded($color, 50%) 66%,
+			colors.fade($color, 50%) 66%,
 			$color 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 50%);
+		colors.darken($color, 50%);
 
 	position: relative;
 	overflow: hidden;
@@ -95,13 +95,13 @@ $specular-size: 75%;
 			// highlight
 			//
 			linear-gradient(var(--light-direction),
-				colors.lightened($color, 30%) 0%,
+				colors.lighten($color, 30%) 0%,
 				transparent 10%) 100% no-repeat,
 
 			// specular
 			//
 			linear-gradient(var(--light-direction),
-				colors.lightened($color, 30%) 0%,
+				colors.lighten($color, 30%) 0%,
 				transparnt 20%) no-repeat;
 	}
 
@@ -110,6 +110,6 @@ $specular-size: 75%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

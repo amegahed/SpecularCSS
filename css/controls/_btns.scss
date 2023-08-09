@@ -21,18 +21,18 @@
 // variables
 //
 
-$shadow: 2px 2px 5px colors.faded(black, 15%);
+$shadow: 2px 2px 5px colors.fade(black, 15%);
 
 //
 // colors
 //
 
 $color: colors.$very-very-light-grey;
-$hover-color: colors.darkened($color, 10%);
-$active-color: colors.darkened($color, 20%);
+$hover-color: colors.darken($color, 10%);
+$active-color: colors.darken($color, 20%);
 $primary-color: var(--primary-color);
-$primary-hover-color: colors.darkened($primary-color, 10%);
-$primary-active-color: colors.darkened($primary-color, 20%);
+$primary-hover-color: colors.darken($primary-color, 10%);
+$primary-active-color: colors.darken($primary-color, 20%);
 
 //
 // styles

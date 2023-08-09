@@ -51,23 +51,23 @@ $specular-voffset: 10%;
 		// specular
 		//
 		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-			colors.faded(white, $specular-strength) 0%,
-			colors.faded(white, $specular-strength) $specular-size,
+			colors.fade(white, $specular-strength) 0%,
+			colors.fade(white, $specular-strength) $specular-size,
 			transparent 100%) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0%,
+			colors.lighten($color, 10%) 0%,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -77,9 +77,9 @@ $specular-voffset: 10%;
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0%,
+			colors.lighten($color, 10%) 0%,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -104,8 +104,8 @@ $specular-voffset: 10%;
 			// specular
 			//
 			radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-				colors.faded(white, $specular-strength) 0%,
-				colors.faded(white, $specular-strength) $specular-size,
+				colors.fade(white, $specular-strength) 0%,
+				colors.fade(white, $specular-strength) $specular-size,
 				transparent 100%) no-repeat,
 	}
 
@@ -121,6 +121,6 @@ $specular-voffset: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

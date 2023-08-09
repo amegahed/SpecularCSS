@@ -38,23 +38,23 @@ $highlight-voffset: 10%;
 		// highlight
 		//
 		radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
-			colors.faded(white, $highlight-strength) 0%,
-			colors.faded(white, $highlight-strength) $highlight-size,
+			colors.fade(white, $highlight-strength) 0%,
+			colors.fade(white, $highlight-strength) $highlight-size,
 			transparent 100%) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0%,
+			colors.lighten($color, 10%) 0%,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -64,9 +64,9 @@ $highlight-voffset: 10%;
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0%,
+			colors.lighten($color, 10%) 0%,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -85,8 +85,8 @@ $highlight-voffset: 10%;
 			// highlight
 			//
 			radial-gradient(ellipse $highlight-width $highlight-height at $highlight-hoffset $highlight-voffset,
-				colors.faded(white, $highlight-strength) 0%,
-				colors.faded(white, $highlight-strength) $highlight-size,
+				colors.fade(white, $highlight-strength) 0%,
+				colors.fade(white, $highlight-strength) $highlight-size,
 				transparent 100%) no-repeat;
 	}
 
@@ -104,6 +104,6 @@ $highlight-voffset: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

@@ -40,8 +40,8 @@ $track-shadow: none;
 //
 
 $thumb-color: var(--primary-color);
-$thumb-hover-color: colors.darkened($thumb-color, 10%);
-$thumb-active-color: colors.darkened($thumb-color, 20%);
+$thumb-hover-color: colors.darken($thumb-color, 10%);
+$thumb-active-color: colors.darken($thumb-color, 20%);
 $track-color: colors.$very-very-light-grey;
 
 //

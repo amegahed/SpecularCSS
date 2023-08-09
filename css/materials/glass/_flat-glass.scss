@@ -41,27 +41,27 @@ $highlight-size: 25%;
 		// specular
 		//
 		linear-gradient(var(--light-direction),
-			colors.faded(white, $specular-strength) 0%,
+			colors.fade(white, $specular-strength) 0%,
 			transparent 20%) no-repeat,
 
 		// reflected
 		//
 		linear-gradient(var(--light-direction),
 			transparent 50%,
-			colors.lightened($color, 10%) 100%) no-repeat,
+			colors.lighten($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.faded(colors.darkened($color, 10%), 100%) 0%,
-			colors.faded($color, $opacity) 100%) no-repeat;
+			colors.fade(colors.darken($color, 10%), 100%) 0%,
+			colors.fade($color, $opacity) 100%) no-repeat;
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -72,13 +72,13 @@ $highlight-size: 25%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 50%,
-			colors.lightened($color, 10%) 100%) no-repeat,
+			colors.lighten($color, 10%) 100%) no-repeat,
 
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.faded(colors.darkened($color, 10%), 100%) 0%,
-			colors.faded($color, $opacity) 100%) no-repeat;
+			colors.fade(colors.darken($color, 10%), 100%) 0%,
+			colors.fade($color, $opacity) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -103,7 +103,7 @@ $highlight-size: 25%;
 			// specular
 			//
 			linear-gradient(var(--light-direction),
-				colors.faded(white, $specular-strength) 0%,
+				colors.fade(white, $specular-strength) 0%,
 				transparent 20%) no-repeat;
 	}
 }

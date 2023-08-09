@@ -51,13 +51,13 @@ $highlight-voffset: 10%;
 		// specular
 		//
 		radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-			colors.faded(white, $specular-strength) $specular-size,
+			colors.fade(white, $specular-strength) $specular-size,
 			transparent 100%) no-repeat,
 
 		// transmitted
 		//
 		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.lightened($color, 50%) 0%,
+			colors.lighten($color, 50%) 0%,
 			$color 50%,
 			transparent 100%) no-repeat,
 
@@ -65,18 +65,18 @@ $highlight-voffset: 10%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 33%,
-			colors.faded($color, 50%) 100%) no-repeat,
+			colors.fade($color, 50%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 20%);
+		border-color: colors.darken($color, 20%);
 	}
 }
 
@@ -87,11 +87,11 @@ $highlight-voffset: 10%;
 		//
 		linear-gradient(var(--light-direction),
 			transparent 33%,
-			colors.faded($color, 50%) 100%) no-repeat,
+			colors.fade($color, 50%) 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -111,7 +111,7 @@ $highlight-voffset: 10%;
 			// transmitted
 			//
 			radial-gradient(ellipse 50% 50% at 50% 85%,
-				colors.lightened($color, 50%) 0%,
+				colors.lighten($color, 50%) 0%,
 				$color 50%,
 				transparent 100%) no-repeat,
 
@@ -124,7 +124,7 @@ $highlight-voffset: 10%;
 			// specular
 			//
 			radial-gradient(ellipse $specular-width $specular-height at $specular-hoffset $specular-voffset,
-				colors.faded(white, $specular-strength) $specular-size,
+				colors.fade(white, $specular-strength) $specular-size,
 				transparent 100%) no-repeat;
 	}
 
@@ -142,6 +142,6 @@ $highlight-voffset: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
