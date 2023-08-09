@@ -30,7 +30,7 @@ $shadow: 5px 5px 10px faded(black, 15%);
 //
 
 $color: colors.$very-very-light-grey;
-$hover-color: colors.darkened($color, 10%);
+$hover-color: colors.darken($color, 10%);
 $active-color: var(--primary-color);
 
 //

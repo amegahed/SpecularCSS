@@ -45,13 +45,13 @@ $round-highlight-voffset: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			colors.fade(colors.darken($color, 20%), 50%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			colors.fade(colors.darken($color, 20%), 50%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// highlight
@@ -63,20 +63,20 @@ $round-highlight-voffset: 10%;
 		// transmitted
 		//
 		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.lightened($color, 50%) 0%,
+			colors.lighten($color, 50%) 0%,
 			$color 50%,
 			transparent 100%) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -86,18 +86,18 @@ $round-highlight-voffset: 10%;
 		// left shading
 		//
 		linear-gradient(to right,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			colors.fade(colors.darken($color, 20%), 50%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// right shading
 		//
 		linear-gradient(to left,
-			colors.faded(colors.darkened($color, 20%), 50%) 0%,
+			colors.fade(colors.darken($color, 20%), 50%) 0%,
 			transparent $border-radius) no-repeat,
 
 		// diffuse
 		//
-		colors.darkened($color, 30%);
+		colors.darken($color, 30%);
 
 	position: relative;
 	overflow: hidden;
@@ -123,7 +123,7 @@ $round-highlight-voffset: 10%;
 		// transmitted
 		//
 		radial-gradient(ellipse 50% 50% at 50% 85%,
-			colors.lightened($color, 50%) 0%,
+			colors.lighten($color, 50%) 0%,
 			$color 50%,
 			transparent 100%) no-repeat;
 	}
@@ -133,6 +133,6 @@ $round-highlight-voffset: 10%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

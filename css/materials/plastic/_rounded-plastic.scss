@@ -41,16 +41,16 @@ $specular-strength: 50%;
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0,
+			colors.lighten($color, 10%) 0,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	// borders
 	//
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }
 
@@ -60,9 +60,9 @@ $specular-strength: 50%;
 		// diffuse
 		//
 		linear-gradient(var(--light-direction),
-			colors.lightened($color, 10%) 0,
+			colors.lighten($color, 10%) 0,
 			$color 50%,
-			colors.darkened($color, 10%) 100%) no-repeat;
+			colors.darken($color, 10%) 100%) no-repeat;
 
 	position: relative;
 	overflow: hidden;
@@ -90,6 +90,6 @@ $specular-strength: 50%;
 	@if ($border-style == inset) {
 		border-color: $color;
 	} @else if ($border-style == outset) {
-		border-color: colors.darkened($color, 10%);
+		border-color: colors.darken($color, 10%);
 	}
 }

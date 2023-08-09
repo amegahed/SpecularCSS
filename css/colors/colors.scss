@@ -140,18 +140,18 @@ $light-text-color: $very-very-light-grey;
 // mixins
 //
 
-@function lightened($color, $amount) {
+@function lighten($color, $amount) {
 	@return color-mix(in srgb, white $amount, $color);
 }
 
-@function darkened($color, $amount) {
+@function darken($color, $amount) {
 	@return color-mix(in srgb, black $amount, $color);
 }
 
-@function faded($color, $amount) {
+@function fade($color, $amount) {
 	@return color-mix(in srgb, $color $amount, transparent);
 }
 
-@function blended($color1, $color2, $amount:50%) {
+@function blend($color1, $color2, $amount:50%) {
 	@return color-mix(in srgb, $color1 $amount, $color2);
 }
