@@ -21,6 +21,7 @@
 
 $background-image: var(--texture);
 $background-size: cover;
+$texture-blur: 5px;
 
 //
 // mixins
@@ -52,9 +53,33 @@ $background-size: cover;
 }
 
 //
+// mixins
+//
+
+@mixin frosting($amount: var(--texture-blur)) {
+	filter: blur($amount);
+}
+
+@mixin polishing() {
+	filter: none;
+}
+
+//
 // styles
 //
 
 :root {
 	--texture-opacity: 1;
+	--texture-blur: #{$texture-blur};
+}
+
+.shaded {
+	&.frosted .shaded, &.frosted {
+		&::before {
+			@include frosting();
+		}
+		&::after {
+			@include frosting();
+		}
+	}
 }
